@@ -319,6 +319,13 @@ h1 em, h2 em { font-style: normal; color: var(--accent); }
 .kanji-card .ring { border-color: var(--accent-soft); width: 70%; aspect-ratio: 1; right: -28%; bottom: -40%; opacity: .3; }
 .kanji-card .ring + .ring { width: 100%; right: -45%; bottom: -62%; opacity: .16; }
 
+.origin { padding: 28px 32px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--soft); }
+.origin-label { margin-bottom: 8px; font-size: .8125rem; font-weight: 700; letter-spacing: .14em; color: var(--accent-ink); }
+.origin dl div { display: flex; align-items: baseline; gap: 18px; padding: 12px 0; border-top: 1px solid var(--line); }
+.origin dl div:first-child { border-top: 0; }
+.origin dt { width: 1.4em; font-size: 1.75rem; font-weight: 400; line-height: 1.2; color: var(--ink); }
+.origin dd { color: var(--muted); }
+
 .overview { max-width: 760px; border-top: 1px solid var(--line); }
 .overview div { display: grid; grid-template-columns: 9em 1fr; gap: 16px; padding: 18px 0; border-bottom: 1px solid var(--line); }
 .overview dt { color: var(--muted); font-size: .9375rem; }
@@ -389,7 +396,13 @@ html.has-bar { scroll-padding-top: calc(var(--header-h) + 64px); }
 
 /* ── 회사 홈 ───────────────────────── */
 .home-hero { padding-block: clamp(56px, 7vw, 112px) clamp(48px, 6vw, 80px); }
-.home-hero .kanji-card { padding: clamp(44px, 6vw, 88px) clamp(24px, 4vw, 56px); }
+.ripple { position: relative; width: 100%; max-width: 380px; aspect-ratio: 1; justify-self: end; }
+.ripple span { position: absolute; left: 50%; top: 50%; translate: -50% -50%; aspect-ratio: 1; border: 1.5px solid var(--accent); border-radius: 50%; }
+.ripple span:nth-child(1) { width: 100%; opacity: .1; }
+.ripple span:nth-child(2) { width: 66%; opacity: .17; }
+.ripple span:nth-child(3) { width: 33%; opacity: .26; }
+.ripple i { position: absolute; left: 50%; top: 50%; translate: -50% -50%; width: 14px; height: 14px; border-radius: 50%; background: var(--accent); }
+.device-wrap .note { margin-top: 14px; font-size: .8125rem; line-height: 1.6; color: var(--muted); }
 .product-block { background: var(--wash); padding-block: clamp(72px, 9vw, 120px); }
 .product-block .tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
 .product-block .ph-logo { display: block; height: 52px; width: auto; margin: 0 0 24px -8px; }
@@ -468,7 +481,8 @@ html.js .reveal.in { opacity: 1; transform: none; }
 @media (max-width: 900px) {
   .hero-grid, .act-wrap, .records, .about-grid, .about-strip, .contact-grid { grid-template-columns: 1fr; }
   .hero-visual { order: 2; }
-  .act-wrap .device { order: -1; }
+  .act-wrap .device-wrap { order: -1; }
+  .ripple { display: none; }
   .trio, .comp-grid, .shots, .feat, .audience { grid-template-columns: 1fr; }
   .flow { grid-template-columns: 1fr; gap: 28px; }
   .link { display: none; }
