@@ -60,11 +60,16 @@
     <section class="section">
       <div class="wrap contact-grid">
         <div class="contact-list reveal">
-          <a class="contact-row primary" href="mailto:info@damun.asia">
-            <span class="c-label">문의하기</span>
-            <span class="c-mail">info@damun.asia</span>
-            <span class="c-desc">제품과 이용에 관한 궁금한 점을 보내 주세요.</span>
-          </a>
+          <div class="contact-card">
+            <p class="c-label">문의하기</p>
+            <p class="c-mail" id="contact-mail">info@damun.asia</p>
+            <p class="c-desc">제품과 이용에 관한 궁금한 점을 보내 주세요.</p>
+            <div class="contact-actions">
+              <a class="btn btn-light" href="mailto:info@damun.asia">메일로 문의하기</a>
+              <button class="btn btn-outline-light" type="button" data-copy="info@damun.asia" data-target="contact-mail">이메일 주소 복사</button>
+            </div>
+            <p class="copy-status" role="status" aria-live="polite"></p>
+          </div>
         </div>
 
         <div class="reveal">

@@ -57,7 +57,7 @@ strong { font-weight: 700; color: var(--ink); }
 .btn-ghost:hover { border-color: var(--ink); }
 .btn-light { background: #fff; color: var(--ink); }
 .btn-light:hover { background: var(--wash); transform: translateY(-1px); }
-.btn-outline-light { border-color: rgba(255, 255, 255, .4); color: #fff; }
+.btn-outline-light { background: transparent; border-color: rgba(255, 255, 255, .45); color: #fff; }
 .btn-outline-light:hover { border-color: #fff; }
 .btn-sm { padding: 10px 20px; font-size: .9375rem; }
 
@@ -224,7 +224,7 @@ h1 em, h2 em { font-style: normal; color: var(--accent); }
 .node-media { aspect-ratio: 16 / 10; overflow: hidden; border-radius: 16px; background: var(--soft); border: 1px solid var(--line); margin-bottom: 20px; }
 .node-media img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: left top; }
 .node-grip { background: var(--wash); display: flex; align-items: flex-end; justify-content: center; padding: 14px 18px 0; }
-.node-grip img { object-fit: contain; object-position: center bottom; }
+.node-grip img { object-fit: contain; object-position: center bottom; -webkit-mask-image: linear-gradient(#000 74%, transparent); mask-image: linear-gradient(#000 74%, transparent); }
 .node h3 { margin-bottom: 6px; font-size: 1.3125rem; }
 .node p { color: var(--muted); font-size: 1rem; }
 .link { position: relative; align-self: start; height: 0; margin-top: clamp(40px, 5vw, 60px); }
@@ -255,8 +255,6 @@ h1 em, h2 em { font-style: normal; color: var(--accent); }
 .tab-item.is-active .tab-desc { display: block; animation: fadeUp .5s var(--ease); }
 .tab-bar { position: absolute; left: 0; top: -1px; height: 2px; width: 0; background: var(--accent); }
 .tab-item.is-active .tab-bar { width: 100%; }
-.tabs.autoplay .tab-item.is-active .tab-bar { width: 0; animation: bar var(--dur, 6s) linear forwards; }
-@keyframes bar { to { width: 100%; } }
 @keyframes fadeUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
 
 .more { margin-top: 32px; }
@@ -378,8 +376,9 @@ html.has-bar { scroll-padding-top: calc(var(--header-h) + 64px); }
 .product-bar .wrap { display: flex; align-items: center; gap: 28px; }
 .pb-brand { flex: none; display: block; line-height: 0; padding: 11px 28px 11px 0; margin-left: -4px; border-right: 1px solid var(--line); }
 .pb-brand img { height: 34px; width: auto; }
-.product-bar nav { min-width: 0; }
-.product-bar ul { display: flex; gap: 30px; overflow-x: auto; scrollbar-width: none; }
+.product-bar nav { position: relative; flex: 1; min-width: 0; }
+.product-bar nav.has-more::after { content: ""; position: absolute; top: 0; right: 0; bottom: 0; width: 44px; pointer-events: none; background: linear-gradient(90deg, rgba(255, 255, 255, 0), #fff 85%); }
+.product-bar ul { position: relative; display: flex; gap: 30px; overflow-x: auto; scrollbar-width: none; }
 .product-bar ul::-webkit-scrollbar { display: none; }
 .product-bar a { display: block; padding: 17px 0 15px; font-size: .9375rem; font-weight: 500; color: var(--muted); text-decoration: none; white-space: nowrap; border-bottom: 2px solid transparent; }
 .product-bar a:hover { color: var(--ink); }
@@ -442,6 +441,23 @@ html.has-bar { scroll-padding-top: calc(var(--header-h) + 64px); }
 .notify p { color: var(--ink-2); }
 .notify .small { margin-top: 10px; font-size: .875rem; color: var(--muted); }
 
+/* ── 홈 · 센터용 · 문의 보강 (UX-001 · 004 · 006) ───────────────────────── */
+.home-hero .sub { margin-top: 14px; max-width: 34em; font-size: 1rem; color: var(--muted); }
+.section .facts { margin-top: clamp(40px, 5vw, 64px); }
+
+.onpage { background: #fff; border-bottom: 1px solid var(--line); }
+.onpage ul { display: flex; gap: 8px; overflow-x: auto; padding: 14px 0; scrollbar-width: none; }
+.onpage ul::-webkit-scrollbar { display: none; }
+.onpage a { display: block; padding: 7px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--soft); font-size: .875rem; font-weight: 500; color: var(--ink-2); text-decoration: none; white-space: nowrap; transition: border-color .2s, color .2s; }
+.onpage a:hover { border-color: var(--accent); color: var(--ink); }
+
+.contact-card { background: var(--ink); border-radius: var(--radius); padding: clamp(24px, 3.4vw, 36px); }
+.contact-card .c-label { color: var(--accent-soft); }
+.contact-card .c-mail { margin: 4px 0; color: #fff; -webkit-user-select: all; user-select: all; }
+.contact-card .c-desc { color: var(--on-dark); }
+.contact-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+.copy-status { min-height: 1.5em; margin-top: 12px; font-size: .875rem; color: var(--accent-soft); }
+
 /* ── 영상 슬롯 (파일이 올라오면 JS가 보여 줌) ───────────────────────── */
 .film { margin-top: clamp(48px, 6vw, 80px); }
 .film video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #0B1424; border-radius: var(--radius); }
@@ -470,7 +486,6 @@ html.js .reveal.in { opacity: 1; transform: none; }
   html.js .reveal { opacity: 1; transform: none; transition: none; }
   .btn, .contact-row { transition: none; }
   .tab-item.is-active .tab-desc { animation: none; }
-  .tabs.autoplay .tab-item.is-active .tab-bar { animation: none; width: 100%; }
 }
 
 /* ── 반응형 ───────────────────────── */
@@ -484,9 +499,36 @@ html.js .reveal.in { opacity: 1; transform: none; }
 @media (max-width: 900px) {
   .hero-grid, .act-wrap, .records, .about-grid, .about-strip, .contact-grid { grid-template-columns: 1fr; }
   .hero-visual { order: 2; }
-  .act-wrap .device-wrap { order: -1; }
   .ripple { display: none; }
   .grip-soft { justify-self: start; width: min(100%, 320px); }
+
+  /* UX-005: 활동 선택 버튼을 이미지 바로 위 탭 줄로 모으고, 선택한 설명은 이미지 아래에 */
+  .act-wrap { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; align-items: start; }
+  .tabs, .tab-item { display: contents; }
+  .tab { grid-row: 1; flex-direction: column; align-items: center; justify-content: center; gap: 0; padding: 14px 4px 12px; text-align: center; border-bottom: 3px solid var(--line); }
+  .tab-item:nth-of-type(1) .tab { grid-column: 1; }
+  .tab-item:nth-of-type(2) .tab { grid-column: 2; }
+  .tab-item:nth-of-type(3) .tab { grid-column: 3; }
+  .tab .t-num, .tab .t-tag { display: none; }
+  .tab .t-title { font-size: 1.0625rem; font-weight: 500; letter-spacing: -.02em; }
+  .tab[aria-selected="true"] { border-bottom-color: var(--accent); }
+  .tab[aria-selected="true"] .t-title { font-weight: 700; }
+  .act-wrap .device-wrap { grid-row: 2; grid-column: 1 / -1; margin-top: 18px; }
+  .tab-item.is-active .tab-desc { grid-row: 3; grid-column: 1 / -1; padding: 18px 0 0; min-height: 7.2em; }
+  .tab-bar { display: none; }
+  .more { grid-row: 4; grid-column: 1 / -1; margin-top: 8px; }
+
+  /* UX-003: 모바일 제품 첫 화면 — 제목·짧은 설명 다음에 실물 비주얼, 버튼·만든 곳은 그 뒤 */
+  .product-hero .hero-grid { gap: 0; }
+  .product-hero .hero-copy { display: contents; }
+  .product-hero .ph-logo { order: 1; height: 36px; margin: 0 0 16px -6px; }
+  .product-hero .eyebrow { order: 2; margin-bottom: 12px; }
+  .product-hero h1 { order: 3; margin-bottom: 14px; }
+  .product-hero .lead { order: 4; margin-bottom: 22px; }
+  .product-hero .hero-visual { order: 5; }
+  .product-hero .hero-copy .actions { order: 6; margin-top: 18px; }
+  .product-hero .maker { order: 7; margin-top: 24px; }
+  .product-hero .stage { width: min(100%, 340px); }
   .trio, .comp-grid, .shots, .feat, .audience { grid-template-columns: 1fr; }
   .flow { grid-template-columns: 1fr; gap: 28px; }
   .link { display: none; }
@@ -533,8 +575,11 @@ html.js .reveal.in { opacity: 1; transform: none; }
   .faq summary { font-size: 1.0625rem; }
   .faq .ans { padding-right: 0; }
   .footer-top { grid-template-columns: 1fr 1fr; gap: 32px 20px; }
-  .pb-brand { display: none; }
-  .product-bar ul { gap: 22px; }
+  .product-bar .pb-brand { display: none; }
+  .product-bar .wrap { gap: 0; }
+  .product-bar ul { gap: 20px; }
+  .product-bar a { font-size: .875rem; }
+  .page-hero { padding-block: 36px 40px; }
   .mode dl div { grid-template-columns: 1fr; gap: 2px; }
 }
 
@@ -553,5 +598,4 @@ html.js .reveal.in { opacity: 1; transform: none; }
 @media (max-width: 900px) {
   .modes { grid-template-columns: 1fr; }
   .notify { grid-template-columns: 1fr; gap: 24px; }
-  .product-hero .ph-logo { height: 44px; }
 }

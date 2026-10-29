@@ -34,16 +34,31 @@
     items.forEach((el) => el.classList.add('in'));
   }
 
-  /* 활동 탭 (제품 페이지): 누르면 바뀌고, 화면에 보이는 동안은 6초마다 저절로 넘어간다 */
+  /* 제품 메뉴 줄(제품 영역): 현재 항목이 보이게 맞추고, 오른쪽에 더 있으면 끝에 옅은 그늘로 알린다 (UX-002) */
+  const barList = document.querySelector('.product-bar ul');
+  if (barList) {
+    const barNav = barList.parentElement;
+    const current = barList.querySelector('[aria-current="page"]');
+    const updateMore = () => {
+      const more = barList.scrollWidth - barList.clientWidth - barList.scrollLeft > 4;
+      barNav.classList.toggle('has-more', more);
+    };
+    if (current) {
+      const li = current.parentElement;
+      barList.scrollLeft = Math.max(0, li.offsetLeft - (barList.clientWidth - li.offsetWidth) / 2);
+    }
+    updateMore();
+    barList.addEventListener('scroll', updateMore, { passive: true });
+    window.addEventListener('resize', updateMore);
+  }
+
+  /* 활동 탭 (제품 개요): 눌러서 고른다. 자동으로 넘어가지 않는다 (UX-005).
+     키보드: 좌우·위아래 화살표로 이동, Home/End 로 처음·끝. */
   const tabsRoot = document.querySelector('.tabs');
   if (tabsRoot) {
     const tabs = [...tabsRoot.querySelectorAll('.tab')];
     const screens = [...document.querySelectorAll('.screens .screen')];
-    const DURATION = 6000;
     let current = 0;
-    let timer = null;
-    let visible = false;
-    let stopped = reduceMotion;   // 사용자가 직접 눌렀거나 모션 줄이기면 자동 넘김을 멈춘다
 
     const select = (i, focus) => {
       current = (i + tabs.length) % tabs.length;
@@ -56,30 +71,45 @@
       });
       if (focus) tabs[current].focus();
     };
-    const schedule = () => {
-      clearTimeout(timer);
-      if (stopped || !visible) { tabsRoot.classList.remove('autoplay'); return; }
-      tabsRoot.style.setProperty('--dur', `${DURATION}ms`);
-      tabsRoot.classList.remove('autoplay');
-      void tabsRoot.offsetWidth;            // 진행 줄 애니메이션을 처음부터 다시 시작
-      tabsRoot.classList.add('autoplay');
-      timer = setTimeout(() => { select(current + 1); schedule(); }, DURATION);
-    };
 
     tabs.forEach((t, n) => {
-      t.addEventListener('click', () => { stopped = true; select(n); schedule(); });
+      t.addEventListener('click', () => select(n));
       t.addEventListener('keydown', (e) => {
         const move = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 }[e.key];
-        if (move) { e.preventDefault(); stopped = true; select(current + move, true); schedule(); }
-        if (e.key === 'Home') { e.preventDefault(); stopped = true; select(0, true); schedule(); }
-        if (e.key === 'End') { e.preventDefault(); stopped = true; select(tabs.length - 1, true); schedule(); }
+        if (move) { e.preventDefault(); select(current + move, true); }
+        if (e.key === 'Home') { e.preventDefault(); select(0, true); }
+        if (e.key === 'End') { e.preventDefault(); select(tabs.length - 1, true); }
       });
     });
-
-    if ('IntersectionObserver' in window) {
-      new IntersectionObserver(([en]) => { visible = en.isIntersecting; schedule(); }, { threshold: 0.35 }).observe(document.querySelector('.act-wrap'));
-    }
   }
+
+  /* 이메일 주소 복사 (문의 페이지) (UX-006): 이 주소만 복사한다. 실패하면 주소를 선택해 직접 복사하도록 안내한다. */
+  document.querySelectorAll('[data-copy]').forEach((btn) => {
+    const status = btn.closest('.contact-card')?.querySelector('.copy-status');
+    btn.addEventListener('click', async () => {
+      let ok = true;
+      try {
+        await navigator.clipboard.writeText(btn.dataset.copy);
+      } catch (_) {
+        ok = false;
+        const el = document.getElementById(btn.dataset.target);
+        if (el) {
+          const range = document.createRange();
+          range.selectNodeContents(el);
+          const sel = window.getSelection();
+          sel.removeAllRanges();
+          sel.addRange(range);
+        }
+      }
+      if (status) {
+        status.textContent = ok
+          ? '이메일 주소를 복사했습니다.'
+          : '복사하지 못했습니다. 선택된 주소를 길게 누르거나 Ctrl+C로 복사해 주세요.';
+        clearTimeout(btn._clear);
+        btn._clear = setTimeout(() => { status.textContent = ''; }, 6000);
+      }
+    });
+  });
 
   /* 영상 슬롯
      [data-video] 가 가리키는 mp4 가 실제로 올라와 있을 때만 영상을 붙인다.
