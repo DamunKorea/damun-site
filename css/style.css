@@ -382,7 +382,26 @@ table.ip tbody th { width: 62%; white-space: normal; font-weight: 600; line-heig
 }
 
 @media (max-width: 560px) {
-  :root { --gutter: 20px; }
+  :root { --gutter: 20px; --header-h: 56px; }
+  /* 좁은 화면은 글자·여백·버튼을 한 단계 줄여 한 화면에 더 많이 보이게 */
+  body { font-size: 1rem; line-height: 1.7; }
+  .head h2, .section h2 { font-size: 1.375rem; }
+  .head { margin-bottom: 24px; }
+  .head p { margin-top: 8px; }
+  .section { padding: 36px 0; }
+  .page-head { padding: 24px 0 4px; }
+  .page-head h1 { font-size: 1.75rem; }
+  .page-head .lead { font-size: 1rem; margin-top: 14px; }
+  .brand img { height: 26px; }
+  .btn { min-height: 46px; padding: 0 20px; font-size: .9375rem; }
+  .points { gap: 24px; }
+  .points li { padding-top: 16px; }
+  .points h3 { font-size: 1.0625rem; }
+  .rows li { padding: 18px 0; }
+  .rows h3 { font-size: 1.0625rem; }
+  .choice h3 { font-size: 1.1875rem; }
+  .facts strong { font-size: 1.625rem; }
+  .c-mail { font-size: 1.375rem; }
   .steps, .steps-5 { grid-template-columns: minmax(0, 1fr); }
   .hero h1 { font-size: 1.875rem; }
   .hero .lead { margin-top: 16px; font-size: 1.0625rem; }
