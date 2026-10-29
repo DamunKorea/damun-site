@@ -21,38 +21,7 @@
   nav.addEventListener('click', (e) => { if (e.target.closest('a')) setMenu(false); });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
 
-  /* 스크롤 등장 */
-  const items = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window && !reduceMotion) {
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((en) => {
-        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
-      });
-    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
-    items.forEach((el) => io.observe(el));
-  } else {
-    items.forEach((el) => el.classList.add('in'));
-  }
-
-  /* 제품 메뉴 줄(제품 영역): 현재 항목이 보이게 맞추고, 오른쪽에 더 있으면 끝에 옅은 그늘로 알린다 (UX-002) */
-  const barList = document.querySelector('.product-bar ul');
-  if (barList) {
-    const barNav = barList.parentElement;
-    const current = barList.querySelector('[aria-current="page"]');
-    const updateMore = () => {
-      const more = barList.scrollWidth - barList.clientWidth - barList.scrollLeft > 4;
-      barNav.classList.toggle('has-more', more);
-    };
-    if (current) {
-      const li = current.parentElement;
-      barList.scrollLeft = Math.max(0, li.offsetLeft - (barList.clientWidth - li.offsetWidth) / 2);
-    }
-    updateMore();
-    barList.addEventListener('scroll', updateMore, { passive: true });
-    window.addEventListener('resize', updateMore);
-  }
-
-  /* 활동 탭 (제품 개요): 눌러서 고른다. 자동으로 넘어가지 않는다 (UX-005).
+  /* 활동 탭 (Rehaptic 소개): 눌러서 고른다. 자동으로 넘어가지 않는다 (UX-005).
      키보드: 좌우·위아래 화살표로 이동, Home/End 로 처음·끝. */
   const tabsRoot = document.querySelector('.tabs');
   if (tabsRoot) {
