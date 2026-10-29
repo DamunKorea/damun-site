@@ -26,8 +26,8 @@ html { scroll-padding-top: calc(var(--header-h) + 16px); -webkit-text-size-adjus
 @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
 body { margin: 0; font-family: var(--font); font-size: 1.0625rem; line-height: 1.75; color: var(--ink-2); background: var(--white); word-break: keep-all; overflow-wrap: break-word; -webkit-font-smoothing: antialiased; }
 img, video { max-width: 100%; height: auto; display: block; }
-h1, h2, h3 { margin: 0; color: var(--ink); line-height: 1.3; letter-spacing: -0.01em; }
-p { margin: 0 0 1em; }
+h1, h2, h3 { margin: 0; color: var(--ink); line-height: 1.3; letter-spacing: -0.01em; text-wrap: balance; }
+p { margin: 0 0 1em; text-wrap: pretty; }
 ul, ol { margin: 0; padding: 0; list-style: none; }
 a { color: inherit; }
 [hidden] { display: none !important; }
