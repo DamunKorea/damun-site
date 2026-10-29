@@ -75,6 +75,16 @@ a { color: inherit; }
 .site-nav a:not(.btn):hover { color: var(--ink); }
 .site-nav a[aria-current="page"]:not(.btn) { color: var(--accent-ink); border-bottom-color: var(--accent-ink); }
 
+/* ── 언어 전환 (UX-009): 한국어 | English ── */
+.site-nav .lang { display: flex; align-items: center; gap: 6px; margin-left: 4px; font-size: .875rem; color: var(--muted); }
+.site-nav .lang [aria-current] { font-weight: 700; color: var(--ink); }
+.site-nav .lang .sep { color: var(--line-strong); }
+.site-nav .lang a:not(.btn) { padding: 8px 4px; font-weight: 600; color: var(--muted); border-bottom: 0; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.site-nav .lang a:not(.btn):hover { color: var(--accent-ink); }
+.lang-short { display: none; }
+.nf-en { margin-top: 56px; padding-top: 32px; border-top: 1px solid var(--line); }
+.nf-en h2 { font-size: 1.5rem; margin-bottom: 8px; }
+
 /* ── 영역 · 제목 ── */
 .section { padding: 64px 0; border-top: 1px solid var(--line); }
 .hero + .section, .page-head + .section { border-top: 0; }
@@ -205,12 +215,13 @@ h3.group .state { margin-left: 10px; font-size: .875rem; }
 .faq .ans p { margin: 0 0 .6em; }
 
 /* ── 표 ── */
-.table-wrap { overflow-x: auto; }
+.table-wrap { position: relative; overflow-x: auto; }
 table { width: 100%; border-collapse: collapse; font-size: .9375rem; }
 th, td { padding: 14px 16px 14px 0; text-align: left; vertical-align: top; border-top: 1px solid var(--line); }
 thead th { font-size: .875rem; font-weight: 600; color: var(--muted); border-top: 0; border-bottom: 1px solid var(--line-strong); }
 tbody th { font-weight: 700; color: var(--ink); white-space: nowrap; }
 tbody tr:last-child th, tbody tr:last-child td { border-bottom: 1px solid var(--line); }
+table.ip tbody th { width: 62%; white-space: normal; font-weight: 600; line-height: 1.6; }
 
 .defs > div { display: grid; grid-template-columns: 11rem minmax(0, 1fr); gap: 4px 32px; padding: 16px 0; border-top: 1px solid var(--line); }
 .defs > div:last-child { border-bottom: 1px solid var(--line); }
@@ -220,6 +231,14 @@ tbody tr:last-child th, tbody tr:last-child td { border-bottom: 1px solid var(--
 .overview > div { display: grid; grid-template-columns: 9rem minmax(0, 1fr); gap: 4px 32px; padding: 16px 0; border-top: 1px solid var(--line); }
 .overview > div:last-child { border-bottom: 1px solid var(--line); }
 .overview dt { color: var(--muted); font-weight: 600; }
+.history li { display: grid; grid-template-columns: 7rem minmax(0, 1fr); gap: 4px 24px; padding: 16px 0; border-top: 1px solid var(--line); }
+.history li:last-child { border-bottom: 1px solid var(--line); }
+.history time { font-weight: 700; color: var(--accent-ink); font-variant-numeric: tabular-nums; }
+.history p { margin: 0; color: var(--ink); }
+.patents { margin: 10px 0 8px; }
+.patents li { position: relative; padding: 4px 0 4px 18px; font-size: .9375rem; }
+.patents li::before { content: ""; position: absolute; left: 0; top: 1.05em; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+.patent-note { display: block; font-size: .8125rem; color: var(--muted); }
 .overview dd { margin: 0; color: var(--ink); }
 
 /* ── 문의 ── */
@@ -322,7 +341,7 @@ tbody tr:last-child th, tbody tr:last-child td { border-bottom: 1px solid var(--
   .points, .tools { grid-template-columns: minmax(0, 1fr); gap: 32px; }
   .steps, .steps-5 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .choices { grid-template-columns: minmax(0, 1fr); }
-  .rows li, .defs > div, .overview > div { grid-template-columns: minmax(0, 1fr); }
+  .rows li, .defs > div, .overview > div, .history li { grid-template-columns: minmax(0, 1fr); }
   .section { padding: 48px 0; }
   .hero { padding: 28px 0 40px; }
   .page-head { padding: 32px 0 8px; }
@@ -343,6 +362,9 @@ tbody tr:last-child th, tbody tr:last-child td { border-bottom: 1px solid var(--
   table.spec td[data-label]::before, table.compare td[data-label]::before { content: attr(data-label) "  "; font-size: .8125rem; font-weight: 600; color: var(--muted); }
 
   .site-header .header-cta { display: inline-flex; }
+  .lang-short { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; padding: 0 10px; font-size: .875rem; font-weight: 600; color: var(--ink-2); text-decoration: none; border: 1px solid var(--line-strong); border-radius: 8px; }
+  .site-nav .lang { margin: 0; padding: 12px 0 4px; }
+  .site-nav .lang a:not(.btn) { display: inline-block; padding: 10px 6px; }
   .menu-toggle { display: inline-flex; }
   .site-nav { display: none; position: absolute; left: 0; right: 0; top: 100%; background: #fff; border-bottom: 1px solid var(--line); padding: 8px var(--gutter) 16px; }
   .site-nav.open { display: block; }
@@ -350,6 +372,13 @@ tbody tr:last-child th, tbody tr:last-child td { border-bottom: 1px solid var(--
   .site-nav a:not(.btn) { display: block; padding: 14px 2px; border-bottom: 1px solid var(--line); }
   .site-nav li:last-child a:not(.btn) { border-bottom: 0; }
   .nav-cta { display: none; }
+}
+
+@media (max-width: 420px) {
+  /* 좁은 폰: 로고 · 언어 · 메뉴만 남기고 문의하기는 메뉴 안으로 (UX-009) */
+  .site-header .header-cta { display: none; }
+  .nav-cta { display: block; padding-top: 8px; }
+  .nav-cta .btn { width: 100%; }
 }
 
 @media (max-width: 560px) {

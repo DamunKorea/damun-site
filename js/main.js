@@ -6,6 +6,21 @@
   const nav = document.getElementById('site-nav');
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* 화면 문구: 페이지의 lang 으로 한국어·영어를 고른다 (UX-009) */
+  const EN = document.documentElement.lang === 'en';
+  const S = EN
+    ? { open: 'Open menu', close: 'Close menu', copied: 'Email address copied.',
+        failed: 'Could not copy. Press and hold the selected address, or copy it with Ctrl+C.' }
+    : { open: '메뉴 열기', close: '메뉴 닫기', copied: '이메일 주소를 복사했습니다.',
+        failed: '복사하지 못했습니다. 선택된 주소를 길게 누르거나 Ctrl+C로 복사해 주세요.' };
+
+  /* 언어 전환: 보고 있던 구역(#앵커)을 그대로 가지고 대응 페이지로 간다 */
+  document.querySelectorAll('[data-lang-switch]').forEach((a) => {
+    a.addEventListener('click', () => {
+      a.setAttribute('href', a.getAttribute('href').split('#')[0] + location.hash);
+    });
+  });
+
   /* 헤더: 스크롤하면 아래 선이 생긴다 */
   const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 8);
   onScroll();
@@ -14,7 +29,7 @@
   /* 모바일 메뉴 */
   const setMenu = (open) => {
     toggle.setAttribute('aria-expanded', String(open));
-    toggle.querySelector('.sr-only').textContent = open ? '메뉴 닫기' : '메뉴 열기';
+    toggle.querySelector('.sr-only').textContent = open ? S.close : S.open;
     nav.classList.toggle('open', open);
   };
   toggle.addEventListener('click', () => setMenu(toggle.getAttribute('aria-expanded') !== 'true'));
@@ -71,9 +86,7 @@
         }
       }
       if (status) {
-        status.textContent = ok
-          ? '이메일 주소를 복사했습니다.'
-          : '복사하지 못했습니다. 선택된 주소를 길게 누르거나 Ctrl+C로 복사해 주세요.';
+        status.textContent = ok ? S.copied : S.failed;
         clearTimeout(btn._clear);
         btn._clear = setTimeout(() => { status.textContent = ''; }, 6000);
       }

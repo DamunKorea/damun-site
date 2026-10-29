@@ -1,35 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://damun.asia/</loc>
     <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://damun.asia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://damun.asia/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://damun.asia/"/>
+  </url>
+  <url>
+    <loc>https://damun.asia/en/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://damun.asia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://damun.asia/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://damun.asia/"/>
   </url>
   <url>
     <loc>https://damun.asia/about.html</loc>
     <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://damun.asia/about.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://damun.asia/en/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://damun.asia/about.html"/>
+  </url>
+  <url>
+    <loc>https://damun.asia/en/about.html</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://damun.asia/about.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://damun.asia/en/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://damun.asia/about.html"/>
   </url>
   <url>
     <loc>https://damun.asia/rehaptic.html</loc>
     <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://damun.asia/rehaptic.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://damun.asia/en/rehaptic.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://damun.asia/rehaptic.html"/>
+  </url>
+  <url>
+    <loc>https://damun.asia/en/rehaptic.html</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://damun.asia/rehaptic.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://damun.asia/en/rehaptic.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://damun.asia/rehaptic.html"/>
   </url>
   <url>
     <loc>https://damun.asia/technology.html</loc>
     <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://damun.asia/technology.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://damun.asia/en/technology.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://damun.asia/technology.html"/>
+  </url>
+  <url>
+    <loc>https://damun.asia/en/technology.html</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://damun.asia/technology.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://damun.asia/en/technology.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://damun.asia/technology.html"/>
   </url>
   <url>
     <loc>https://damun.asia/centers.html</loc>
     <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://damun.asia/centers.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://damun.asia/en/centers.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://damun.asia/centers.html"/>
+  </url>
+  <url>
+    <loc>https://damun.asia/en/centers.html</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://damun.asia/centers.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://damun.asia/en/centers.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://damun.asia/centers.html"/>
   </url>
   <url>
     <loc>https://damun.asia/family.html</loc>
     <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://damun.asia/family.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://damun.asia/en/family.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://damun.asia/family.html"/>
+  </url>
+  <url>
+    <loc>https://damun.asia/en/family.html</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://damun.asia/family.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://damun.asia/en/family.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://damun.asia/family.html"/>
   </url>
   <url>
     <loc>https://damun.asia/contact.html</loc>
     <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://damun.asia/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://damun.asia/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://damun.asia/contact.html"/>
+  </url>
+  <url>
+    <loc>https://damun.asia/en/contact.html</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://damun.asia/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://damun.asia/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://damun.asia/contact.html"/>
   </url>
   <url>
     <loc>https://damun.asia/privacy.html</loc>
     <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://damun.asia/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://damun.asia/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://damun.asia/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://damun.asia/en/privacy.html</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://damun.asia/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://damun.asia/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://damun.asia/privacy.html"/>
   </url>
 </urlset>
