@@ -590,3 +590,9 @@ html[lang="en"] .lattice b { font-size: .75rem; }
   .more .text-link, .actions .text-link, .related .text-link { display: inline-flex; align-items: center; min-height: 40px; }
   .related { display: flex; flex-wrap: wrap; align-items: center; gap: 0 6px; }
 }
+
+/* 가정용 활동 카드 끝의 「더 많은 콘텐츠」 칸 */
+.cc-more { grid-column: span 2; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 28px 32px; border: 1px dashed var(--line-strong); border-radius: var(--radius); background: var(--soft); }
+.cc-more h3 { margin: 0 0 8px; font-size: 1.1875rem; }
+.cc-more p { margin: 0 0 14px; max-width: 34rem; }
+@media (max-width: 900px) { .cc-more { grid-column: 1 / -1; padding: 22px 20px; } }
