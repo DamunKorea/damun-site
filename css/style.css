@@ -473,7 +473,7 @@ table.ip tbody th { width: 62%; white-space: normal; font-weight: 600; line-heig
 .fchip b { display: block; font-size: 1.25rem; font-weight: 800; color: var(--accent-light); line-height: 1.1; }
 .fchip.c1 { left: -30px; top: 16%; }
 .fchip.c2 { right: -22px; top: 6%; }
-.fchip.c3 { right: 7%; bottom: -24px; }
+.fchip.c3 { right: -18px; top: 62%; }
 .hero.dark .facts, .page-head.dark .facts { margin-top: 48px; border-color: rgba(255, 255, 255, .14); }
 .hero.dark .facts strong, .page-head.dark .facts strong { color: var(--accent-light); }
 .hero.dark .facts span, .page-head.dark .facts span { color: #9FB2CC; }
@@ -547,3 +547,10 @@ table.ip tbody th { width: 62%; white-space: normal; font-weight: 600; line-heig
   .layer { padding: 16px; }
   .gen { padding: 20px; }
 }
+
+/* 영어: 타임라인 이름표(Records·Suggest)가 줄바꿈되지 않게 */
+html[lang="en"] .timeline li { grid-template-columns: 5.25rem minmax(0, 1fr); }
+.band-dark .film { margin-bottom: 44px; }
+td[data-label="Level steps"], .spec thead th:last-child { white-space: nowrap; }
+html[lang="en"] .lattice { grid-template-columns: 5.4rem repeat(8, minmax(0, 1fr)); }
+html[lang="en"] .lattice b { font-size: .6875rem; }

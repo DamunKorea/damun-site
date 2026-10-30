@@ -75,11 +75,11 @@
         <div class="head">
           <p class="eyebrow">Platform</p>
           <h2>From input to AI analysis, one platform</h2>
-          <p>It reads finger input, guides you through contents, records values and analyzes the data. Dashed items are planned for the next generation (v3).</p>
+          <p>It reads finger input, guides the activities, records values and analyzes the data. Dashed items are planned for the next generation (v3).</p>
         </div>
         <div class="stack" role="list" aria-label="Rehaptic platform structure">
           <div class="layer l4" role="listitem"><div class="ln">AI analysis<span class="ls">The layer that reads the data</span></div><div class="lc"><span class="pill">Trends</span><span class="pill">Hand profile</span><span class="pill">Plan suggestion</span><span class="pill next">Movement data analysis</span></div></div>
-          <div class="layer l3" role="listitem"><div class="ln">Measure and record<span class="ls">The layer that leaves values</span></div><div class="lc"><span class="pill">7 measurements by finger</span><span class="pill">Level suggestions</span><span class="pill">Reports</span><span class="pill next">Hand movement measures</span></div></div>
+          <div class="layer l3" role="listitem"><div class="ln">Measure and record<span class="ls">The layer that records values</span></div><div class="lc"><span class="pill">7 measurements by finger</span><span class="pill">Level suggestions</span><span class="pill">Reports</span><span class="pill next">Hand movement measures</span></div></div>
           <div class="layer l2" role="listitem"><div class="ln">Contents<span class="ls">What you do</span></div><div class="lc"><span class="pill">Hand exercise</span><span class="pill">Rhythm play</span><span class="pill">Follow the Numbers</span><span class="pill">Mole catching</span><span class="pill next">Hand movement contents</span></div></div>
           <div class="layer l1" role="listitem"><div class="ln">Input<span class="ls">The layer that reads the hand</span></div><div class="lc"><span class="pill">8 independent levers</span><span class="pill">Vibration, sound and screen guidance</span><span class="pill next">Motion sensor (gyro etc.)</span></div></div>
         </div>
@@ -91,7 +91,7 @@
       <div class="wrap">
         <div class="head"><h2>What makes it different</h2></div>
         <ul class="points">
-          <li><h3>Finger-by-finger input and vibration</h3><p>Four independent levers per hand are pressed on their own, and vibration, the screen and sound together tell you which finger. The independent vibration and input structure is the subject of domestic patent applications (3 applications, not yet granted).</p></li>
+          <li><h3>Finger-by-finger input and vibration</h3><p>Four independent levers per hand are pressed on their own, and vibration, the screen and sound together tell you which finger. The structure of independent input and vibration is the subject of three domestic patent applications (pending, not yet granted).</p></li>
           <li><h3>Seven measurements by finger</h3><p>Reaction, separation, control, sustain, beat, sequence and coordination are recorded automatically as per-finger values. For each trial, the reaction time, result, press depth and fingers pressed instead are saved.</p></li>
           <li><h3>Records built for how organizations work</h3><p>Participants are registered by ID number instead of name, and records gather in the admin web without staff writing them down. Levels are only suggested; staff confirm and apply them.</p></li>
         </ul>
@@ -107,13 +107,13 @@
         <ol class="arch">
           <li>
             <h3>Haptic grips</h3>
-            <p>A left and right pair. Independent levers for each finger and vibration send signals and take input.</p>
+            <p>A left and right pair. Each finger has its own lever for input, and vibration tells you which finger.</p>
             <span class="chip">8 levers · signal about every 0.1 s</span>
           </li>
           <li>
             <span class="via">Bluetooth</span>
             <h3>Tablet app</h3>
-            <p>Guides training on an Android tablet and records each trial. If the internet drops, it stores records and sends them once reconnected.</p>
+            <p>Guides training on an Android tablet and records each trial. If the internet drops, it keeps the records and sends them once reconnected.</p>
             <span class="chip">Sound · large text · practice first</span>
           </li>
           <li>
@@ -125,7 +125,7 @@
           <li>
             <span class="via">Web browser</span>
             <h3>Admin web</h3>
-            <p>Shows center status and per-participant records, PDF reports and CSV, applies level suggestions and manages accounts.</p>
+            <p>Shows center status and each participant's records, provides PDF reports and CSV, applies level suggestions and manages accounts.</p>
             <span class="chip">Staff apply suggestions</span>
           </li>
         </ol>
@@ -138,7 +138,7 @@
         <div class="head">
           <p class="eyebrow">Next generation · v3</p>
           <h2>From fingers to the movement of the hand</h2>
-          <p>The next-generation grip (v3) carries a motion sensor (a gyro and the like) so it reads the tilt and movement of the hand together with finger input. It leads to new contents and AI analysis.</p>
+          <p>The next-generation grip (v3) carries a motion sensor (such as a gyro) and reads the tilt and movement of the hand together with finger input. It leads to new contents and AI analysis.</p>
         </div>
         <figure class="film" data-video="../video/v3-concept-en.mp4" data-poster="../video/v3-concept-en-poster.webp" data-mode="player" hidden>
           <figcaption>Next-generation grip concept video</figcaption>
@@ -161,7 +161,7 @@
       <div class="wrap">
         <div class="head">
           <h2>Seven areas measured by finger</h2>
-          <p>Each area, the value used to measure it and the contents that cover it. Area names are internal design names; app screens show only game names.</p>
+          <p>Each area, the value used to measure it and the contents that cover it. Area names are internal design names; app screens show only content names.</p>
         </div>
         <div class="table-wrap">
           <table class="spec">
@@ -286,7 +286,7 @@
           <div><dt>Hold rate</dt><dd>In Hand exercise, the sum of time actually held (counted only up to the target time) ÷ the sum of target times × 100.</dd></div>
           <div><dt>Rhythm accuracy</dt><dd>(exact + good × 0.5) ÷ rhythm trials × 100. A missed note is recorded as a failure.</dd></div>
           <div><dt>Press depth</dt><dd>How many % of the calibrated length the target finger's lever went at its deepest during a trial (0 to 100). It is the distance the lever moved, not force, and is compared only with the same user's other times.</dd></div>
-          <div><dt>Pressed instead</dt><dd>How many times another finger was pressed instead of (or together with) the finger that should be pressed, and which fingers. Only complete presses are counted, and only a newly pressed one is counted once.</dd></div>
+          <div><dt>Pressed instead</dt><dd>How many times another finger was pressed instead of (or together with) the finger that should be pressed, and which fingers. A press counts only when it is complete, and a finger that is newly pressed is counted once.</dd></div>
         </dl>
         <p class="fine">Press depth and fingers pressed instead are recorded values and do not enter the formulas for accuracy or level suggestions. The definitions are drafts under development and may change.</p>
       </div>
@@ -361,8 +361,8 @@
           </ul>
         </div>
         <div>
-          <div class="frame"><img src="../img/admin-analysis.webp" width="1440" height="900" alt="Admin web analysis screen: reaction time, left-right speed difference, beat offset, how many in a sequence, and the level card" loading="lazy"></div>
-          <p class="note">Screens shown in Korean. Example screens from a development environment using only ID numbers and fictional data; product specifications and screens may change.</p>
+          <div class="frame"><img src="../img/admin-analysis-en.webp" width="1440" height="900" alt="Admin web analysis screen: reaction time, left-right speed difference, beat offset, how many in a sequence, and the level card" loading="lazy"></div>
+          <p class="note">The admin web currently has a Korean interface only, so this screen is an English rendering of the actual screen of a development environment, using only ID numbers and fictional data. Product specifications, screens and available languages may change.</p>
         </div>
       </div>
     </section>

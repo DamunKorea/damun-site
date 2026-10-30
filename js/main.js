@@ -118,9 +118,15 @@
 
     if (mode === 'player') {
       video.controls = true;
-      video.preload = 'metadata';
-      if (slot.dataset.poster) video.poster = slot.dataset.poster;
-      video.src = `${url}#t=0.1`;
+      if (slot.dataset.poster) {
+        /* 첫 장면이 비어 있는 영상은 읽어 둔 대표 장면(poster)을 재생 전까지 그대로 보인다 */
+        video.preload = 'none';
+        video.poster = slot.dataset.poster;
+        video.src = url;
+      } else {
+        video.preload = 'metadata';
+        video.src = `${url}#t=0.1`;
+      }
       slot.prepend(video);
       slot.hidden = false;
     } else {
