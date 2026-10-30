@@ -596,3 +596,87 @@ html[lang="en"] .lattice b { font-size: .75rem; }
 .cc-more h3 { margin: 0 0 8px; font-size: 1.1875rem; }
 .cc-more p { margin: 0 0 14px; max-width: 34rem; }
 @media (max-width: 900px) { .cc-more { grid-column: 1 / -1; padding: 22px 20px; } }
+
+/* ══════ 메뉴 개편(대표 지시 2026-10-30 16시): 홈 · 회사 소개 · 제품(펼침) · 문의하기 + 제품 탭 줄 + 바닥글 묶음 ══════ */
+.site-nav .has-sub { position: relative; }
+.sub-toggle { display: inline-flex; align-items: center; gap: 8px; padding: 8px 2px; background: none; border: 0; border-bottom: 2px solid transparent; font: 600 1.0625rem/1.75 var(--font); color: #C5D1E3; cursor: pointer; }
+.sub-toggle:hover, .sub-toggle[aria-expanded="true"] { color: #fff; }
+.has-sub.is-current .sub-toggle { color: #fff; border-bottom-color: var(--accent-light); }
+.sub-toggle i { width: 7px; height: 7px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: translateY(-3px) rotate(45deg); transition: transform .15s; }
+.sub-toggle[aria-expanded="true"] i { transform: translateY(1px) rotate(-135deg); }
+.sub-label { display: none; }
+.site-nav .sub { display: none; position: absolute; left: 50%; top: calc(100% + 12px); transform: translateX(-50%); width: 560px; padding: 10px; background: #fff; border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 20px 50px rgba(6, 16, 36, .32); }
+.site-nav .sub::before { content: ""; position: absolute; left: 0; right: 0; top: -14px; height: 14px; }
+.has-sub.open .sub { display: block; }
+@media (hover: hover) and (min-width: 901px) { .has-sub:hover .sub { display: block; } }
+.site-nav .sub ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; }
+.site-nav .sub a:not(.btn) { display: block; padding: 12px 14px; border: 0; border-radius: 10px; color: var(--ink); text-decoration: none; }
+.site-nav .sub a:not(.btn):hover { background: var(--soft); color: var(--ink); }
+.site-nav .sub a b { display: block; font-size: 1rem; font-weight: 700; color: var(--ink); }
+.site-nav .sub a span { display: block; margin-top: 2px; font-size: .875rem; font-weight: 500; line-height: 1.5; color: var(--muted); }
+.site-nav .sub a[aria-current="page"]:not(.btn) { background: var(--wash); color: var(--ink); }
+.site-nav .sub a[aria-current="page"] b { color: var(--accent-ink); }
+
+.subnav { position: sticky; top: var(--header-h); z-index: 40; background: #13223D; border-bottom: 1px solid rgba(255, 255, 255, .08); }
+.subnav-inner { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; }
+.subnav-inner::-webkit-scrollbar { display: none; }
+.subnav a { flex: 0 0 auto; display: inline-flex; align-items: center; min-height: 46px; padding: 0 14px; font-size: .9375rem; font-weight: 600; color: #B7C6DD; text-decoration: none; border-bottom: 2px solid transparent; }
+.subnav a:first-child { padding-left: 0; }
+.subnav a:hover { color: #fff; }
+.subnav a[aria-current="page"] { color: #fff; border-bottom-color: var(--accent-light); }
+.subnav :focus-visible { outline-color: var(--accent-light); outline-offset: -3px; }
+html:has(.subnav) { scroll-padding-top: calc(var(--header-h) + 62px); }
+
+.f-links { gap: 20px 64px; }
+.f-group { display: flex; flex-direction: column; gap: 2px; min-width: 150px; }
+.f-group .f-head { margin: 0 0 6px; font-size: .8125rem; font-weight: 700; letter-spacing: .04em; color: #8FA4C4; }
+.site-footer .f-links .f-group a { display: block; padding: 3px 0; }
+
+@media (max-width: 900px) {
+  .sub-toggle { display: none; }
+  .sub-label { display: block; padding: 16px 2px 2px; font-size: .8125rem; font-weight: 700; letter-spacing: .04em; color: #8FA4C4; }
+  .site-nav .sub { display: block; position: static; transform: none; width: auto; padding: 0; background: none; border: 0; box-shadow: none; }
+  .site-nav .sub::before { display: none; }
+  .site-nav .sub ul { display: block; }
+  .site-nav .sub a:not(.btn) { display: block; padding: 11px 2px 11px 14px; border-radius: 0; border-bottom: 1px solid rgba(255, 255, 255, .1); color: #C5D1E3; }
+  .site-nav .sub a:not(.btn):hover { background: none; color: #fff; }
+  .site-nav .sub a b { font-size: 1rem; font-weight: 600; color: inherit; }
+  .site-nav .sub a span { font-size: .8125rem; color: #8FA4C4; }
+  .site-nav .sub a[aria-current="page"]:not(.btn) { background: none; color: #fff; }
+  .site-nav .sub a[aria-current="page"] b { color: #fff; }
+  .subnav { position: static; }
+  html:has(.subnav) { scroll-padding-top: calc(var(--header-h) + 16px); }
+  .f-links { gap: 12px 40px; }
+  .site-footer .f-links .f-group a { display: flex; align-items: center; min-height: 40px; padding: 0; }
+}
+
+/* 센터용 · 가정용 한곳 비교(대표 지시: 콘텐츠는 같고 구성만 다름을 쉽게) */
+.modes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.mode { display: flex; flex-direction: column; border: 1px solid var(--line-strong); border-radius: 16px; overflow: hidden; background: #fff; }
+.mode .kit { margin: 0; aspect-ratio: 16 / 10; background: linear-gradient(180deg, #F6F9FF 0%, #E6EEFC 100%); border-bottom: 1px solid var(--line); }
+.mode .kit img { width: 100%; height: 100%; object-fit: cover; }
+.mode-body { display: flex; flex-direction: column; flex: 1; padding: 24px 28px 28px; }
+.mode-tag { align-self: flex-start; margin: 0 0 10px; padding: 3px 12px; border-radius: 999px; background: var(--wash); color: var(--accent-ink); font-size: .875rem; font-weight: 700; }
+.mode-tag.home { background: #E2F5F0; color: #0A7464; }
+.mode h3 { font-size: 1.5rem; }
+.mode .state { margin-top: 6px; }
+.mode-rows { margin: 18px 0 22px; }
+.mode-rows > div { display: grid; grid-template-columns: 6.5rem minmax(0, 1fr); gap: 4px 14px; padding: 10px 0; border-top: 1px solid var(--line); font-size: .9375rem; }
+.mode-rows dt { color: var(--muted); font-weight: 600; }
+.mode-rows dd { margin: 0; color: var(--ink-2); }
+.mode .text-link { margin-top: auto; align-self: flex-start; }
+.same { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; margin-top: 20px; padding: 16px 22px; border: 1px solid var(--line); border-radius: 14px; background: var(--soft); }
+.same-title { margin: 0; font-size: .9375rem; color: var(--muted); }
+.same-title b { margin-right: 6px; color: var(--ink); }
+.same-list { display: flex; flex-wrap: wrap; gap: 8px; }
+.same-list li { padding: 3px 12px; border: 1px solid var(--line); border-radius: 999px; background: #fff; font-size: .875rem; font-weight: 600; color: var(--ink-2); }
+.same-list li:last-child { border-style: dashed; color: var(--muted); }
+.modes-sec .fine { margin-top: 14px; }
+html[lang="en"] .mode-rows > div { grid-template-columns: 5.4rem minmax(0, 1fr); }
+@media (max-width: 760px) {
+  .modes { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .mode-body { padding: 20px; }
+  .mode h3 { font-size: 1.3125rem; }
+  .mode-rows > div { grid-template-columns: 5.6rem minmax(0, 1fr); font-size: .9063rem; }
+  .same { padding: 14px 16px; }
+}

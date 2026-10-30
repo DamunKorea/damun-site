@@ -43,20 +43,23 @@
       </button>
       <nav id="site-nav" class="site-nav" aria-label="주요 메뉴">
         <ul>
+          <li><a href="index.html">홈</a></li>
           <li><a href="about.html">회사 소개</a></li>
-          <li><a href="rehaptic.html" aria-current="page">Rehaptic</a></li>
+          <li class="has-sub is-current"><button class="sub-toggle" type="button" aria-expanded="false" aria-controls="nav-product">제품<i aria-hidden="true"></i></button><span class="sub-label" aria-hidden="true">제품</span><div class="sub" id="nav-product"><ul aria-label="제품"><li><a href="rehaptic.html"><b>제품 소개</b><span>그립과 콘텐츠를 한눈에</span></a></li><li><a href="centers.html"><b>센터용</b><span>태블릿 + 관리자 웹 · 담당자가 진행</span></a></li><li><a href="family.html" aria-current="page"><b>가정용</b><span>스마트폰 앱 · 집에서 부담 없이</span></a></li><li><a href="technology.html"><b>기술</b><span>손가락별 측정과 AI 계획</span></a></li></ul></div></li>
           <li class="nav-cta"><a class="btn btn-primary btn-sm" href="contact.html">문의하기</a></li>
           <li class="lang"><span class="lang-group" role="group" aria-label="언어 선택"><span lang="ko" aria-current="true">한국어</span><span class="sep" aria-hidden="true">|</span><a lang="en" hreflang="en" href="en/family.html" data-lang-switch>English</a></span></li>
         </ul>
       </nav>
     </div>
   </header>
+  <nav class="subnav" aria-label="제품 메뉴">
+    <div class="wrap subnav-inner"><a href="rehaptic.html">제품 소개</a><a href="centers.html">센터용</a><a href="family.html" aria-current="page">가정용</a><a href="technology.html">기술</a></div>
+  </nav>
 
   <main id="main">
 
     <section class="page-head">
       <div class="wrap">
-        <a class="back" href="rehaptic.html">← Rehaptic 소개</a>
         <h1>집에서 즐기는 Rehaptic,<br>준비하고 있습니다</h1>
         <p class="lead">어르신과 가족이 집에서 손과 머리를 함께 움직이는 활동을 즐길 수 있도록, 모바일 앱과 그립을 준비하고 있습니다.</p>
         <p class="state">2028년 이후 출시 예정</p>
@@ -68,17 +71,17 @@
       <div class="wrap">
         <div class="head">
           <h2>집에서는 이렇게 즐겨요</h2>
-          <p>앱을 켜고 그립을 쥔 뒤, 화면이 알려 주는 대로 손과 머리를 함께 움직입니다.</p>
+          <p>스마트폰 앱을 켜고 그립을 쥔 뒤, 화면이 알려 주는 대로 손과 머리를 함께 움직입니다.</p>
         </div>
         <div class="frame home-scene"><img src="img/home-living.webp" width="1280" height="800" alt="거실 탁자 위 태블릿에 손 운동 앱 화면이 열려 있고, 그 앞에서 양손에 그립을 쥔 모습. 1 앱을 켜요, 2 그립을 쥐어요, 3 화면을 따라 해요"></div>
         <p class="note home-note">장면은 이해를 돕기 위해 그린 예시이며, 기기 화면은 센터용 태블릿 앱의 실제 화면입니다. 가정용 모바일 앱은 화면 구성(UI)이 달라질 수 있고, 제품 사양과 일정은 바뀔 수 있습니다.</p>
         <ol class="steps steps-3">
-          <li><h3>앱을 켜요</h3><p>스마트폰이나 태블릿에서 앱을 엽니다.</p></li>
+          <li><h3>앱을 켜요</h3><p>내 스마트폰에서 앱을 엽니다.</p></li>
           <li><h3>그립을 쥐어요</h3><p>왼손·오른손 그립을 양손에 쥡니다.</p></li>
           <li><h3>화면을 따라 해요</h3><p>화면·소리·진동이 알려 주는 대로 누릅니다.</p></li>
         </ol>
         <figure class="film" data-video="video/home-play.mp4" data-poster="video/home-play-poster.webp" data-mode="player" hidden>
-          <figcaption>집에서 즐기는 모습 (40초 · 소리 없음)</figcaption>
+          <figcaption>집에서 즐기는 모습 (40초 · 음악)</figcaption>
         </figure>
       </div>
     </section>
@@ -143,9 +146,10 @@
             <thead><tr><th scope="col"><span class="sr-only">구분</span></th><th scope="col">센터용</th><th scope="col">가정용</th></tr></thead>
             <tbody>
               <tr><th scope="row">쓰는 분</th><td data-label="센터용">프로그램 담당자와 어르신</td><td data-label="가정용">어르신과 가족</td></tr>
-              <tr><th scope="row">구성</th><td data-label="센터용">햅틱 그립 + 태블릿 앱 + 관리자 웹</td><td data-label="가정용">햅틱 그립 + 모바일 앱</td></tr>
+              <tr><th scope="row">구성</th><td data-label="센터용">햅틱 그립 + 태블릿 앱 + 관리자 웹</td><td data-label="가정용">햅틱 그립 + 스마트폰 앱</td></tr>
               <tr><th scope="row">콘텐츠 · 측정</th><td data-label="센터용">모두 같음</td><td data-label="가정용">모두 같음</td></tr>
-              <tr><th scope="row">이용 방식</th><td data-label="센터용">담당자가 프로그램을 진행하고, 기록은 관리자 웹에서 관리합니다</td><td data-label="가정용">집에서 모바일 앱으로 스스로 즐깁니다</td></tr>
+              <tr><th scope="row">이용 방식</th><td data-label="센터용">담당자가 프로그램을 진행하고, 기록은 관리자 웹에서 관리합니다</td><td data-label="가정용">집에서 스마트폰 앱으로 스스로 즐깁니다</td></tr>
+              <tr><th scope="row">이렇게 나눈 까닭</th><td data-label="센터용">담당자가 여러 분의 기록을 한곳에서 관리해, 더 꼼꼼한 서비스를 하도록</td><td data-label="가정용">태블릿과 관리자 웹 없이 꼭 필요한 것만 담아, 부담 없이 시작하도록</td></tr>
               <tr><th scope="row">상태</th><td data-label="센터용">2027년 상반기 출시 예정</td><td data-label="가정용">2028년 이후 출시 예정</td></tr>
             </tbody>
           </table>
@@ -182,13 +186,8 @@
       <div class="f-top">
         <a class="f-logo" href="index.html" aria-label="다문 DAMUN 홈"><img src="img/damun-white.svg" alt="damun" width="124" height="38"></a>
         <nav class="f-links" aria-label="사이트 안내">
-          <a href="about.html">회사 소개</a>
-          <a href="rehaptic.html">Rehaptic</a>
-          <a href="technology.html">기술</a>
-          <a href="centers.html">센터용</a>
-          <a href="family.html">가정용</a>
-          <a href="contact.html">문의</a>
-          <a href="privacy.html">개인정보 처리방침</a>
+          <div class="f-group"><p class="f-head">회사</p><a href="index.html">홈</a><a href="about.html">회사 소개</a><a href="contact.html">문의</a><a href="privacy.html">개인정보 처리방침</a></div>
+          <div class="f-group"><p class="f-head">제품</p><a href="rehaptic.html">제품 소개</a><a href="centers.html">센터용</a><a href="family.html">가정용</a><a href="technology.html">기술</a></div>
         </nav>
       </div>
       <p class="f-mail">문의 <a href="mailto:info@damun.asia">info@damun.asia</a></p>

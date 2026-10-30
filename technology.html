@@ -43,20 +43,23 @@
       </button>
       <nav id="site-nav" class="site-nav" aria-label="주요 메뉴">
         <ul>
+          <li><a href="index.html">홈</a></li>
           <li><a href="about.html">회사 소개</a></li>
-          <li><a href="rehaptic.html" aria-current="page">Rehaptic</a></li>
+          <li class="has-sub is-current"><button class="sub-toggle" type="button" aria-expanded="false" aria-controls="nav-product">제품<i aria-hidden="true"></i></button><span class="sub-label" aria-hidden="true">제품</span><div class="sub" id="nav-product"><ul aria-label="제품"><li><a href="rehaptic.html"><b>제품 소개</b><span>그립과 콘텐츠를 한눈에</span></a></li><li><a href="centers.html"><b>센터용</b><span>태블릿 + 관리자 웹 · 담당자가 진행</span></a></li><li><a href="family.html"><b>가정용</b><span>스마트폰 앱 · 집에서 부담 없이</span></a></li><li><a href="technology.html" aria-current="page"><b>기술</b><span>손가락별 측정과 AI 계획</span></a></li></ul></div></li>
           <li class="nav-cta"><a class="btn btn-primary btn-sm" href="contact.html">문의하기</a></li>
           <li class="lang"><span class="lang-group" role="group" aria-label="언어 선택"><span lang="ko" aria-current="true">한국어</span><span class="sep" aria-hidden="true">|</span><a lang="en" hreflang="en" href="en/technology.html" data-lang-switch>English</a></span></li>
         </ul>
       </nav>
     </div>
   </header>
+  <nav class="subnav" aria-label="제품 메뉴">
+    <div class="wrap subnav-inner"><a href="rehaptic.html">제품 소개</a><a href="centers.html">센터용</a><a href="family.html">가정용</a><a href="technology.html" aria-current="page">기술</a></div>
+  </nav>
 
   <main id="main">
 
     <section class="page-head dark">
       <div class="wrap">
-        <a class="back" href="rehaptic.html">← Rehaptic 소개</a>
         <p class="eyebrow">기술</p>
         <h1>손가락마다 재고,<br>기록으로 남깁니다</h1>
         <p class="lead">Rehaptic은 손가락별 입력과 일곱 가지 측정 영역을 바탕으로, 훈련을 어떻게 수행했는지를 자동으로 기록합니다. 기록이 쌓이면 난이도를 제안하고, 정하는 것은 사람입니다. 다음 세대에서는 모션 센서로 손의 움직임까지 읽고, AI 분석으로 이어집니다.</p>
@@ -80,7 +83,7 @@
         <div class="stack" role="list" aria-label="Rehaptic 플랫폼 구조">
           <div class="layer l4" role="listitem"><div class="ln">AI 분석<span class="ls">데이터를 읽는 층</span></div><div class="lc"><span class="pill">경향 정리</span><span class="pill">손 프로필</span><span class="pill">구성 추천</span><span class="pill next">움직임 데이터 분석</span></div></div>
           <div class="layer l3" role="listitem"><div class="ln">측정 · 기록<span class="ls">값으로 남기는 층</span></div><div class="lc"><span class="pill">손가락별 7가지 측정</span><span class="pill">난이도 제안</span><span class="pill">리포트</span><span class="pill next">손 움직임 지표</span></div></div>
-          <div class="layer l2" role="listitem"><div class="ln">콘텐츠<span class="ls">하는 활동</span></div><div class="lc"><span class="pill">손 운동</span><span class="pill">리듬 놀이</span><span class="pill">숫자 따라 누르기</span><span class="pill">두더지 잡기</span><span class="pill next">손 움직임 콘텐츠</span></div></div>
+          <div class="layer l2" role="listitem"><div class="ln">콘텐츠<span class="ls">하는 활동</span></div><div class="lc"><span class="pill">손 운동</span><span class="pill">리듬 놀이</span><span class="pill">숫자 따라 누르기</span><span class="pill">두더지 잡기</span><span class="pill">주먹으로 피하기</span><span class="pill next">손 움직임 콘텐츠</span></div></div>
           <div class="layer l1" role="listitem"><div class="ln">입력<span class="ls">손에서 읽는 층</span></div><div class="lc"><span class="pill">독립 레버 8채널</span><span class="pill">진동 · 소리 · 화면 안내</span><span class="pill next">모션 센서(자이로 등)</span></div></div>
         </div>
         <p class="legend"><span class="pill sample"></span> 지금 구성 <span class="pill next sample"></span> 다음 세대(v3) 계획</p>
@@ -141,7 +144,7 @@
           <p>다음 세대 그립(v3)은 모션 센서(자이로 등)를 담아, 손가락 입력과 함께 손의 방향(기울기·회전)과 위치, 이동 경로를 읽습니다. 새 콘텐츠와 AI 분석으로 이어집니다.</p>
         </div>
         <figure class="film" data-video="video/v3-concept.mp4" data-poster="video/v3-concept-poster.webp" data-mode="player" hidden>
-          <figcaption>다음 세대 그립 개념 영상</figcaption>
+          <figcaption>다음 세대 그립 개념 영상 (30초 · 음악)</figcaption>
         </figure>
         <ul class="points">
           <li><h3>손의 방향과 위치를 읽는 센서</h3><p>그립 안의 모션 센서가 손의 기울기와 회전, 그리고 어디서 어디로 움직였는지(위치와 이동 경로)를 읽습니다.</p></li>
@@ -409,13 +412,8 @@
       <div class="f-top">
         <a class="f-logo" href="index.html" aria-label="다문 DAMUN 홈"><img src="img/damun-white.svg" alt="damun" width="124" height="38"></a>
         <nav class="f-links" aria-label="사이트 안내">
-          <a href="about.html">회사 소개</a>
-          <a href="rehaptic.html">Rehaptic</a>
-          <a href="technology.html">기술</a>
-          <a href="centers.html">센터용</a>
-          <a href="family.html">가정용</a>
-          <a href="contact.html">문의</a>
-          <a href="privacy.html">개인정보 처리방침</a>
+          <div class="f-group"><p class="f-head">회사</p><a href="index.html">홈</a><a href="about.html">회사 소개</a><a href="contact.html">문의</a><a href="privacy.html">개인정보 처리방침</a></div>
+          <div class="f-group"><p class="f-head">제품</p><a href="rehaptic.html">제품 소개</a><a href="centers.html">센터용</a><a href="family.html">가정용</a><a href="technology.html">기술</a></div>
         </nav>
       </div>
       <p class="f-mail">문의 <a href="mailto:info@damun.asia">info@damun.asia</a></p>

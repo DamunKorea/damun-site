@@ -43,20 +43,23 @@
       </button>
       <nav id="site-nav" class="site-nav" aria-label="주요 메뉴">
         <ul>
+          <li><a href="index.html">홈</a></li>
           <li><a href="about.html">회사 소개</a></li>
-          <li><a href="rehaptic.html" aria-current="page">Rehaptic</a></li>
+          <li class="has-sub is-current"><button class="sub-toggle" type="button" aria-expanded="false" aria-controls="nav-product">제품<i aria-hidden="true"></i></button><span class="sub-label" aria-hidden="true">제품</span><div class="sub" id="nav-product"><ul aria-label="제품"><li><a href="rehaptic.html"><b>제품 소개</b><span>그립과 콘텐츠를 한눈에</span></a></li><li><a href="centers.html" aria-current="page"><b>센터용</b><span>태블릿 + 관리자 웹 · 담당자가 진행</span></a></li><li><a href="family.html"><b>가정용</b><span>스마트폰 앱 · 집에서 부담 없이</span></a></li><li><a href="technology.html"><b>기술</b><span>손가락별 측정과 AI 계획</span></a></li></ul></div></li>
           <li class="nav-cta"><a class="btn btn-primary btn-sm" href="contact.html">문의하기</a></li>
           <li class="lang"><span class="lang-group" role="group" aria-label="언어 선택"><span lang="ko" aria-current="true">한국어</span><span class="sep" aria-hidden="true">|</span><a lang="en" hreflang="en" href="en/centers.html" data-lang-switch>English</a></span></li>
         </ul>
       </nav>
     </div>
   </header>
+  <nav class="subnav" aria-label="제품 메뉴">
+    <div class="wrap subnav-inner"><a href="rehaptic.html">제품 소개</a><a href="centers.html" aria-current="page">센터용</a><a href="family.html">가정용</a><a href="technology.html">기술</a></div>
+  </nav>
 
   <main id="main">
 
     <section class="page-head">
       <div class="wrap">
-        <a class="back" href="rehaptic.html">← Rehaptic 소개</a>
         <h1>센터의 손 운동 프로그램을<br>쉽게 시작하고 이어갑니다</h1>
         <p class="lead">복지관 · 경로당 · 주·야간보호센터 · 요양시설의 프로그램 담당자를 위한 센터용 Rehaptic 안내입니다.</p>
         <p class="state">2027년 상반기 출시 예정</p>
@@ -146,7 +149,7 @@
       </div>
       <div class="wrap">
         <figure class="film" data-video="video/admin-tour.mp4" data-poster="video/admin-tour-poster.webp" data-mode="player" hidden>
-          <figcaption>관리자 웹 둘러보기</figcaption>
+          <figcaption>관리자 웹 둘러보기 (20초 · 음악)</figcaption>
         </figure>
       </div>
     </section>
@@ -239,13 +242,8 @@
       <div class="f-top">
         <a class="f-logo" href="index.html" aria-label="다문 DAMUN 홈"><img src="img/damun-white.svg" alt="damun" width="124" height="38"></a>
         <nav class="f-links" aria-label="사이트 안내">
-          <a href="about.html">회사 소개</a>
-          <a href="rehaptic.html">Rehaptic</a>
-          <a href="technology.html">기술</a>
-          <a href="centers.html">센터용</a>
-          <a href="family.html">가정용</a>
-          <a href="contact.html">문의</a>
-          <a href="privacy.html">개인정보 처리방침</a>
+          <div class="f-group"><p class="f-head">회사</p><a href="index.html">홈</a><a href="about.html">회사 소개</a><a href="contact.html">문의</a><a href="privacy.html">개인정보 처리방침</a></div>
+          <div class="f-group"><p class="f-head">제품</p><a href="rehaptic.html">제품 소개</a><a href="centers.html">센터용</a><a href="family.html">가정용</a><a href="technology.html">기술</a></div>
         </nav>
       </div>
       <p class="f-mail">문의 <a href="mailto:info@damun.asia">info@damun.asia</a></p>

@@ -43,8 +43,9 @@
       </button>
       <nav id="site-nav" class="site-nav" aria-label="Main menu">
         <ul>
+          <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About DAMUN</a></li>
-          <li><a href="rehaptic.html">Rehaptic</a></li>
+          <li class="has-sub"><button class="sub-toggle" type="button" aria-expanded="false" aria-controls="nav-product">Product<i aria-hidden="true"></i></button><span class="sub-label" aria-hidden="true">Product</span><div class="sub" id="nav-product"><ul aria-label="Product"><li><a href="rehaptic.html"><b>Product overview</b><span>The grip and contents at a glance</span></a></li><li><a href="centers.html"><b>For centers</b><span>Tablet + admin web, run by staff</span></a></li><li><a href="family.html"><b>For home</b><span>Smartphone app, easy to start at home</span></a></li><li><a href="technology.html"><b>Technology</b><span>Per-finger measurement and AI plans</span></a></li></ul></div></li>
           <li class="nav-cta"><a class="btn btn-primary btn-sm" href="contact.html" aria-current="page">Contact us</a></li>
           <li class="lang"><span class="lang-group" role="group" aria-label="Language"><span lang="en" aria-current="true">English</span><span class="sep" aria-hidden="true">|</span><a lang="ko" hreflang="ko" href="../contact.html" data-lang-switch>한국어</a></span></li>
         </ul>
@@ -84,13 +85,8 @@
       <div class="f-top">
         <a class="f-logo" href="index.html" aria-label="DAMUN home"><img src="../img/damun-white.svg" alt="damun" width="124" height="38"></a>
         <nav class="f-links" aria-label="Site guide">
-          <a href="about.html">About DAMUN</a>
-          <a href="rehaptic.html">Rehaptic</a>
-          <a href="technology.html">Technology</a>
-          <a href="centers.html">For centers</a>
-          <a href="family.html">For home</a>
-          <a href="contact.html">Contact</a>
-          <a href="privacy.html">Privacy policy</a>
+          <div class="f-group"><p class="f-head">Company</p><a href="index.html">Home</a><a href="about.html">About DAMUN</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy policy</a></div>
+          <div class="f-group"><p class="f-head">Product</p><a href="rehaptic.html">Product overview</a><a href="centers.html">For centers</a><a href="family.html">For home</a><a href="technology.html">Technology</a></div>
         </nav>
       </div>
       <p class="f-mail">Contact <a href="mailto:info@damun.asia">info@damun.asia</a></p>

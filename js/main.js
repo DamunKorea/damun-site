@@ -36,6 +36,20 @@
   nav.addEventListener('click', (e) => { if (e.target.closest('a')) setMenu(false); });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
 
+  /* 상단 메뉴 「제품」 펼침 목록: 눌러 열고 닫는다. 바깥을 누르거나 Esc, 초점이 밖으로 나가면 닫힌다.
+     넓은 화면에서 마우스를 올려도 열린다(CSS). 좁은 화면 메뉴에서는 늘 펼쳐 둔다. */
+  document.querySelectorAll('.has-sub').forEach((li) => {
+    const btn = li.querySelector('.sub-toggle');
+    if (!btn) return;
+    const set = (open) => { btn.setAttribute('aria-expanded', String(open)); li.classList.toggle('open', open); };
+    btn.addEventListener('click', (e) => { e.stopPropagation(); set(btn.getAttribute('aria-expanded') !== 'true'); });
+    li.addEventListener('focusout', (e) => { if (!li.contains(e.relatedTarget)) set(false); });
+    document.addEventListener('click', (e) => { if (!li.contains(e.target)) set(false); });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') { set(false); btn.focus(); }
+    });
+  });
+
   /* 활동 고르기 (Rehaptic 소개): 눌러서 고른다. 자동으로 넘어가지 않는다 (UX-005). 펼침 버튼(aria-expanded) 방식이라 모두 Tab 키로 닿는다.
      키보드: 좌우·위아래 화살표로도 이동, Home/End 로 처음·끝. */
   const tabsRoot = document.querySelector('.tabs');
