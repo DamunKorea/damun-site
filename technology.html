@@ -138,20 +138,20 @@
         <div class="head">
           <p class="eyebrow">다음 세대 · v3</p>
           <h2>손가락에서 손의 움직임까지</h2>
-          <p>다음 세대 그립(v3)은 모션 센서(자이로 등)를 담아, 손가락 입력과 함께 손의 기울기와 움직임을 읽습니다. 새 콘텐츠와 AI 분석으로 이어집니다.</p>
+          <p>다음 세대 그립(v3)은 모션 센서(자이로 등)를 담아, 손가락 입력과 함께 손의 방향(기울기·회전)과 위치, 이동 경로를 읽습니다. 새 콘텐츠와 AI 분석으로 이어집니다.</p>
         </div>
         <figure class="film" data-video="video/v3-concept.mp4" data-poster="video/v3-concept-poster.webp" data-mode="player" hidden>
           <figcaption>다음 세대 그립 개념 영상</figcaption>
         </figure>
         <ul class="points">
-          <li><h3>손의 움직임을 읽는 센서</h3><p>그립 안의 모션 센서가 손의 기울기와 회전, 움직임을 읽습니다.</p></li>
+          <li><h3>손의 방향과 위치를 읽는 센서</h3><p>그립 안의 모션 센서가 손의 기울기와 회전, 그리고 어디서 어디로 움직였는지(위치와 이동 경로)를 읽습니다.</p></li>
           <li><h3>손 움직임 콘텐츠</h3><p>그립을 쥔 채 손을 움직이는 새 콘텐츠를 만듭니다. 손가락 입력과 손의 움직임이 함께 쓰입니다.</p></li>
           <li><h3>측정 데이터 AI 분석</h3><p>손가락 기록과 움직임 기록을 함께 모아 경향을 정리하고 구성을 추천합니다. 적용은 담당자가 확인합니다.</p></li>
         </ul>
         <ul class="gallery v3-gallery">
-          <li class="cc"><figure><img src="img/v3-grip.webp" width="1280" height="800" alt="그립과 모션 센서: 손가락 8채널과 X·Y·Z 축 신호 개념도" loading="lazy"></figure><h3>그립 + 모션 센서</h3></li>
-          <li class="cc"><figure><img src="img/v3-content.webp" width="1280" height="800" alt="손 움직임 콘텐츠 개념 예시: 그립을 움직여 점을 길 따라 옮깁니다" loading="lazy"></figure><h3>손 움직임 콘텐츠</h3></li>
-          <li class="cc"><figure><img src="img/v3-analysis.webp" width="1280" height="800" alt="움직임 기록과 AI 요약 개념 예시: 움직임 추이, 움직인 길, 지표 막대" loading="lazy"></figure><h3>움직임 기록과 AI 요약</h3></li>
+          <li class="cc"><figure><img src="img/v3-grip.webp" width="1280" height="800" alt="그립과 모션 센서 개념 그림: 손가락 8채널, 방향(기울기·회전), 위치와 이동 경로" loading="lazy"></figure><h3>그립 + 모션 센서</h3></li>
+          <li class="cc"><figure><img src="img/v3-content.webp" width="1280" height="800" alt="손 움직임 콘텐츠 개념 예시: 그립을 움직여 점을 길 따라 옮기고, 손의 방향과 위치도 함께 읽습니다" loading="lazy"></figure><h3>손 움직임 콘텐츠</h3></li>
+          <li class="cc"><figure><img src="img/v3-analysis.webp" width="1280" height="800" alt="움직임 기록과 AI 요약 개념 예시: 3D 이동 경로, 방향 추이, 손 프로필, 지표" loading="lazy"></figure><h3>움직임 기록과 AI 요약</h3></li>
         </ul>
         <p class="fine">다음 세대(v3)는 개발 계획이며 항목과 일정은 바뀔 수 있습니다. 측정값은 훈련 수행 기록이며 진단이나 효과 판단이 아닙니다. 위 그림과 영상은 개념 예시이고 실제 제품·앱 화면이 아닙니다.</p>
       </div>
@@ -203,7 +203,7 @@
           </table>
         </div>
         <p class="legend"><span class="dot m"></span> 주로 보는 영역 <span class="dot s"></span> 함께 보는 영역 (반응은 손 운동 · 숫자 따라 누르기의 반응 시간으로 잽니다)</p>
-        <p class="fine">두더지 잡기는 켜진 손가락을 누르는 반응 놀이이며, 측정 영역과의 연결은 정하고 있습니다.</p>
+        <p class="fine">두더지 잡기는 반응·분리, 주먹으로 피하기는 협응·지속을 보는 콘텐츠입니다. 두더지 잡기의 반응 시간은 다른 콘텐츠의 반응 값과 합산하지 않습니다. 위 표는 사업계획서의 영역 표를 따르며 두 콘텐츠는 따로 적었습니다.</p>
       </div>
     </section>
 
@@ -220,11 +220,12 @@
           <tr><th scope="row">손 운동</th><td data-label="어떻게 하나요">켜진 번호의 손가락을 눌러 정해진 시간 동안 쥐고 있기. 한 손씩 · 양손 · 한 손에 둘 · 손마다 다르게 · 양손 둘씩, 다섯 가지 짜임을 한 바퀴 돕니다</td><td data-label="주로 보는 영역">지속 · 분리 (협응)</td><td data-label="난이도 칸">13칸</td></tr>
           <tr><th scope="row">리듬 놀이</th><td data-label="어떻게 하나요">배경음에 맞춰 내려오는 동그라미를 그 손가락으로 제때 누르기. 곡 한 번이 한 판입니다</td><td data-label="주로 보는 영역">박자 (협응 · 지속)</td><td data-label="난이도 칸">19칸</td></tr>
           <tr><th scope="row">숫자 따라 누르기</th><td data-label="어떻게 하나요">숫자를 하나씩 보고 기억해 같은 순서로 누르기. 5라운드가 한 블록입니다</td><td data-label="주로 보는 영역">순서 (분리)</td><td data-label="난이도 칸">8칸</td></tr>
-          <tr><th scope="row">두더지 잡기</th><td data-label="어떻게 하나요">켜진 손가락을 눌러 올라온 두더지를 잡는 반응 놀이. 설명 → 연습 → 본 판 순서로 진행합니다</td><td data-label="주로 보는 영역">—</td><td data-label="난이도 칸">7칸</td></tr>
+          <tr><th scope="row">두더지 잡기</th><td data-label="어떻게 하나요">켜진 손가락을 눌러 올라온 두더지를 잡는 반응 놀이. 설명 → 연습 → 본 판 순서로 진행합니다</td><td data-label="주로 보는 영역">반응 · 분리</td><td data-label="난이도 칸">7칸</td></tr>
+          <tr><th scope="row">주먹으로 피하기</th><td data-label="어떻게 하나요">왼손 전체를 쥐면 왼쪽으로, 오른손 전체를 쥐면 오른쪽으로 한 칸씩 가며 내려오는 먹구름을 피합니다. 쥐었다 폈다가 다시 쥐어야 또 움직이며, 두 손이 함께 있어야 하는 활동입니다</td><td data-label="주로 보는 영역">협응 · 지속</td><td data-label="난이도 칸">10칸</td></tr>
           <tr><th scope="row">손가락 따로</th><td data-label="어떻게 하나요">막대 네 개 중 목표 하나만 올리고 나머지는 가만히 두기</td><td data-label="주로 보는 영역">분리 (조절)</td><td data-label="난이도 칸">—</td></tr>
           <tr><th scope="row">깊이 맞추기</th><td data-label="어떻게 하나요">화면 막대의 띠 높이에 맞춰 정해진 깊이에서 머물기</td><td data-label="주로 보는 영역">조절 (지속)</td><td data-label="난이도 칸">—</td></tr>
           <tr><th scope="row">박자 따라 하기</th><td data-label="어떻게 하나요">박자를 더 깊이 다루는 활동</td><td data-label="주로 보는 영역">박자</td><td data-label="난이도 칸">—</td></tr>
-          <tr><th scope="row">계절 · 지역 테마 팩</th><td data-label="어떻게 하나요">계절과 지역을 소재로 한 콘텐츠 묶음</td><td data-label="주로 보는 영역">—</td><td data-label="난이도 칸">—</td></tr>
+          <tr><th scope="row">계절 · 지역 테마 팩</th><td data-label="어떻게 하나요">계절과 지역을 소재로 한 콘텐츠 묶음. 담긴 콘텐츠의 영역을 그대로 따릅니다</td><td data-label="주로 보는 영역">지속 · 분리 · 협응 · 박자 · 순서</td><td data-label="난이도 칸">—</td></tr>
             </tbody>
           </table>
         </div>
