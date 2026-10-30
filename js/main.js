@@ -119,6 +119,7 @@
     if (mode === 'player') {
       video.controls = true;
       video.preload = 'metadata';
+      if (slot.dataset.poster) video.poster = slot.dataset.poster;
       video.src = `${url}#t=0.1`;
       slot.prepend(video);
       slot.hidden = false;
