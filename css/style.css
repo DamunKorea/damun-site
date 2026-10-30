@@ -423,3 +423,127 @@ table.ip tbody th { width: 62%; white-space: normal; font-weight: 600; line-heig
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }
 }
+
+/* ══════ 기술 회사 느낌의 개편 (대표 지시 2026-10-30): 어두운 머리글·첫 화면, 플랫폼 구조, 세대 로드맵, v3·AI 구역 ══════ */
+:root { --dark: #0F1B30; --dark-2: #14264A; --on-dark-2: #B7C6DD; --accent-light: #8DB5F4; }
+
+/* 머리글 · 바닥글: 어둡게 */
+.site-header { background: rgba(15, 27, 48, .96); border-bottom-color: rgba(255, 255, 255, .06); }
+.site-header.scrolled { border-bottom-color: rgba(255, 255, 255, .14); }
+.site-header :focus-visible, .site-footer :focus-visible, .band-dark :focus-visible, .hero.dark :focus-visible, .page-head.dark :focus-visible { outline-color: var(--accent-light); }
+.site-nav a:not(.btn) { color: #C5D1E3; }
+.site-nav a:not(.btn):hover { color: #fff; }
+.site-nav a[aria-current="page"]:not(.btn) { color: #fff; border-bottom-color: var(--accent-light); }
+.site-nav .lang, .site-nav .lang a:not(.btn) { color: #9FB2CC; }
+.site-nav .lang [aria-current] { color: #fff; }
+.site-nav .lang .sep { color: rgba(255, 255, 255, .25); }
+.site-nav .lang a:not(.btn):hover { color: #fff; }
+.menu-toggle .bars, .menu-toggle .bars::before, .menu-toggle .bars::after { background: #fff; }
+.site-footer { background: var(--dark); border-top: 0; color: #9FB2CC; }
+.site-footer .f-links a { color: #C5D1E3; }
+.site-footer .f-links a:hover { color: #fff; }
+.site-footer .f-mail a { color: #fff; }
+.site-footer .f-biz, .site-footer .f-legal { color: #8FA4C4; }
+
+/* 어두운 첫 화면 · 페이지 머리 */
+.hero.dark, .page-head.dark { position: relative; overflow: hidden; color: var(--on-dark-2);
+  background: radial-gradient(900px 520px at 80% 30%, rgba(66, 133, 232, .32), transparent 62%), linear-gradient(180deg, #0F1B30 0%, #14243F 100%); }
+.hero.dark::before, .page-head.dark::before { content: ""; position: absolute; inset: 0; pointer-events: none;
+  background-image: linear-gradient(rgba(140, 180, 255, .07) 1px, transparent 1px), linear-gradient(90deg, rgba(140, 180, 255, .07) 1px, transparent 1px); background-size: 56px 56px;
+  -webkit-mask-image: radial-gradient(ellipse at 72% 38%, #000 10%, transparent 72%); mask-image: radial-gradient(ellipse at 72% 38%, #000 10%, transparent 72%); }
+.hero.dark > .wrap, .page-head.dark > .wrap { position: relative; }
+.hero.dark { padding: 64px 0 56px; }
+.page-head.dark { padding: 56px 0 48px; }
+.hero.dark h1, .page-head.dark h1 { color: #fff; }
+.hero.dark .accent { color: var(--accent-light); }
+.hero.dark .lead, .page-head.dark .lead { color: #C5D1E3; }
+.hero.dark .sub { color: #9FB2CC; }
+.hero.dark .sub strong { color: #fff; }
+.hero.dark .btn-primary, .page-head.dark .btn-primary { background: #2F6FE0; }
+.hero.dark .btn-primary:hover, .page-head.dark .btn-primary:hover { background: #4285E8; }
+.hero.dark .text-link, .page-head.dark .text-link, .band-dark .text-link { color: #9FC1FA; }
+.hero.dark .text-link:hover, .page-head.dark .text-link:hover, .band-dark .text-link:hover { color: #fff; }
+.hero.dark .note { color: #8FA4C4; }
+.hero.dark .state, .page-head.dark .state { color: #9FC1FA; }
+.page-head.dark .back { color: #9FB2CC; }
+.page-head.dark .back:hover { color: #fff; }
+.hero.dark .tablet { border-color: #0A1424; background: #0A1424; box-shadow: 0 30px 80px rgba(0, 0, 0, .5), 0 0 0 1px rgba(140, 180, 255, .25), 0 0 70px rgba(66, 133, 232, .28); }
+.hero-visual { position: relative; }
+.fchip { position: absolute; z-index: 2; padding: 10px 14px; border-radius: 12px; background: rgba(15, 27, 48, .85); border: 1px solid rgba(140, 180, 255, .38); color: #C5D1E3; font-size: .8125rem; font-weight: 600; line-height: 1.3; backdrop-filter: blur(6px); }
+.fchip b { display: block; font-size: 1.25rem; font-weight: 800; color: var(--accent-light); line-height: 1.1; }
+.fchip.c1 { left: -30px; top: 16%; }
+.fchip.c2 { right: -22px; top: 6%; }
+.fchip.c3 { right: 7%; bottom: -24px; }
+.hero.dark .facts, .page-head.dark .facts { margin-top: 48px; border-color: rgba(255, 255, 255, .14); }
+.hero.dark .facts strong, .page-head.dark .facts strong { color: var(--accent-light); }
+.hero.dark .facts span, .page-head.dark .facts span { color: #9FB2CC; }
+.facts { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+.hero.dark + .section, .page-head.dark + .section, .band-dark + .section { border-top: 0; }
+
+/* 작은 제목(영역 이름표) */
+.eyebrow { margin: 0 0 10px; font-size: .8125rem; font-weight: 700; letter-spacing: .1em; color: var(--accent-ink); }
+.hero.dark .eyebrow, .page-head.dark .eyebrow, .band-dark .eyebrow { color: var(--accent-light); }
+
+/* 어두운 구역 */
+.section.band-dark { background: linear-gradient(180deg, #0F1B30, #14264A); border-top: 0; color: var(--on-dark-2); }
+.band-dark h2, .band-dark h3 { color: #fff; }
+.band-dark .head p, .band-dark p { color: var(--on-dark-2); }
+.band-dark .fine { color: #8FA4C4; }
+.band-dark .points li { border-top-color: var(--accent-light); }
+.band-dark .points p { color: var(--on-dark-2); }
+.band-dark .cc figure, .band-dark .frame { border-color: rgba(255, 255, 255, .18); background: #0A1424; }
+.band-dark .cc h3 { color: #fff; }
+.band-dark .film figcaption { color: #9FB2CC; }
+.band-dark .film video { box-shadow: 0 24px 70px rgba(0, 0, 0, .5); border: 1px solid rgba(255, 255, 255, .12); }
+.band-dark .record { border-color: rgba(255, 255, 255, .18); background: rgba(255, 255, 255, .03); }
+.band-dark .record .r-head { color: #fff; }
+.band-dark .record .list li { color: #C5D1E3; }
+.band-dark .list strong { color: #fff; }
+.ai-section.band-dark .ai-panel { background: rgba(255, 255, 255, .04); border: 1px solid rgba(255, 255, 255, .1); }
+.v3-gallery { margin-top: 40px; }
+.section.tint { background: var(--soft); }
+.section.tint + .section { border-top: 0; }
+
+/* 플랫폼 구조(입력 → 콘텐츠 → 측정·기록 → AI 분석) */
+.stack { display: grid; gap: 12px; }
+.layer { display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 20px; align-items: center; padding: 18px 22px; border: 1px solid var(--line-strong); border-radius: 14px; background: #fff; }
+.layer .ln { font-weight: 700; color: var(--ink); }
+.layer .ls { display: block; font-size: .8125rem; font-weight: 500; color: var(--muted); }
+.layer .lc { display: flex; flex-wrap: wrap; gap: 8px; }
+.pill { display: inline-block; padding: 6px 13px; border-radius: 999px; background: var(--wash); color: var(--accent-deep); font-size: .875rem; font-weight: 600; }
+.pill.next { background: transparent; border: 1px dashed var(--accent-ink); color: var(--accent-ink); }
+.pill.next::before { content: "v3 "; font-weight: 800; }
+.pill.sample { width: 28px; height: 14px; padding: 0; vertical-align: middle; margin: 0 6px 0 14px; }
+.pill.sample::before { content: none; }
+.legend .pill.sample:first-child { margin-left: 0; }
+.layer.l4 { background: linear-gradient(90deg, #17263C, #1E3A66); border-color: transparent; }
+.layer.l4 .ln { color: #fff; }
+.layer.l4 .ls { color: #9FB2CC; }
+.layer.l4 .pill { background: rgba(255, 255, 255, .12); color: #fff; }
+.layer.l4 .pill.next { background: transparent; border-color: var(--accent-light); color: #BFD6FB; }
+
+/* 세대 로드맵 */
+.gens { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.gen { position: relative; padding: 26px; border: 1px solid var(--line-strong); border-radius: 16px; background: #fff; }
+.gen .gt { margin: 0 0 6px; font-size: .8125rem; font-weight: 700; letter-spacing: .06em; color: var(--accent-ink); }
+.gen h3 { margin-bottom: 8px; font-size: 1.25rem; }
+.gen p:last-child { margin: 0; color: var(--muted); font-size: .9375rem; }
+.gen.next { border-color: var(--accent-ink); box-shadow: 0 0 0 4px rgba(66, 133, 232, .12); }
+.gen.plan { border-style: dashed; }
+
+@media (max-width: 900px) {
+  .fchip { display: none; }
+  .layer { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  .gens { grid-template-columns: minmax(0, 1fr); }
+  .site-nav { background: var(--dark); border-bottom-color: rgba(255, 255, 255, .14); }
+  .site-nav a:not(.btn) { border-bottom-color: rgba(255, 255, 255, .1); }
+  .lang-short { color: #C5D1E3; border-color: rgba(255, 255, 255, .3); }
+  .hero.dark { padding: 32px 0 32px; }
+  .page-head.dark { padding: 28px 0 28px; }
+  .hero.dark .facts, .page-head.dark .facts { margin-top: 32px; }
+}
+@media (max-width: 560px) {
+  .hero.dark { padding: 24px 0 28px; }
+  .layer { padding: 16px; }
+  .gen { padding: 20px; }
+}
