@@ -46,7 +46,7 @@
           <li><a href="about.html">회사 소개</a></li>
           <li><a href="rehaptic.html" aria-current="page">Rehaptic</a></li>
           <li class="nav-cta"><a class="btn btn-primary btn-sm" href="contact.html">문의하기</a></li>
-          <li class="lang" role="group" aria-label="언어 선택"><span lang="ko" aria-current="true">한국어</span><span class="sep" aria-hidden="true">|</span><a lang="en" hreflang="en" href="en/rehaptic.html" data-lang-switch>English</a></li>
+          <li class="lang"><span class="lang-group" role="group" aria-label="언어 선택"><span lang="ko" aria-current="true">한국어</span><span class="sep" aria-hidden="true">|</span><a lang="en" hreflang="en" href="en/rehaptic.html" data-lang-switch>English</a></span></li>
         </ul>
       </nav>
     </div>
@@ -104,18 +104,18 @@
         </div>
 
         <div class="act-wrap">
-          <div class="tabs" role="tablist" aria-label="세 가지 활동">
+          <div class="tabs" role="group" aria-label="세 가지 활동">
             <div class="tab-item is-active">
-              <button class="tab" role="tab" id="tab-hold" aria-selected="true" aria-controls="desc-hold" type="button"><span class="t-title">손 운동</span></button>
-              <div class="tab-desc" id="desc-hold" role="tabpanel" aria-labelledby="tab-hold"><p>파랗게 켜진 번호를 정해진 시간 동안 꾹 누르고 버팁니다. 한 손가락에서 시작해 양손 네 손가락까지, 여러 가지 모양으로 이어집니다.</p></div>
+              <button class="tab" id="tab-hold" aria-expanded="true" aria-controls="desc-hold" type="button"><span class="t-title">손 운동</span></button>
+              <div class="tab-desc" id="desc-hold"><p>파랗게 켜진 번호를 정해진 시간 동안 꾹 누르고 버팁니다. 한 손가락에서 시작해 양손 네 손가락까지, 여러 가지 모양으로 이어집니다.</p></div>
             </div>
             <div class="tab-item">
-              <button class="tab" role="tab" id="tab-rhythm" aria-selected="false" aria-controls="desc-rhythm" tabindex="-1" type="button"><span class="t-title">리듬 놀이</span></button>
-              <div class="tab-desc" id="desc-rhythm" role="tabpanel" aria-labelledby="tab-rhythm"><p>음악에 맞춰 위에서 내려오는 동그라미가 고리에 차면 그 번호를 누릅니다. 느리게·빠르게, 두 가지 빠르기로 즐기고, 잘 맞히면 곡에 악기가 하나씩 더해집니다.</p></div>
+              <button class="tab" id="tab-rhythm" aria-expanded="false" aria-controls="desc-rhythm" type="button"><span class="t-title">리듬 놀이</span></button>
+              <div class="tab-desc" id="desc-rhythm"><p>음악에 맞춰 위에서 내려오는 동그라미가 고리에 차면 그 번호를 누릅니다. 느리게·빠르게, 두 가지 빠르기로 즐기고, 잘 맞히면 곡에 악기가 하나씩 더해집니다.</p></div>
             </div>
             <div class="tab-item">
-              <button class="tab" role="tab" id="tab-number" aria-selected="false" aria-controls="desc-number" tabindex="-1" type="button"><span class="t-title">숫자 따라 누르기</span></button>
-              <div class="tab-desc" id="desc-number" role="tabpanel" aria-labelledby="tab-number"><p>숫자가 하나씩 크게 나옵니다. 순서대로 기억했다가 같은 순서로 누릅니다. 틀려도 괜찮아요 — 정답을 보여 드리고 다음 숫자로 넘어갑니다.</p></div>
+              <button class="tab" id="tab-number" aria-expanded="false" aria-controls="desc-number" type="button"><span class="t-title">숫자 따라 누르기</span></button>
+              <div class="tab-desc" id="desc-number"><p>숫자가 하나씩 크게 나옵니다. 순서대로 기억했다가 같은 순서로 누릅니다. 틀려도 괜찮아요 — 정답을 보여 드리고 다음 숫자로 넘어갑니다.</p></div>
             </div>
           </div>
 

@@ -36,8 +36,8 @@
   nav.addEventListener('click', (e) => { if (e.target.closest('a')) setMenu(false); });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
 
-  /* 활동 탭 (Rehaptic 소개): 눌러서 고른다. 자동으로 넘어가지 않는다 (UX-005).
-     키보드: 좌우·위아래 화살표로 이동, Home/End 로 처음·끝. */
+  /* 활동 고르기 (Rehaptic 소개): 눌러서 고른다. 자동으로 넘어가지 않는다 (UX-005). 펼침 버튼(aria-expanded) 방식이라 모두 Tab 키로 닿는다.
+     키보드: 좌우·위아래 화살표로도 이동, Home/End 로 처음·끝. */
   const tabsRoot = document.querySelector('.tabs');
   if (tabsRoot) {
     const tabs = [...tabsRoot.querySelectorAll('.tab')];
@@ -48,8 +48,7 @@
       current = (i + tabs.length) % tabs.length;
       tabs.forEach((t, n) => {
         const on = n === current;
-        t.setAttribute('aria-selected', String(on));
-        t.tabIndex = on ? 0 : -1;
+        t.setAttribute('aria-expanded', String(on));
         t.parentElement.classList.toggle('is-active', on);
         screens[n].classList.toggle('is-active', on);
       });
@@ -118,6 +117,8 @@
 
     if (mode === 'player') {
       video.controls = true;
+      const cap = slot.querySelector('figcaption');
+      if (cap) video.setAttribute('aria-label', cap.textContent.trim());
       if (slot.dataset.poster) {
         /* 첫 장면이 비어 있는 영상은 읽어 둔 대표 장면(poster)을 재생 전까지 그대로 보인다 */
         video.preload = 'none';

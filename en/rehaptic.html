@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Rehaptic overview | DAMUN</title>
-  <meta name="description" content="Rehaptic is a digital training device with a haptic grip where each finger presses on its own, and three activities. It will be offered in versions for centers and for home.">
+  <meta name="description" content="Rehaptic is a digital training device with a haptic grip where each finger presses on its own, planned for centers and for home.">
   <meta name="theme-color" content="#FFFFFF">
   <link rel="canonical" href="https://damun.asia/en/rehaptic.html">
   <link rel="alternate" hreflang="ko" href="https://damun.asia/rehaptic.html">
@@ -15,7 +15,7 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="DAMUN">
   <meta property="og:title" content="Rehaptic overview | DAMUN">
-  <meta property="og:description" content="Rehaptic is a digital training device with a haptic grip where each finger presses on its own, and three activities. It will be offered in versions for centers and for home.">
+  <meta property="og:description" content="Rehaptic is a digital training device with a haptic grip where each finger presses on its own, planned for centers and for home.">
   <meta property="og:url" content="https://damun.asia/en/rehaptic.html">
   <meta property="og:image" content="https://damun.asia/img/og-image-en.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -46,7 +46,7 @@
           <li><a href="about.html">About DAMUN</a></li>
           <li><a href="rehaptic.html" aria-current="page">Rehaptic</a></li>
           <li class="nav-cta"><a class="btn btn-primary btn-sm" href="contact.html">Contact us</a></li>
-          <li class="lang" role="group" aria-label="Language"><span lang="en" aria-current="true">English</span><span class="sep" aria-hidden="true">|</span><a lang="ko" hreflang="ko" href="../rehaptic.html" data-lang-switch>한국어</a></li>
+          <li class="lang"><span class="lang-group" role="group" aria-label="Language"><span lang="en" aria-current="true">English</span><span class="sep" aria-hidden="true">|</span><a lang="ko" hreflang="ko" href="../rehaptic.html" data-lang-switch>한국어</a></span></li>
         </ul>
       </nav>
     </div>
@@ -104,18 +104,18 @@
         </div>
 
         <div class="act-wrap">
-          <div class="tabs" role="tablist" aria-label="Three activities">
+          <div class="tabs" role="group" aria-label="Three activities">
             <div class="tab-item is-active">
-              <button class="tab" role="tab" id="tab-hold" aria-selected="true" aria-controls="desc-hold" type="button"><span class="t-title">Hand exercise</span></button>
-              <div class="tab-desc" id="desc-hold" role="tabpanel" aria-labelledby="tab-hold"><p>Press the number lit in blue and keep holding for the set time. Starting with one finger and working up to all four fingers of both hands, in a variety of shapes.</p></div>
+              <button class="tab" id="tab-hold" aria-expanded="true" aria-controls="desc-hold" type="button"><span class="t-title">Hand exercise</span></button>
+              <div class="tab-desc" id="desc-hold"><p>Press the number lit in blue and keep holding for the set time. Starting with one finger and working up to all four fingers of both hands, in a variety of shapes.</p></div>
             </div>
             <div class="tab-item">
-              <button class="tab" role="tab" id="tab-rhythm" aria-selected="false" aria-controls="desc-rhythm" tabindex="-1" type="button"><span class="t-title">Rhythm play</span></button>
-              <div class="tab-desc" id="desc-rhythm" role="tabpanel" aria-labelledby="tab-rhythm"><p>A circle falls from above in time with the music; press that number when it fills the ring. Play at a slower or faster tempo, and as you do well, instruments are added to the song one by one.</p></div>
+              <button class="tab" id="tab-rhythm" aria-expanded="false" aria-controls="desc-rhythm" type="button"><span class="t-title">Rhythm play</span></button>
+              <div class="tab-desc" id="desc-rhythm"><p>A circle falls from above in time with the music; press that number when it fills the ring. Play at a slower or faster tempo, and as you do well, instruments are added to the song one by one.</p></div>
             </div>
             <div class="tab-item">
-              <button class="tab" role="tab" id="tab-number" aria-selected="false" aria-controls="desc-number" tabindex="-1" type="button"><span class="t-title">Follow the Numbers</span></button>
-              <div class="tab-desc" id="desc-number" role="tabpanel" aria-labelledby="tab-number"><p>Numbers appear one at a time. Remember them in order and press them in the same order. It's okay to get one wrong: we show the correct answer and move on to the next number.</p></div>
+              <button class="tab" id="tab-number" aria-expanded="false" aria-controls="desc-number" type="button"><span class="t-title">Follow the Numbers</span></button>
+              <div class="tab-desc" id="desc-number"><p>Numbers appear one at a time. Remember them in order and press them in the same order. It's okay to get one wrong: we show the correct answer and move on to the next number.</p></div>
             </div>
           </div>
 
