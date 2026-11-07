@@ -296,7 +296,7 @@
     }
   };
 
-  /* 첫 화면 태블릿의 반복 영상: 재생·일시정지 버튼(움직임 줄이기면 저절로 틀지 않고 버튼으로만 튼다) */
+  /* 첫 화면 태블릿의 반복 영상: 재생·일시정지 버튼. 대표 지시(11/07)로 움직임 줄이기 설정이어도 저절로 틀고, 이 버튼으로 멈출 수 있게 한다 */
   const loopToggle = (slot, video) => {
     const btn = document.createElement('button');
     btn.type = 'button';
@@ -332,15 +332,14 @@
     video.muted = true;
     video.loop = true;
     video.setAttribute('aria-hidden', 'true');
-    video.preload = reduceMotion ? 'none' : 'auto';
+    /* 여기까지 온 반복 영상은 첫 화면 태블릿(설정과 관계없이) 또는 움직임 줄이기가 아닌 경우라 모두 저절로 튼다 */
+    video.preload = 'auto';
     video.src = url;
     video.addEventListener('playing', () => video.classList.add('is-live'), { once: true });
     /* 태블릿 틀이 있으면 그 안(베젤 안쪽)에 영상을 놓아 테두리·둥근 모서리가 그대로 보이게 한다 */
     (slot.querySelector('.tablet') || slot).appendChild(video);
     if (heroStage) loopToggle(slot, video);
-    if (!reduceMotion) {
-      video.autoplay = true;
-      video.play().catch(() => {});
-    }
+    video.autoplay = true;
+    video.play().catch(() => {});
   });
 })();
