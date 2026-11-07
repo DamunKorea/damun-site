@@ -811,3 +811,11 @@ html[lang="en"] .mode-rows > div { grid-template-columns: 5.4rem minmax(0, 1fr);
   .toc a, .toc-inline li a { padding-top: 10px; padding-bottom: 10px; }
   .brand { display: inline-flex; align-items: center; min-height: 44px; }
 }
+
+/* 첫 화면 태블릿 반복 영상의 재생·일시정지 버튼(태블릿 오른쪽 아래 모서리) */
+.loop-toggle { position: absolute; right: 18px; bottom: 18px; z-index: 3; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; border: 1px solid rgba(255, 255, 255, .55); border-radius: 50%; background: rgba(10, 20, 36, .78); cursor: pointer; box-shadow: 0 6px 18px rgba(0, 0, 0, .3); }
+.loop-toggle::before { content: ""; width: 0; height: 0; margin-left: 3px; border-left: 13px solid #fff; border-top: 8px solid transparent; border-bottom: 8px solid transparent; }
+.loop-toggle.is-playing::before { width: 4px; height: 14px; margin-left: 0; border: 0; background: #fff; box-shadow: 7px 0 0 #fff; transform: translateX(-3.5px); }
+.loop-toggle:hover { background: rgba(10, 20, 36, .92); }
+.loop-toggle:focus-visible { outline: 3px solid #9FC1FA; outline-offset: 2px; }
+@media (max-width: 560px) { .loop-toggle { right: 12px; bottom: 12px; } }

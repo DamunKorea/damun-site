@@ -9,9 +9,9 @@
   /* 화면 문구: 페이지의 lang 으로 한국어·영어를 고른다 (UX-009) */
   const EN = document.documentElement.lang === 'en';
   const S = EN
-    ? { open: 'Open menu', close: 'Close menu', copied: 'Email address copied.', play: 'Play activity demo', playOf: (n) => `Play ${n} activity demo`,
+    ? { open: 'Open menu', close: 'Close menu', copied: 'Email address copied.', play: 'Play activity demo', playOf: (n) => `Play ${n} activity demo`, playV: 'Play video', pauseV: 'Pause video',
         failed: 'Could not copy. Press and hold the selected address, or copy it with Ctrl+C.' }
-    : { open: '메뉴 열기', close: '메뉴 닫기', copied: '이메일 주소를 복사했습니다.', play: '활동 영상 재생', playOf: (n) => `${n} 활동 영상 재생`,
+    : { open: '메뉴 열기', close: '메뉴 닫기', copied: '이메일 주소를 복사했습니다.', play: '활동 영상 재생', playOf: (n) => `${n} 활동 영상 재생`, playV: '영상 재생', pauseV: '영상 일시정지',
         failed: '복사하지 못했습니다. 선택된 주소를 길게 누르거나 Ctrl+C로 복사해 주세요.' };
 
   /* 언어 전환: 보고 있던 구역(#앵커)을 그대로 가지고 대응 페이지로 간다 */
@@ -296,12 +296,32 @@
     }
   };
 
+  /* 첫 화면 태블릿의 반복 영상: 재생·일시정지 버튼(움직임 줄이기면 저절로 틀지 않고 버튼으로만 튼다) */
+  const loopToggle = (slot, video) => {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'loop-toggle';
+    const sync = () => {
+      const on = !video.paused;
+      btn.classList.toggle('is-playing', on);
+      btn.setAttribute('aria-label', on ? S.pauseV : S.playV);
+    };
+    btn.addEventListener('click', () => {
+      if (video.paused) { video.play().catch(() => {}); } else { video.pause(); }
+    });
+    video.addEventListener('play', sync);
+    video.addEventListener('pause', sync);
+    sync();
+    slot.appendChild(btn);
+  };
+
   document.querySelectorAll('[data-video]').forEach(async (slot) => {
     const url = slot.dataset.video;
     const mode = slot.dataset.mode;
     if (mode === 'player') { mountPlayer(slot, url); return; }
-    if (mode === 'loop' && reduceMotion) {
-      if (!slot.closest('.hero') && (await exists(url))) manualPlay(slot, url);
+    const heroStage = slot.classList.contains('stage');
+    if (mode === 'loop' && reduceMotion && !heroStage) {
+      if (await exists(url)) manualPlay(slot, url);
       return;
     }
     if (!(await exists(url))) return;
@@ -311,12 +331,16 @@
     video.className = 'slot-video';
     video.muted = true;
     video.loop = true;
-    video.autoplay = true;
     video.setAttribute('aria-hidden', 'true');
+    video.preload = reduceMotion ? 'none' : 'auto';
     video.src = url;
     video.addEventListener('playing', () => video.classList.add('is-live'), { once: true });
     /* 태블릿 틀이 있으면 그 안(베젤 안쪽)에 영상을 놓아 테두리·둥근 모서리가 그대로 보이게 한다 */
     (slot.querySelector('.tablet') || slot).appendChild(video);
-    video.play().catch(() => {});
+    if (heroStage) loopToggle(slot, video);
+    if (!reduceMotion) {
+      video.autoplay = true;
+      video.play().catch(() => {});
+    }
   });
 })();
