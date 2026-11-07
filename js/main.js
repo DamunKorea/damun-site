@@ -315,7 +315,8 @@
     video.setAttribute('aria-hidden', 'true');
     video.src = url;
     video.addEventListener('playing', () => video.classList.add('is-live'), { once: true });
-    slot.appendChild(video);
+    /* 태블릿 틀이 있으면 그 안(베젤 안쪽)에 영상을 놓아 테두리·둥근 모서리가 그대로 보이게 한다 */
+    (slot.querySelector('.tablet') || slot).appendChild(video);
     video.play().catch(() => {});
   });
 })();
