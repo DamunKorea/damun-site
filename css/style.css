@@ -295,7 +295,7 @@ table.ip tbody th { width: 62%; white-space: normal; font-weight: 600; line-heig
 .arch p { margin: 0; font-size: .9375rem; color: var(--muted); }
 .chip { margin-top: auto; padding-top: 12px; border-top: 1px solid var(--line); font-size: .8125rem; font-weight: 600; color: var(--ink-2); }
 
-.matrix { min-width: 640px; }
+.matrix { min-width: 820px; }
 .matrix th, .matrix td { padding: 12px 8px; text-align: center; vertical-align: middle; }
 .matrix thead th { font-size: .8125rem; vertical-align: bottom; border-bottom: 1px solid var(--line-strong); }
 .matrix thead th:first-child, .matrix tbody th { padding-left: 0; text-align: left; }
@@ -819,3 +819,7 @@ html[lang="en"] .mode-rows > div { grid-template-columns: 5.4rem minmax(0, 1fr);
 .loop-toggle:hover { background: rgba(10, 20, 36, .92); }
 .loop-toggle:focus-visible { outline: 3px solid #9FC1FA; outline-offset: 2px; }
 @media (max-width: 560px) { .loop-toggle { right: 12px; bottom: 12px; } }
+
+/* 2026-11-17: 콘텐츠 전체 구성 — 지금 있는 여덟과 계획을 나눈다 */
+.gallery-head { margin: 48px 0 6px; font-size: 1.25rem; font-weight: 700; }
+.gallery-lead { margin: 0 0 20px; font-size: .9375rem; color: var(--muted); }
