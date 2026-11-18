@@ -823,3 +823,13 @@ html[lang="en"] .mode-rows > div { grid-template-columns: 5.4rem minmax(0, 1fr);
 /* 2026-11-17: 콘텐츠 전체 구성 — 지금 있는 여덟과 계획을 나눈다 */
 .gallery-head { margin: 48px 0 6px; font-size: 1.25rem; font-weight: 700; }
 .gallery-lead { margin: 0 0 20px; font-size: .9375rem; color: var(--muted); }
+
+/* 2026-11-19: 표방 점검 반영 — v3 그림 두 장, 앞으로의 계획 구역, v3 표시 없는 계획 칸 */
+.pill.next.plan::before { content: none; }
+@media (min-width: 561px) { .v3-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.ai-panel.ai-plan { grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 901px) {
+  .ai-plan .loop { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+  .ai-plan .loop li { padding-bottom: 0; }
+  .ai-plan .loop li::after { display: none; }
+}
