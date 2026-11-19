@@ -117,12 +117,17 @@
       if (toc.classList.contains('is-open') && !toc.contains(e.target) && !fab.contains(e.target)) setOpen(false);
     });
 
-    /* 첫 화면을 지나면 목차를 보이고, 지금 읽는 구역을 표시한다 */
+    /* 첫 화면을 지나면 목차를 보이고, 지금 읽는 구역을 표시한다.
+       끝 문의 판 · 바닥글에 닿으면 목차(넓은 화면)와 목차 단추(좁은 화면)를 감춰 그 글과 겹치지 않게 한다 (4차) */
+    const end = document.querySelector('main > .cta') || document.querySelector('.site-footer');
     let ticking = false;
     const sync = () => {
       ticking = false;
       const pad = parseFloat(getComputedStyle(root).scrollPaddingTop) || 100;
-      root.classList.toggle('toc-on', hero ? hero.getBoundingClientRect().bottom < pad + 60 : true);
+      const past = hero ? hero.getBoundingClientRect().bottom < pad + 60 : true;
+      const reach = wide.matches ? pad + 16 + toc.offsetHeight + 24 : window.innerHeight - 16;
+      const atEnd = !!end && end.getBoundingClientRect().top < reach;
+      root.classList.toggle('toc-on', past && !atEnd);
       const line = pad + 24;
       let cur = -1;
       sections.forEach((sec, i) => { if (sec && sec.getBoundingClientRect().top <= line) cur = i; });
