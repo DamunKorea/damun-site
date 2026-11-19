@@ -9,9 +9,9 @@
   /* 화면 문구: 페이지의 lang 으로 한국어·영어를 고른다 (UX-009) */
   const EN = document.documentElement.lang === 'en';
   const S = EN
-    ? { open: 'Open menu', close: 'Close menu', copied: 'Email address copied.', play: 'Play activity demo', playOf: (n) => `Play ${n} activity demo`, playV: 'Play video', pauseV: 'Pause video',
+    ? { open: 'Open menu', close: 'Close menu', copied: 'Email address copied.', play: 'Play activity demo', playOf: (n) => `Play ${n} activity demo`, playV: 'Play video', pauseV: 'Pause video', watch: 'Watch video', pauseAll: 'Pause videos', playAll: 'Play videos',
         failed: 'Could not copy. Press and hold the selected address, or copy it with Ctrl+C.' }
-    : { open: '메뉴 열기', close: '메뉴 닫기', copied: '이메일 주소를 복사했습니다.', play: '활동 영상 재생', playOf: (n) => `${n} 활동 영상 재생`, playV: '영상 재생', pauseV: '영상 일시정지',
+    : { open: '메뉴 열기', close: '메뉴 닫기', copied: '이메일 주소를 복사했습니다.', play: '활동 영상 재생', playOf: (n) => `${n} 활동 영상 재생`, playV: '영상 재생', pauseV: '영상 일시정지', watch: '영상 보기', pauseAll: '영상 멈추기', playAll: '영상 다시 재생',
         failed: '복사하지 못했습니다. 선택된 주소를 길게 누르거나 Ctrl+C로 복사해 주세요.' };
 
   /* 언어 전환: 보고 있던 구역(#앵커)을 그대로 가지고 대응 페이지로 간다 */
@@ -68,7 +68,7 @@
   if (toc) {
     const fab = document.querySelector('.toc-fab');
     const closeBtn = toc.querySelector('.toc-close');
-    const hero = document.querySelector('.page-head');
+    const hero = document.querySelector('.ph');
     const wide = window.matchMedia('(min-width: 1100px)');
     const links = [...toc.querySelectorAll('a[href^="#"]:not([data-top])')];
     const sections = links.map((a) => document.getElementById(a.getAttribute('href').slice(1)));
@@ -236,7 +236,26 @@
       video.src = `${url}#t=0.1`;
     }
     video.addEventListener('error', () => { slot.hidden = true; }, { once: true });
-    slot.prepend(video);
+    /* 재생 전에는 대표 장면과 「영상 보기」 단추만 보인다. 누르면 기본 컨트롤로 넘어간다 */
+    const stageEl = document.createElement('div');
+    stageEl.className = 'film-stage';
+    stageEl.appendChild(video);
+    if (slot.dataset.poster) {
+      video.controls = false;
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'film-play';
+      btn.textContent = S.watch;
+      if (cap) btn.setAttribute('aria-label', `${S.watch}: ${cap.textContent.trim()}`);
+      btn.addEventListener('click', () => {
+        btn.remove();
+        video.controls = true;
+        video.play().catch(() => {});
+        video.focus({ preventScroll: true });
+      });
+      stageEl.appendChild(btn);
+    }
+    slot.prepend(stageEl);
     slot.hidden = false;
   };
 
@@ -315,7 +334,58 @@
     slot.appendChild(btn);
   };
 
+  /* 콘텐츠 영상: 누를 것 없이 화면에 들어온 영상이 소리 없이 돈다. 첫 화면 태블릿과 같이(대표 지시 11/07)
+     움직임 줄이기 설정에서도 틀고, 구역 위의 단추 하나로 모두 멈출 수 있다. */
+  const setupClips = (list) => {
+    const btn = document.querySelector('[data-clips-toggle]');
+    const seen = new Set();
+    let stopped = false;
+    const videoOf = (slot) => {
+      let v = slot.querySelector('video');
+      if (v) return v;
+      v = document.createElement('video');
+      v.className = 'slot-video';
+      v.muted = true;
+      v.loop = true;
+      v.playsInline = true;
+      v.preload = 'auto';
+      v.setAttribute('aria-hidden', 'true');
+      v.src = slot.dataset.video;
+      v.addEventListener('playing', () => v.classList.add('is-live'), { once: true });
+      v.addEventListener('error', () => v.remove(), { once: true });
+      slot.appendChild(v);
+      return v;
+    };
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          seen.add(e.target);
+          if (!stopped) videoOf(e.target).play().catch(() => {});
+        } else {
+          seen.delete(e.target);
+          const v = e.target.querySelector('video');
+          if (v) v.pause();
+        }
+      });
+    }, { threshold: 0.2 });
+    list.querySelectorAll('figure[data-video]').forEach((slot) => io.observe(slot));
+    if (!btn) return;
+    const sync = () => {
+      btn.textContent = stopped ? S.playAll : S.pauseAll;
+      btn.classList.toggle('is-stopped', stopped);
+    };
+    btn.hidden = false;
+    sync();
+    btn.addEventListener('click', () => {
+      stopped = !stopped;
+      sync();
+      seen.forEach((slot) => { const v = videoOf(slot); if (stopped) v.pause(); else v.play().catch(() => {}); });
+    });
+  };
+  document.querySelectorAll('[data-clips]').forEach(setupClips);
+
   document.querySelectorAll('[data-video]').forEach(async (slot) => {
+    if (slot.closest('[data-clips]')) return;
     const url = slot.dataset.video;
     const mode = slot.dataset.mode;
     if (mode === 'player') { mountPlayer(slot, url); return; }

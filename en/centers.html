@@ -36,7 +36,7 @@
         <img src="../img/damun-white.svg" alt="damun" width="155" height="48">
       </a>
       <a class="lang-short" lang="ko" hreflang="ko" href="../centers.html" data-lang-switch aria-label="View this page in Korean">한국어</a>
-      <a class="btn btn-primary btn-sm header-cta" href="contact.html">Contact us</a>
+      <a class="btn btn-nav header-cta" href="contact.html">Contact us</a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
         <span class="sr-only">Open menu</span>
         <span class="bars" aria-hidden="true"></span>
@@ -46,7 +46,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">Company</a></li>
           <li class="has-sub is-current"><button class="sub-toggle" type="button" aria-expanded="false" aria-controls="nav-product">Product<i aria-hidden="true"></i></button><span class="sub-label" aria-hidden="true">Product</span><div class="sub" id="nav-product"><ul aria-label="Product"><li><a href="rehaptic.html"><b>Product overview</b><span>The grip and contents at a glance</span></a></li><li><a href="centers.html" aria-current="page"><b>For centers</b><span>Tablet + admin web, run by staff</span></a></li><li><a href="family.html"><b>For home</b><span>Smartphone app, easy to start at home</span></a></li><li><a href="technology.html"><b>Technology</b><span>Per-finger records and future plans</span></a></li></ul></div></li>
-          <li class="nav-cta"><a class="btn btn-primary btn-sm" href="contact.html">Contact us</a></li>
+          <li class="nav-cta"><a class="btn btn-nav" href="contact.html">Contact us</a></li>
           <li class="lang"><span class="lang-group" role="group" aria-label="Language"><span lang="en" aria-current="true">English</span><span class="sep" aria-hidden="true">|</span><a lang="ko" hreflang="ko" href="../centers.html" data-lang-switch>한국어</a></span></li>
         </ul>
       </nav>
@@ -56,27 +56,29 @@
     <div class="wrap subnav-inner"><a href="rehaptic.html">Product overview</a><a href="centers.html" aria-current="page">For centers</a><a href="family.html">For home</a><a href="technology.html">Technology</a></div>
   </nav>
 
-  <main id="main">
+  <main id="main" data-page="centers">
 
-    <section class="page-head svc-page svc-center">
-      <div class="wrap svc-head">
-        <div class="svc-text">
-          <nav class="svc-switch" aria-label="Choose a service type"><a class="svc-opt c is-on" href="centers.html" aria-current="page"><b>For centers</b><span>Tablet + admin web</span></a><a class="svc-opt h" href="family.html"><b>For home</b><span>Smartphone app</span></a></nav>
-          <h1>Start your center's hand-exercise program<br>with ease, and keep it going</h1>
-          <p class="lead">A guide to Rehaptic for centers, written for program staff at welfare centers, senior centers, day and night care centers and care facilities.</p>
-          <p class="state">Planned launch: first half of 2027</p>
-          <div class="actions">
+    <section class="ph svc-page">
+      <div class="wrap">
+        <nav class="svc-switch" aria-label="Choose a service type"><a class="svc-opt c is-on" href="centers.html" aria-current="page"><b>For centers</b><span>Tablet + admin web</span></a><a class="svc-opt h" href="family.html"><b>For home</b><span>Smartphone app</span></a></nav>
+        <h1>Start your center's <span class="nb">hand-exercise</span> program <br>with ease, and keep it going</h1>
+        <div class="ph-grid">
+          <div class="ph-copy">
+            <p class="ph-lead">A guide to Rehaptic for centers, written for program staff at welfare centers, senior centers, day and night care centers and care facilities.</p>
+            <p class="state">Planned launch: first half of 2027</p>
+            <div class="actions">
             <a class="btn btn-primary" href="contact.html">Contact us</a>
-            <a class="text-link" href="#system">See the package</a>
+            <a class="go" href="#system">See the package</a>
           </div>
+          </div>
+          <figure class="svc-fig"><img src="../img/kit-center-en.webp" width="1280" height="800" alt="Setup for centers: a pair of haptic grips, a tablet with the app and a laptop with the admin web"></figure>
         </div>
-        <figure class="svc-fig"><img src="../img/kit-center-en.webp" width="1280" height="800" alt="Setup for centers: a pair of haptic grips, a tablet with the app and a laptop with the admin web"></figure>
       </div>
     </section>
-    <section class="svc-strip svc-center">
+    <section class="svc-strip">
       <div class="wrap">
         <h2 class="sr-only">Service type at a glance</h2>
-        <ol class="svc-cards"><li><span class="n">1</span><p class="q">Who uses it</p><h3>Program staff and older adults</h3><p>Welfare centers · senior centers · day and night care centers · care facilities</p></li><li><span class="n">2</span><p class="q">What it takes</p><h3>Grips + tablet app + admin web</h3><p>Everyone's records are managed in one place</p></li><li><span class="n">3</span><p class="q">How it is used</p><h3>Staff run the program</h3><p>Training on the tablet; records and level suggestions in the admin web</p></li></ol>
+        <ol class="svc-cards"><li><p class="q">Who uses it</p><h3>Program staff and older adults</h3><p>Welfare centers · senior centers · day and night care centers · care facilities</p></li><li><p class="q">What it takes</p><h3>Grips + tablet app + admin web</h3><p>Everyone's records are managed in one place</p></li><li><p class="q">How it is used</p><h3>Staff run the program</h3><p>Training on the tablet; records and level suggestions in the admin web</p></li></ol>
         <p class="fine">Pictures are concept illustrations; device screens are examples based on screens of an app in development.</p>
       </div>
     </section>
@@ -84,8 +86,13 @@
 
     <section id="system" class="section">
       <div class="wrap">
+        <div class="ed">
+          <p class="ed-label"><span>01</span>Package</p>
+          <div class="ed-body">
         <div class="head">
           <h2>Grips, a tablet app and an admin web come as one set</h2>
+        </div>
+          </div>
         </div>
         <ul class="tools">
           <li>
@@ -110,21 +117,27 @@
 
     <section id="how" class="section">
       <div class="wrap">
+        <div class="ed">
+          <p class="ed-label"><span>02</span>How it runs</p>
+          <div class="ed-body">
         <div class="head">
           <h2>Run it with just one tablet</h2>
           <p>Choose who is training, and today's plan for that person is set; the app then guides you from the explanation to practice.</p>
         </div>
-        <ol class="steps steps-5">
-          <li><h3>Choose a participant</h3><p>When staff choose who is training on the tablet, that person's plan for today (for example, 4 activities, about 18 minutes) is set with the level of each activity.</p></li>
-          <li><h3>Find the starting level</h3><p>A first-time participant spends about 4 minutes on one game, pressing the lit numbers, to find the starting level of each activity.</p></li>
-          <li><h3>Check the device</h3><p>Press each of the eight fingers in turn and check the pictures and numbers.</p></li>
-          <li><h3>Explanation and practice</h3><p>The app reads out what to do, and you practice before starting.</p></li>
-          <li><h3>Activities and results</h3><p>There is a short rest between activities; at the end, the app shows what was done today and saves the records.</p></li>
+          </div>
+        </div>
+        <ol class="steps">
+          <li><img class="flow" src="../img/flow-1-en.webp" width="960" height="600" alt="Start screen: today's participant and plan" loading="lazy"><h3>Choose a participant</h3><p>When staff choose who is training on the tablet, that person's plan for today (for example, 3 activities, about 14 minutes) is set with the level of each activity.</p></li>
+          <li><img class="flow" src="../img/flow-3-en.webp" width="960" height="600" alt="Device check screen: eight finger numbers" loading="lazy"><h3>Check the device</h3><p>Press each of the eight fingers in turn and check the pictures and numbers.</p></li>
+          <li><img class="flow" src="../img/flow-4-en.webp" width="960" height="600" alt="Explanation and practice screen" loading="lazy"><h3>Explanation and practice</h3><p>The app reads out what to do, and you practice before starting.</p></li>
+          <li><img class="flow" src="../img/flow-5-en.webp" width="960" height="600" alt="Activity screen" loading="lazy"><h3>Activities and results</h3><p>There is a short rest between activities; at the end, the app shows what was done today and saves the records.</p></li>
         </ol>
+        <div class="ed ed-after">
+          <div class="ed-body">
         <ul class="rows">
           <li>
-            <h3>Find the starting level, then begin</h3>
-            <p>At first, a short game called "Find the starting level" is used to find where to begin: pressing lit numbers one at a time, pressing two together, and pressing in time with a sound. It is not a diagnosis or a test, and its result is used only to suggest a starting level and speed for each activity. Staff confirm before anything is applied. After that, levels are suggested one step at a time based on performance records.</p>
+            <h3>Start at the easiest step</h3>
+            <p>At first, each activity starts at its easiest level. Staff can change the level and speed of each activity, and after that levels are suggested one step at a time based on performance records. Staff confirm before anything is applied.</p>
           </li>
           <li>
             <h3>The app guides, and staff run the session alongside</h3>
@@ -139,41 +152,70 @@
             <p>When training ends, the app shows right away what was done today, and staff can open the detailed numbers separately. Participation records gather in the admin web as per-activity records and PDF reports. If the internet drops, the tablet stores the records and sends them when reconnected.</p>
           </li>
         </ul>
-        <p class="more"><a class="text-link" href="contact.html">Contact us about the package or adoption</a></p>
+        <p class="more"><a class="go" href="contact.html">Contact us about the package or adoption</a></p>
+          </div>
+        </div>
       </div>
     </section>
 
     <section id="records" class="section">
-      <div class="wrap split">
-        <div>
-          <h2>Records built up by finger</h2>
-          <p>From who is training today to each participant's records, check it all in a single internet browser.</p>
-          <p class="metrics-line"><strong>Items recorded</strong> Sessions · Trials · Accuracy · Time taken · Hold time · Results by finger</p>
-          <ul class="list">
+      <div class="wrap">
+        <div class="ed">
+          <p class="ed-label"><span>03</span>Records</p>
+          <div class="ed-body">
+            <div class="head">
+              <h2>Records built up by finger</h2>
+              <p>From who is training today to each participant's records, check it all in a single internet browser.</p>
+            </div>
+            <div class="frame"><img src="../img/admin-center-en.webp" width="1440" height="744" alt="Admin web center status: to-do items and who has not trained yet today" loading="lazy"></div>
+            <p class="metrics-line"><strong>Items recorded</strong> Sessions · Trials · Accuracy · Time taken · Hold time · Results by finger</p>
+            <div class="rec-cols">
+              <ul class="list">
             <li><strong>Center status</strong> — who trains today and who to look in on, at a glance</li>
             <li><strong>Participant records</strong> — weekly attendance, the current level of each activity and its changes, and per-session records</li>
             <li><strong>Level suggestions</strong> — suggests who to move up or down based on records; staff decide whether to apply</li>
             <li><strong>Session history · PDF reports · CSV export</strong>, plus staff and center accounts and tablet connection management</li>
           </ul>
-          <ul class="timeline" aria-label="Where records lead">
+              <div>
+                <ul class="timeline" aria-label="Where records lead">
             <li><span>Records</span>Performance records and reports by finger</li>
             <li><span>Suggest</span>Level and speed suggestions based on performance records (staff apply them)</li>
             <li><span>Plan</span>Training plan suggestions from records (planned; staff apply them)</li>
           </ul>
-          <p class="notice"><strong>Performance record notice</strong>These values are records of how training was done. They are not a diagnosis, and medical decisions belong to a medical professional.</p>
-          <p class="more"><a class="text-link" href="technology.html#definitions">See record definitions and level suggestion rules</a></p>
-        </div>
-        <div class="frame"><img src="../img/admin-center-en.webp" width="1440" height="744" alt="Admin web center status: to-do items and who has not trained yet today" loading="lazy"></div>
-      </div>
-      <div class="wrap">
-        <figure class="film" data-video="../video/admin-tour-en.mp4" data-poster="../video/admin-tour-en-poster.webp" data-mode="player" hidden>
+                <p class="notice"><strong>Performance record notice</strong>These values are records of how training was done. They are not a diagnosis, and medical decisions belong to a medical professional.</p>
+              </div>
+            </div>
+            <p class="more"><a class="go" href="technology.html#definitions">See record definitions and level suggestion rules</a></p>
+            <figure class="film" data-video="../video/admin-tour-en.mp4" data-poster="../video/admin-tour-en-poster.webp" data-mode="player" hidden>
           <figcaption>Admin web tour (20 s, with music)</figcaption>
         </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="report" class="section section-tint">
+      <div class="wrap">
+        <div class="ed">
+          <p class="ed-label"><span>04</span>Reports</p>
+          <div class="ed-body report">
+            <div class="report-copy">
+              <div class="head">
+                <h2>Participation records gather in the admin web and appear as PDF reports</h2>
+                <p>Older adults and families receive only the first page of the report, which lists what was done.</p>
+              </div>
+              <ol class="report-keys"><li><h3>This period at a glance</h3><p>Visits, completed sessions and time spent</p></li><li><h3>By week</h3><p>Sessions completed each week</p></li><li><h3>Activities done</h3><p>How many times each activity was done</p></li><li><h3>Training days</h3><p>Marked on a calendar</p></li></ol>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <section id="adopt" class="section">
       <div class="wrap">
+        <div class="ed">
+          <p class="ed-label"><span>05</span>Adoption</p>
+          <div class="ed-body">
         <div class="head">
           <h2>Adoption guide</h2>
           <p>Operating methods and features for each organization are arranged to fit the product specifications.</p>
@@ -194,11 +236,16 @@
             <li><strong>ID number ledger template</strong> — a spreadsheet to match ID numbers with participants</li>
           </ul>
         </details>
+          </div>
+        </div>
       </div>
     </section>
 
     <section id="faq" class="section">
       <div class="wrap">
+        <div class="ed">
+          <p class="ed-label"><span>06</span>FAQ</p>
+          <div class="ed-body">
         <div class="head"><h2>Frequently asked questions</h2></div>
         <div class="faq">
           <details>
@@ -219,7 +266,7 @@
           </details>
           <details>
             <summary>What if it is too hard or too easy?</summary>
-            <div class="ans"><p>At first, "Find the starting level" sets a starting level for each activity. After that, staff can move the level and speed of each activity up or down one step at a time. The admin web tells you who might be ready for a higher or lower level based on performance records; staff decide.</p></div>
+            <div class="ans"><p>At first, each activity starts at its easiest step. After that, staff can move the level and speed of each activity up or down one step at a time. The admin web tells you who might be ready for a higher or lower level based on performance records; staff decide.</p></div>
           </details>
           <details>
             <summary>What if sound or vibration is uncomfortable?</summary>
@@ -242,15 +289,19 @@
             <div class="ans"><p>We arrange it to fit the size and setup of your organization. Please contact <a class="text-link" href="mailto:info@damun.asia?subject=Rehaptic%20adoption%20inquiry">info@damun.asia</a>.</p></div>
           </details>
         </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="section cta">
+    <section class="cta">
       <div class="wrap">
-        <h2>Considering adoption?</h2>
-        <p>Feel free to contact us about adopting at your center, partnerships, or anything else.</p>
-        <div class="actions"><a class="btn btn-primary" href="contact.html">Contact us</a></div>
-        <p class="related"><span>See also</span> <a class="text-link" href="family.html">For home</a> <span aria-hidden="true">·</span> <a class="text-link" href="technology.html">Technology</a></p>
+        <div>
+          <h2>Considering adoption?</h2>
+          <p>Feel free to contact us about adopting at your center, partnerships, or anything else.</p>
+          <p class="related"><span>See also</span> <a href="family.html">For home</a> <span aria-hidden="true">·</span> <a href="technology.html">Technology</a></p>
+        </div>
+        <a class="btn btn-primary" href="contact.html">Contact us</a>
       </div>
     </section>
   </main>
@@ -258,16 +309,20 @@
   <footer class="site-footer">
     <div class="wrap">
       <div class="f-top">
-        <a class="f-logo" href="index.html" aria-label="DAMUN home"><img src="../img/damun-white.svg" alt="damun" width="124" height="38"></a>
+        <div class="f-brand">
+          <a class="f-logo" href="index.html" aria-label="DAMUN home"><img src="../img/damun-white.svg" alt="damun" width="124" height="38"></a>
+          <p class="f-mail">Contact <a href="mailto:info@damun.asia">info@damun.asia</a></p>
+        </div>
         <nav class="f-links" aria-label="Site guide">
           <div class="f-group"><p class="f-head">DAMUN</p><a href="index.html">Home</a><a href="about.html">Company</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy policy</a></div>
           <div class="f-group"><p class="f-head">Product</p><a href="rehaptic.html">Product overview</a><a href="centers.html">For centers</a><a href="family.html">For home</a><a href="technology.html">Technology</a></div>
         </nav>
       </div>
-      <p class="f-mail">Contact <a href="mailto:info@damun.asia">info@damun.asia</a></p>
-      <p class="f-biz">DAMUN · Representative: Martin Seo · Business registration no. 894-20-02492 · 12, Daewangpangyo-ro 645beon-gil, Bundang-gu, Seongnam-si, Gyeonggi-do, Republic of Korea (7F #15, Gyeonggi Center for Creative Economy & Innovation)</p>
-      <p class="f-legal">Rehaptic has not been approved or certified as a medical device and is not intended to diagnose, treat or prevent disease. Screens shown are from an app in development or are concept examples; product specifications, screens, available languages and launch schedule may change.</p>
-      <p class="f-legal">© 2026 DAMUN. All rights reserved.</p>
+      <div class="f-bottom">
+        <p class="f-biz">DAMUN · Representative: Martin Seo · Business registration no. 894-20-02492 · 12, Daewangpangyo-ro 645beon-gil, Bundang-gu, Seongnam-si, Gyeonggi-do, Republic of Korea (7F #15, Gyeonggi Center for Creative Economy & Innovation)</p>
+        <p class="f-legal">Rehaptic has not been approved or certified as a medical device and is not intended to diagnose, treat or prevent disease. Screens shown are from an app in development or are concept examples; product specifications, screens, available languages and launch schedule may change.</p>
+        <p class="f-copy">© 2026 DAMUN. All rights reserved.</p>
+      </div>
     </div>
   </footer>
 

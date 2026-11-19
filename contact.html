@@ -36,7 +36,7 @@
         <img src="img/damun-white.svg" alt="damun" width="155" height="48">
       </a>
       <a class="lang-short" lang="en" hreflang="en" href="en/contact.html" data-lang-switch aria-label="View this page in English">EN</a>
-      <a class="btn btn-primary btn-sm header-cta" href="contact.html">문의하기</a>
+      <a class="btn btn-nav header-cta" href="contact.html">문의하기</a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
         <span class="sr-only">메뉴 열기</span>
         <span class="bars" aria-hidden="true"></span>
@@ -46,26 +46,27 @@
           <li><a href="index.html">홈</a></li>
           <li><a href="about.html">회사</a></li>
           <li class="has-sub"><button class="sub-toggle" type="button" aria-expanded="false" aria-controls="nav-product">제품<i aria-hidden="true"></i></button><span class="sub-label" aria-hidden="true">제품</span><div class="sub" id="nav-product"><ul aria-label="제품"><li><a href="rehaptic.html"><b>제품 소개</b><span>그립과 콘텐츠를 한눈에</span></a></li><li><a href="centers.html"><b>센터용</b><span>태블릿 + 관리자 웹 · 담당자가 진행</span></a></li><li><a href="family.html"><b>가정용</b><span>스마트폰 앱 · 집에서 부담 없이</span></a></li><li><a href="technology.html"><b>기술</b><span>손가락별 기록과 앞으로의 계획</span></a></li></ul></div></li>
-          <li class="nav-cta"><a class="btn btn-primary btn-sm" href="contact.html" aria-current="page">문의하기</a></li>
+          <li class="nav-cta"><a class="btn btn-nav" href="contact.html" aria-current="page">문의하기</a></li>
           <li class="lang"><span class="lang-group" role="group" aria-label="언어 선택"><span lang="ko" aria-current="true">한국어</span><span class="sep" aria-hidden="true">|</span><a lang="en" hreflang="en" href="en/contact.html" data-lang-switch>English</a></span></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main id="main">
+  <main id="main" data-page="contact">
 
-    <section class="page-head">
+    <section class="ph">
       <div class="wrap">
+        <p class="kicker latin">Contact</p>
         <h1>궁금한 점이 있으신가요?<br>편하게 문의해 주세요</h1>
-        <p class="lead">궁금한 내용은 info@damun.asia로 보내 주세요.</p>
+        <p class="ph-lead">궁금한 내용은 info@damun.asia로 보내 주세요.</p>
       </div>
     </section>
 
     <section class="section">
-      <div class="wrap narrow">
-        <div class="contact-card">
-          <p class="c-label">문의하기</p>
+      <div class="wrap ed">
+        <p class="ed-label"><span>01</span>문의하기</p>
+        <div class="ed-body contact-card">
           <p class="c-mail" id="contact-mail">info@damun.asia</p>
           <div class="contact-actions">
             <a class="btn btn-primary" href="mailto:info@damun.asia">메일로 문의하기</a>
@@ -73,9 +74,19 @@
           </div>
           <p class="copy-status" role="status" aria-live="polite"></p>
         </div>
-        <p>문의하실 때 기관 이름과 종류, 연락받으실 분의 성함과 연락처, 이용 예정 인원, 궁금한 점을 함께 적어 주시면 확인이 빠릅니다.</p>
-        <p>도입을 검토하신다면 이용자가 안내를 이해하는지, 기기를 편하게 조작하는지, 반복 활동에 참여하는지부터 확인해 볼 수 있습니다.</p>
-        <p>사업장을 방문하시기 전에는 메일로 먼저 연락해 주세요.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap ed">
+        <p class="ed-label"><span>02</span>안내</p>
+        <div class="ed-body">
+          <ul class="notes">
+            <li>문의하실 때 기관 이름과 종류, 연락받으실 분의 성함과 연락처, 이용 예정 인원, 궁금한 점을 함께 적어 주시면 확인이 빠릅니다.</li>
+            <li>도입을 검토하신다면 이용자가 안내를 이해하는지, 기기를 편하게 조작하는지, 반복 활동에 참여하는지부터 확인해 볼 수 있습니다.</li>
+            <li>사업장을 방문하시기 전에는 메일로 먼저 연락해 주세요.</li>
+          </ul>
+        </div>
       </div>
     </section>
   </main>
@@ -83,16 +94,20 @@
   <footer class="site-footer">
     <div class="wrap">
       <div class="f-top">
-        <a class="f-logo" href="index.html" aria-label="다문 DAMUN 홈"><img src="img/damun-white.svg" alt="damun" width="124" height="38"></a>
+        <div class="f-brand">
+          <a class="f-logo" href="index.html" aria-label="다문 DAMUN 홈"><img src="img/damun-white.svg" alt="damun" width="124" height="38"></a>
+          <p class="f-mail">문의 <a href="mailto:info@damun.asia">info@damun.asia</a></p>
+        </div>
         <nav class="f-links" aria-label="사이트 안내">
           <div class="f-group"><p class="f-head">다문</p><a href="index.html">홈</a><a href="about.html">회사</a><a href="contact.html">문의</a><a href="privacy.html">개인정보 처리방침</a></div>
           <div class="f-group"><p class="f-head">제품</p><a href="rehaptic.html">제품 소개</a><a href="centers.html">센터용</a><a href="family.html">가정용</a><a href="technology.html">기술</a></div>
         </nav>
       </div>
-      <p class="f-mail">문의 <a href="mailto:info@damun.asia">info@damun.asia</a></p>
-      <p class="f-biz">다문(DAMUN) · 대표 서성륜 · 사업자등록번호 894-20-02492 · 경기도 성남시 분당구 대왕판교로645번길 12, 7층 15호 (삼평동, 경기창조경제혁신센터)</p>
-      <p class="f-legal">Rehaptic은 의료기기로 허가 · 인증을 받은 제품이 아니며, 질병의 진단 · 치료 · 예방을 목적으로 하지 않습니다. 화면은 개발 중인 앱의 화면이거나 개념 예시이며, 제품 사양, 화면과 출시 일정은 바뀔 수 있습니다.</p>
-      <p class="f-legal">© 2026 DAMUN. All rights reserved.</p>
+      <div class="f-bottom">
+        <p class="f-biz">다문(DAMUN) · 대표 서성륜 · 사업자등록번호 894-20-02492 · 경기도 성남시 분당구 대왕판교로645번길 12, 7층 15호 (삼평동, 경기창조경제혁신센터)</p>
+        <p class="f-legal">Rehaptic은 의료기기로 허가 · 인증을 받은 제품이 아니며, 질병의 진단 · 치료 · 예방을 목적으로 하지 않습니다. 화면은 개발 중인 앱의 화면이거나 개념 예시이며, 제품 사양, 화면과 출시 일정은 바뀔 수 있습니다.</p>
+        <p class="f-copy">© 2026 DAMUN. All rights reserved.</p>
+      </div>
     </div>
   </footer>
 
