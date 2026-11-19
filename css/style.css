@@ -848,3 +848,6 @@ main[data-page="contact"] .ph { padding-bottom: clamp(28px, 3.4vw, 44px); }
 /* 제품 소개 첫 화면: 태블릿 영상 없이 글과 수치만 (대표 11.19) */
 .product-hero { padding-bottom: clamp(64px, 8.5vw, 120px); }
 .product-hero + .section { border-top: 0; }
+
+/* 리포트 구역: 스크롤을 따라 붙는 제목이 아래 목록과 겹쳐 보여 붙임을 없앤다 (11.19) */
+.report.has-sheet .head, .report.has-sheet .report-copy { position: static; }
