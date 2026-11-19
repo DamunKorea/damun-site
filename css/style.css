@@ -844,3 +844,7 @@ main:not([data-page="about"]) .ed .report .head h2 { font-size: clamp(1.875rem, 
 
 main[data-page="contact"] .section { padding: clamp(44px, 5.4vw, 72px) 0; }
 main[data-page="contact"] .ph { padding-bottom: clamp(28px, 3.4vw, 44px); }
+
+/* 제품 소개 첫 화면: 태블릿 영상 없이 글과 수치만 (대표 11.19) */
+.product-hero { padding-bottom: clamp(64px, 8.5vw, 120px); }
+.product-hero + .section { border-top: 0; }
