@@ -122,6 +122,29 @@
     if (menuOpen() && !nav.contains(e.target) && !toggle.contains(e.target)) setMenu(false);
   });
 
+  const productMenu = nav.querySelector('.has-sub');
+  if (productMenu) {
+    const productButton = productMenu.querySelector('.sub-toggle');
+    const setProduct = open => {
+      productMenu.classList.toggle('open', open);
+      productButton.setAttribute('aria-expanded', String(open));
+    };
+    productButton.addEventListener('click', () => setProduct(!productMenu.classList.contains('open')));
+    productMenu.addEventListener('focusout', e => {
+      if (!productMenu.contains(e.relatedTarget)) setProduct(false);
+    });
+    productMenu.addEventListener('keydown', e => {
+      if (e.key !== 'Escape' || !productMenu.classList.contains('open')) return;
+      e.stopPropagation();
+      setProduct(false);
+      productButton.focus();
+    });
+    document.addEventListener('click', e => {
+      if (!productMenu.contains(e.target)) setProduct(false);
+    });
+    window.matchMedia('(min-width:901px)').addEventListener('change', () => setProduct(false));
+  }
+
   // A saved link opens its technical reference in place. Reading and opening rows never navigates.
   const revealReference = () => {
     const id = location.hash.slice(1);
@@ -211,6 +234,24 @@
 
   /* 설명 영상(player)은 파일 확인을 기다리지 않고 바로 붙인다. 확인이 끝난 뒤에야 자리가 생기면 문서가 뒤늦게 길어져서,
      언어 전환 뒤 뒤로 가기에서 읽던 위치가 밀린다 (UX-015). 영상 칸의 비율은 CSS 가 미리 잡아 둔다. */
+  const reel = document.querySelector('.activity-reel-stage');
+  if (reel) {
+    const video = reel.querySelector('video');
+    const button = reel.querySelector('.activity-reel-start');
+    video.controls = false;
+    button.hidden = false;
+    button.addEventListener('click', () => {
+      button.hidden = true;
+      video.controls = true;
+      video.focus({ preventScroll: true });
+      video.play().catch(() => {
+        video.controls = false;
+        button.hidden = false;
+        button.focus({ preventScroll: true });
+      });
+    });
+  }
+
   const mountPlayer = (slot, url) => {
     const video = document.createElement('video');
     video.playsInline = true;

@@ -26,7 +26,7 @@
 
   <link rel="stylesheet" href="fonts/pretendard.css">
   <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/studio.css?v=11"><link rel="stylesheet" href="css/family-motion.css?v=14"><link rel="stylesheet" href="css/showcase.css?v=19"></head>
+<link rel="stylesheet" href="css/studio.css?v=11"><link rel="stylesheet" href="css/family-motion.css?v=14"><link rel="stylesheet" href="css/showcase.css?v=23"></head>
 <body>
   <a class="skip" href="#main">본문 바로가기</a>
 
@@ -43,7 +43,10 @@
       </button>
       <nav id="site-nav" class="site-nav" aria-label="주요 메뉴">
         <ul>
-          <li><a href="rehaptic.html">제품</a></li><li><a href="centers.html">센터용</a></li><li><a href="family.html" aria-current="page">가정용</a></li><li><a href="technology.html">기술</a></li><li><a href="about.html">회사</a></li><li><a href="contact.html" class="nav-contact">문의</a></li><li class="lang"><span class="lang-group" role="group" aria-label="언어 선택"><span lang="ko" aria-current="true">한국어</span><span class="sep" aria-hidden="true">|</span><a lang="en" hreflang="en" href="en/family.html" data-lang-switch>English</a></span></li>
+          <li class="has-sub is-current"><button class="sub-toggle" type="button" aria-expanded="false" aria-controls="nav-product">제품<i aria-hidden="true"></i></button><span class="sub-label" aria-hidden="true">제품</span><div class="sub" id="nav-product"><ul aria-label="제품"><li><a href="rehaptic.html"><b>제품 소개</b><span>그립과 콘텐츠를 한눈에</span></a></li><li><a href="centers.html"><b>센터용</b><span>태블릿 + 관리자 웹 · 담당자가 진행</span></a></li><li><a href="family.html" aria-current="page"><b>가정용</b><span>스마트폰 앱 · 집에서 부담 없이</span></a></li><li><a href="technology.html"><b>기술</b><span>손가락별 기록과 앞으로의 계획</span></a></li></ul></div></li>
+          <li><a href="about.html">회사</a></li>
+          <li class="nav-cta"><a class="btn btn-nav" href="contact.html">문의하기</a></li>
+          <li class="lang"><span class="lang-group" role="group" aria-label="언어 선택"><span lang="ko" aria-current="true">한국어</span><span class="sep" aria-hidden="true">|</span><a lang="en" hreflang="en" href="en/family.html" data-lang-switch>English</a></span></li>
         </ul>
       </nav>
     </div>
@@ -76,9 +79,9 @@
           <h2>가로 화면으로 즐기는 손 운동</h2>
           <p>스마트폰을 가로로 놓고 양손에 그립을 쥡니다.</p>
         </div>
-        <div id="family-play"><figure class="film" data-video="video/home-play.mp4?v=20" data-poster="video/home-play-poster.webp?v=20" data-mode="player" hidden>
-          <figcaption>가정용 플레이 콘셉트 · 34초 · 음악 포함</figcaption>
-        <div class="family-chapters" role="group" aria-label="영상 장면 선택" hidden style="display:none"></div><p class="motion-hint"></p><p class="motion-status" role="status"></p></figure></div>
+        <div id="family-play"><figure class="film" data-video="video/home-play.mp4?v=23" data-poster="video/home-play-poster.webp?v=23" data-mode="player" hidden>
+          <figcaption>가정용 플레이 콘셉트 · 54초 · 음악 포함</figcaption>
+        <div class="family-chapters" role="group" aria-label="영상 장면 선택" hidden><button type="button" data-activity="intro" data-second="0" data-hint=""><small>0:00</small><span>처음부터</span></button><button type="button" data-activity="dance" data-second="28" data-hint="그립을 쥐면 빛이 켜지고, 힘을 풀면 꺼져요."><small>0:28</small><span>리듬터치</span></button></div><p class="motion-hint"></p><p class="motion-status" role="status"></p></figure></div>
         
         
           </div>
@@ -119,7 +122,7 @@
         <div class="ed">
           <p class="ed-label">개발 진행 중</p>
           <div class="ed-body">
-        <div class="head"><h2>넥스트 그립 개발 계획</h2><p>다음 세대 그립(v3)은 모션 센서(자이로 등)를 담아, 손가락 입력과 함께 손의 방향(기울기·회전)과 위치, 이동 경로를 읽도록 개발할 계획입니다.</p></div>
+        <div class="head"><h2>넥스트 그립 개발 계획</h2><p>리듬터치는 자이로로 읽은 팔 동작과 레버의 눌림을 함께 쓰는 가정용 게임 콘셉트입니다.</p></div>
         
         <p class="fine">모두 개발 진행 중이며 일정과 구성은 바뀔 수 있습니다. 효능이나 치료 효과를 말하지 않습니다. 가정용은 센터용과 사용 환경이 다르므로, 표방과 안전 요건을 따로 확인한 뒤 출시 여부와 구성을 정합니다.</p>
           </div>
@@ -160,6 +163,6 @@
     </div>
   </footer>
 
-  <script src="js/design-main.js?v=16" defer></script>
+  <script src="js/design-main.js?v=23" defer></script>
 <script defer src="js/studio.js?v=20"></script><script defer src="js/family-motion.js?v=19"></script></body>
 </html>

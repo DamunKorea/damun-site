@@ -26,7 +26,7 @@
 
   <link rel="stylesheet" href="../fonts/pretendard.css">
   <link rel="stylesheet" href="../css/style.css">
-<link rel="stylesheet" href="../css/studio.css?v=11"><link rel="stylesheet" href="../css/showcase.css?v=19"></head>
+<link rel="stylesheet" href="../css/studio.css?v=11"><link rel="stylesheet" href="../css/showcase.css?v=23"></head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
@@ -43,7 +43,10 @@
       </button>
       <nav id="site-nav" class="site-nav" aria-label="Main menu">
         <ul>
-          <li><a href="rehaptic.html">Product</a></li><li><a href="centers.html">For centers</a></li><li><a href="family.html">For home</a></li><li><a href="technology.html" aria-current="page">Technology</a></li><li><a href="about.html">About</a></li><li><a href="contact.html" class="nav-contact">Contact</a></li><li class="lang"><span class="lang-group" role="group" aria-label="Language"><span lang="en" aria-current="true">English</span><span class="sep" aria-hidden="true">|</span><a lang="ko" hreflang="ko" href="../technology.html" data-lang-switch>한국어</a></span></li>
+          <li class="has-sub is-current"><button class="sub-toggle" type="button" aria-expanded="false" aria-controls="nav-product">Product<i aria-hidden="true"></i></button><span class="sub-label" aria-hidden="true">Product</span><div class="sub" id="nav-product"><ul aria-label="Product"><li><a href="rehaptic.html"><b>Product overview</b><span>Explore the grip and activities</span></a></li><li><a href="centers.html"><b>For centers</b><span>Tablet and staff dashboard</span></a></li><li><a href="family.html"><b>For home</b><span>Smartphone app, easy to start at home</span></a></li><li><a href="technology.html" aria-current="page"><b>Technology</b><span>Per-finger records and future plans</span></a></li></ul></div></li>
+          <li><a href="about.html">Company</a></li>
+          <li class="nav-cta"><a class="btn btn-nav" href="contact.html">Contact us</a></li>
+          <li class="lang"><span class="lang-group" role="group" aria-label="Language"><span lang="en" aria-current="true">English</span><span class="sep" aria-hidden="true">|</span><a lang="ko" hreflang="ko" href="../technology.html" data-lang-switch>한국어</a></span></li>
         </ul>
       </nav>
     </div>
@@ -99,7 +102,7 @@
     
 
 
-    <section id="v3" class="section next-grip"><div class="wrap next-layout"><div class="next-copy"><p class="next-kicker">NEXT GRIP · In planning</p><h2>From fingers to the movement of the hand</h2><p>We plan to develop a next-generation grip (v3) with a motion sensor (such as a gyro) that reads the orientation (tilt and rotation), position and movement path of the hand together with finger input.</p></div></div></section>
+    <section id="v3" class="section next-grip"><div class="wrap next-layout"><div class="next-copy"><p class="next-kicker">NEXT GRIP · CONCEPT</p><h2>Arm motion and lever input</h2><p>In Rhythm Touch, the gyroscope tracks how you turn the grip. Squeeze either grip to light the blade on that side. Release it and the light goes out. Swing the lit blade through a block on the beat to split it.</p></div><figure class="next-demo"><video src="../video/rhythm-reach-en.mp4?v=20" poster="../video/rhythm-reach-en-poster.webp?v=20" controls="" playsinline="" preload="none" width="1280" height="800" aria-label="Rhythm Touch concept film"><a href="../video/rhythm-reach-en.mp4?v=20">Open video</a></video><div class="gesture-timing"><div><span>Arm gesture</span><i class="timing-track arm" aria-hidden="true"></i></div><div><span>Grip squeeze</span><i class="timing-track squeeze" aria-hidden="true"></i></div></div><figcaption>Illustrative timing · Both inputs overlap at the beat marker.</figcaption></figure></div></section>
 
     
 
@@ -329,6 +332,6 @@
     </div>
   </footer>
 
-  <script src="../js/design-main.js?v=16" defer></script>
+  <script src="../js/design-main.js?v=23" defer></script>
 <script defer src="../js/studio.js?v=20"></script></body>
 </html>
