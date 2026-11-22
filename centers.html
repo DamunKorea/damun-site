@@ -26,141 +26,79 @@
 
   <link rel="stylesheet" href="fonts/pretendard.css">
   <link rel="stylesheet" href="css/style.css">
-</head>
+<link rel="stylesheet" href="css/studio.css?v=11"><link rel="stylesheet" href="css/showcase.css?v=19"></head>
 <body>
   <a class="skip" href="#main">본문 바로가기</a>
 
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="index.html" aria-label="다문 DAMUN 홈">
-        <img src="img/damun-white.svg" alt="damun" width="155" height="48">
+        <img src="img/damun-primary.svg" alt="damun" width="155" height="48">
       </a>
       <a class="lang-short" lang="en" hreflang="en" href="en/centers.html" data-lang-switch aria-label="View this page in English">EN</a>
-      <a class="btn btn-nav header-cta" href="contact.html">문의하기</a>
+      
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
         <span class="sr-only">메뉴 열기</span>
         <span class="bars" aria-hidden="true"></span>
       </button>
       <nav id="site-nav" class="site-nav" aria-label="주요 메뉴">
         <ul>
-          <li><a href="index.html">홈</a></li>
-          <li><a href="about.html">회사</a></li>
-          <li class="has-sub is-current"><button class="sub-toggle" type="button" aria-expanded="false" aria-controls="nav-product">제품<i aria-hidden="true"></i></button><span class="sub-label" aria-hidden="true">제품</span><div class="sub" id="nav-product"><ul aria-label="제품"><li><a href="rehaptic.html"><b>제품 소개</b><span>그립과 콘텐츠를 한눈에</span></a></li><li><a href="centers.html" aria-current="page"><b>센터용</b><span>태블릿 + 관리자 웹 · 담당자가 진행</span></a></li><li><a href="family.html"><b>가정용</b><span>스마트폰 앱 · 집에서 부담 없이</span></a></li><li><a href="technology.html"><b>기술</b><span>손가락별 기록과 앞으로의 계획</span></a></li></ul></div></li>
-          <li class="nav-cta"><a class="btn btn-nav" href="contact.html">문의하기</a></li>
-          <li class="lang"><span class="lang-group" role="group" aria-label="언어 선택"><span lang="ko" aria-current="true">한국어</span><span class="sep" aria-hidden="true">|</span><a lang="en" hreflang="en" href="en/centers.html" data-lang-switch>English</a></span></li>
+          <li><a href="rehaptic.html">제품</a></li><li><a href="centers.html" aria-current="page">센터용</a></li><li><a href="family.html">가정용</a></li><li><a href="technology.html">기술</a></li><li><a href="about.html">회사</a></li><li><a href="contact.html" class="nav-contact">문의</a></li><li class="lang"><span class="lang-group" role="group" aria-label="언어 선택"><span lang="ko" aria-current="true">한국어</span><span class="sep" aria-hidden="true">|</span><a lang="en" hreflang="en" href="en/centers.html" data-lang-switch>English</a></span></li>
         </ul>
       </nav>
     </div>
   </header>
-  <nav class="subnav" aria-label="제품 메뉴">
-    <div class="wrap subnav-inner"><a href="rehaptic.html">제품 소개</a><a href="centers.html" aria-current="page">센터용</a><a href="family.html">가정용</a><a href="technology.html">기술</a></div>
-  </nav>
+  
 
   <main id="main" data-page="centers">
 
     <section class="ph svc-page">
       <div class="wrap">
-        <nav class="svc-switch" aria-label="서비스 형태 고르기"><a class="svc-opt c is-on" href="centers.html" aria-current="page"><b>센터용</b><span>태블릿 + 관리자 웹</span></a><a class="svc-opt h" href="family.html"><b>가정용</b><span>스마트폰 앱</span></a></nav>
-        <h1>센터의 손 운동 프로그램을 <br>쉽게 시작하고 이어갑니다</h1>
-        <div class="ph-grid">
-          <div class="ph-copy">
+        
+        <div class="ph-grid"><div class="ph-copy"><h1>센터에서 함께하는 손 운동</h1>
             <p class="ph-lead">복지관 · 경로당 · 주·야간보호센터 · 요양시설의 프로그램 담당자를 위한 센터용 Rehaptic 안내입니다.</p>
             <p class="state">2027년 상반기 출시 예정</p>
-            <div class="actions">
-            <a class="btn btn-primary" href="contact.html">문의하기</a>
-            <a class="go" href="#system">구성 보기</a>
+            <p id="system" class="setup-line">양손 그립 한 쌍과 안드로이드 태블릿으로 훈련하고, 담당자는 웹에서 기록을 확인합니다.</p><div class="actions">
+            
+            <a class="btn btn-primary" href="#center-session">센터 훈련 영상 보기</a>
           </div>
           </div>
-          <figure class="svc-fig"><img src="img/kit-center.webp" width="1280" height="800" alt="센터용 구성: 햅틱 그립 한 쌍, 태블릿 앱이 열린 태블릿, 관리자 웹이 열린 노트북"></figure>
+          <figure class="svc-fig"><img src="img/kit-center.webp" width="1280" height="800" alt="센터용 구성: 햅틱 그립 한 쌍, 태블릿 앱이 열린 태블릿, 관리자 웹이 열린 노트북"><figcaption class="concept-cap">센터용 기기 구성 예시</figcaption></figure>
         </div>
       </div>
     </section>
-    <section class="svc-strip">
-      <div class="wrap">
-        <h2 class="sr-only">서비스 형태 요약</h2>
-        <ol class="svc-cards"><li><p class="q">누가 쓰나요</p><h3>프로그램 담당자와 어르신</h3><p>복지관 · 경로당 · 주·야간보호센터 · 요양시설</p></li><li><p class="q">무엇으로 하나요</p><h3>그립 + 태블릿 앱 + 관리자 웹</h3><p>여러 분의 기록을 한곳에서 관리합니다</p></li><li><p class="q">어떻게 이용하나요</p><h3>담당자가 진행합니다</h3><p>훈련은 태블릿으로, 기록과 난이도 제안은 관리자 웹으로</p></li></ol>
-        <p class="fine">그림은 이해를 돕기 위한 개념 예시이며, 기기 화면은 개발 중인 앱의 화면을 바탕으로 한 예시입니다.</p>
-      </div>
-    </section>
+    
 
 
-    <section id="system" class="section">
-      <div class="wrap">
-        <div class="ed">
-          <p class="ed-label"><span>01</span>구성</p>
-          <div class="ed-body">
-        <div class="head">
-          <h2>그립, 태블릿 앱, 관리자 웹이 한 세트입니다</h2>
-        </div>
-          </div>
-        </div>
-        <ul class="tools">
-          <li>
-            <div class="frame frame-grip"><img src="img/grip-crop.webp" width="900" height="520" alt="Rehaptic 햅틱 그립을 쥔 두 손" loading="lazy"></div>
-            <h3>햅틱 그립</h3>
-            <p>왼손·오른손 한 쌍. 손가락마다 따로 눌리는 레버가 있고, 신호는 불빛과 화면으로, 눌림은 진동으로 알려 줍니다. 블루투스로 태블릿과 이어집니다.</p>
-          </li>
-          <li>
-            <div class="frame"><img src="img/app-start.webp" width="1280" height="800" alt="태블릿 앱에서 오늘 훈련할 분을 고르는 화면" loading="lazy"></div>
-            <h3>태블릿 앱</h3>
-            <p>안드로이드 태블릿에서 여덟 가지 활동과 결과 화면을 보여 주고, 기록은 인터넷으로 관리자 웹에 보냅니다.</p>
-          </li>
-          <li>
-            <div class="frame"><img src="img/admin-record.webp" width="1440" height="900" alt="관리자 웹 기록 요약: 콘텐츠별 난이도 자리" loading="lazy"></div>
-            <h3>관리자 웹</h3>
-            <p>담당자용 화면입니다. 인터넷 브라우저로 접속해 기록 · 리포트 · 계정을 관리합니다. 어르신 · 보호자께는 리포트의 첫 쪽(한 일)만 드립니다.</p>
-          </li>
-        </ul>
-      </div>
-    </section>
+    
 
     <section id="how" class="section">
       <div class="wrap">
         <div class="ed">
-          <p class="ed-label"><span>02</span>진행</p>
+          <p class="ed-label">진행</p>
           <div class="ed-body">
         <div class="head">
           <h2>태블릿 하나로 이렇게 진행합니다</h2>
-          <p>훈련하실 분을 고르면 그분의 오늘 훈련 구성이 서고, 설명부터 연습까지 앱이 안내합니다.</p>
+          <p>앱이 안내하고, 담당자가 곁에서 진행합니다.</p>
         </div>
           </div>
         </div>
-        <ol class="steps">
+        <figure id="center-session" class="center-film"><figcaption><h3>센터에서 진행하는 한 회차</h3><span>26초 · 시연</span></figcaption>
+    <video width="1280" height="800" controls playsinline preload="metadata" poster="video/center-session-poster.webp?v=20" aria-label="센터 훈련 진행 영상"><source src="video/center-session.mp4?v=20" type="video/mp4"><a href="video/center-session.mp4?v=20">영상 열기</a></source></video>
+    <details class="player-chapters"><summary>장면 선택<span class="scene-name"></span></summary><div class="center-cues" hidden role="group" aria-label="영상 장면 선택"><button type="button" data-second="0" data-scene-name="대상자 선택"><small>0:00</small>대상자 선택</button><button type="button" data-second="4" data-scene-name="기기 확인"><small>0:04</small>기기 확인</button><button type="button" data-second="8" data-scene-name="손 운동"><small>0:08</small>손 운동</button><button type="button" data-second="15" data-scene-name="리듬 놀이"><small>0:15</small>리듬 놀이</button><button type="button" data-second="22" data-scene-name="기록 확인"><small>0:22</small>기록 확인</button></div></details></figure><details class="session-steps"><summary>진행 순서를 글로 보기</summary><ol class="steps">
           <li><div class="flow"><img src="img/flow-1.webp" width="960" height="600" alt="시작 화면: 오늘 훈련하실 분과 오늘 할 훈련" loading="lazy"></div><h3>대상자 고르기</h3><p>담당자가 태블릿에서 훈련하실 분을 고르면, 그분의 「오늘 할 훈련」(예: 3가지 · 약 14분)이 콘텐츠별 난이도와 함께 섭니다.</p></li>
           <li><div class="flow"><img src="img/flow-3.webp" width="960" height="600" alt="기기 확인 화면: 여덟 손가락 번호" loading="lazy"></div><h3>기기 확인</h3><p>여덟 손가락을 하나씩 눌러 그림과 번호를 확인합니다.</p></li>
           <li><div class="flow"><img src="img/flow-4.webp" width="960" height="600" alt="설명과 연습 화면" loading="lazy"></div><h3>설명·연습</h3><p>할 일을 소리로 읽어 드리고, 연습한 뒤에 시작합니다.</p></li>
           <li><div class="flow"><img src="img/flow-5.webp" width="960" height="600" alt="활동 화면" loading="lazy"></div><h3>활동·결과</h3><p>콘텐츠 사이에 잠깐 쉬어 가고, 마치면 오늘 해 본 것을 보여 드리고 기록을 남깁니다.</p></li>
-        </ol>
-        <div class="ed ed-after">
-          <div class="ed-body">
-        <ul class="points points-2">
-          <li>
-            <h3>가장 쉬운 칸에서 시작합니다</h3>
-            <p>처음에는 콘텐츠마다 가장 쉬운 난이도에서 시작합니다. 담당자는 콘텐츠별로 난이도와 빠르기를 바꿀 수 있고, 그다음부터는 수행 기록을 바탕으로 난이도를 한 칸씩 제안합니다. 적용은 담당자가 확인해 정합니다.</p>
-          </li>
-          <li>
-            <h3>앱이 안내하고, 담당자가 곁에서 진행합니다</h3>
-            <p>할 일을 소리로 읽어 드리고 큰 글씨로 한 번에 하나만 보여 드립니다. 담당자는 옆에서 지켜보며 태블릿 하나로 프로그램을 진행하고, 어르신은 언제든 「도움이 필요해요」를 누를 수 있습니다.</p>
-          </li>
-          <li>
-            <h3>게임처럼 즐기고, 난이도를 제안합니다</h3>
-            <p>음악과 불빛에 맞춰 누르는 활동이라 반복해도 즐길 수 있습니다. 관리자 웹이 수행 기록을 바탕으로 다음 난이도를 제안하고, 정하는 것은 담당자입니다.</p>
-          </li>
-          <li>
-            <h3>손가락별로 자동 기록합니다</h3>
-            <p>훈련을 마치면 오늘 해 본 활동을 바로 보여 드리고, 담당자는 자세한 숫자를 따로 펼쳐 볼 수 있습니다. 참여 기록은 관리자 웹에 모여 콘텐츠별 기록과 PDF 리포트로 나옵니다. 인터넷이 잠시 끊겨도 태블릿에 모아 두었다가 보냅니다.</p>
-          </li>
-        </ul>
-        <p class="more"><a class="go" href="contact.html">구성이나 도입이 궁금하시면 문의하기</a></p>
-          </div>
-        </div>
+        </ol></details>
+        
       </div>
     </section>
 
     <section id="records" class="section">
       <div class="wrap">
         <div class="ed">
-          <p class="ed-label"><span>03</span>기록</p>
+          <p class="ed-label">기록</p>
           <div class="ed-body">
             <div class="head">
               <h2>손가락별로 쌓이는 기록</h2>
@@ -168,43 +106,13 @@
             </div>
           </div>
         </div>
-        <div class="frame frame-wide"><img src="img/admin-center.webp" width="1440" height="744" alt="관리자 웹 센터 현황: 오늘 할 일과 아직 안 하신 분" loading="lazy"></div>
-        <div class="ed ed-after">
-          <div class="ed-body">
-            <div class="metrics"><p class="metrics-h">기록하는 항목</p><ul class="chips"><li>회차 수</li><li>문제 수</li><li>정확도</li><li>걸린 시간</li><li>유지 시간</li><li>손가락별 결과</li></ul></div>
-            <div class="rec-cols">
-              <ul class="list">
-            <li><strong>센터 현황</strong> — 오늘 훈련할 분과 챙겨 볼 분을 한눈에</li>
-            <li><strong>대상자별 기록</strong> — 주별 출석 기록, 콘텐츠마다 지금 난이도와 바뀐 기록, 회차별 기록</li>
-            <li><strong>난이도 제안</strong> — 기록을 바탕으로 올리거나 내릴 분을 권하고, 적용은 담당자가 정합니다</li>
-            <li><strong>회차 이력 · PDF 리포트 · CSV 내보내기</strong>, 센터·담당자 계정과 태블릿 연결 관리</li>
-          </ul>
-              <div>
-                <ul class="timeline" aria-label="기록이 이어지는 방향">
-            <li><span>기록</span>손가락별 수행 기록과 리포트</li>
-            <li><span>제안</span>수행 기록을 바탕으로 난이도·속도 제안 (적용은 담당자)</li>
-            <li><span>계획</span>기록을 바탕으로 한 훈련 구성 제안 (계획 · 적용은 담당자)</li>
-          </ul>
-                <p class="notice"><strong>수행 기록 안내</strong>이 값은 훈련을 어떻게 했는지에 대한 기록입니다. 진단이 아니며, 의학적 판단은 담당 의료인의 몫입니다.</p>
-              </div>
-            </div>
-            <p class="more"><a class="go" href="technology.html#definitions">기록 값 정의와 난이도 제안 규칙 보기</a></p>
-            <figure class="film" data-video="video/admin-tour.mp4" data-poster="video/admin-tour-poster.webp" data-mode="player" hidden>
-          <figcaption>관리자 웹 둘러보기 (20초 · 음악)</figcaption>
-        </figure>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="report" class="section section-tint">
-      <div class="wrap">
-        <div class="ed">
-          <p class="ed-label"><span>04</span>리포트</p>
-          <div class="ed-body report has-sheet">
+        <figure id="center-admin" class="center-film center-admin"><figcaption><h3>관리자 웹 둘러보기</h3><span>20초 · 시연</span></figcaption><video controls playsinline preload="metadata" width="1280" height="800" poster="video/admin-tour-poster.webp?v=20" aria-label="관리자 웹 시연 영상"><source src="video/admin-tour.mp4?v=20" type="video/mp4"><a href="video/admin-tour.mp4?v=20">영상 열기</a></source></video></figure>
+        
+      <p class="notice"><strong>수행 기록 안내</strong>이 값은 훈련을 어떻게 했는지에 대한 기록입니다. 진단이 아니며, 의학적 판단은 담당 의료인의 몫입니다.</p>
+              <details id="report" class="report-disclosure tech-reference"><summary>보호자용 리포트 첫 쪽 보기</summary><div class="ed-body report has-sheet">
             <div class="report-copy">
               <div class="head">
-                <h2>참여 기록은<br>관리자 웹에 모여<br>PDF 리포트로 나옵니다</h2>
+                
                 <p>어르신 · 보호자께는 리포트의 <span class="nb">첫 쪽(한 일)만</span> 드립니다.</p>
               </div>
               <ol class="report-keys"><li><h3>이번 기간 한눈에</h3><p>온 횟수 · 마친 훈련 · 훈련한 시간</p></li><li><h3>주별로 보면</h3><p>주마다 마친 훈련</p></li><li><h3>해 본 콘텐츠</h3><p>콘텐츠별 횟수</p></li><li><h3>훈련한 날</h3><p>달력으로 표시</p></li></ol>
@@ -214,14 +122,15 @@
               <figcaption>시연 자료로 만든 예시</figcaption>
             </figure>
           </div>
-        </div>
-      </div>
+        </details></div>
     </section>
+
+    
 
     <section id="adopt" class="section">
       <div class="wrap">
         <div class="ed">
-          <p class="ed-label"><span>05</span>도입</p>
+          <p class="ed-label">도입</p>
           <div class="ed-body">
         <div class="head">
           <h2>도입 안내</h2>
@@ -251,14 +160,11 @@
     <section id="faq" class="section">
       <div class="wrap">
         <div class="ed">
-          <p class="ed-label"><span>06</span>질문</p>
+          <p class="ed-label">질문</p>
           <div class="ed-body">
         <div class="head"><h2>자주 묻는 질문</h2></div>
         <div class="faq">
-          <details>
-            <summary>어떤 곳에서 쓰나요?</summary>
-            <div class="ans"><p>복지관, 경로당, 주·야간보호센터, 요양시설의 프로그램 담당자가 어르신과 함께 쓰도록 만들었습니다. 손과 머리를 함께 움직이는 활동을 즐기고 싶은 어르신이 사용하는 분입니다.</p></div>
-          </details>
+          
           <details>
             <summary>무엇이 필요한가요?</summary>
             <div class="ans"><p>햅틱 그립 한 쌍(왼손·오른손), 그립과 짝지은 안드로이드 태블릿 한 대, 그리고 관리자 웹을 열 인터넷 브라우저가 필요합니다.</p><p>인터넷이 잠시 끊겨도 태블릿이 기록을 모아 두었다가, 다시 연결되면 저절로 보냅니다.</p></div>
@@ -307,7 +213,7 @@
           <div>
             <h2>도입을 검토하고 계신가요?</h2>
             <p>센터 도입과 제휴, 그 밖의 궁금한 점을 편하게 문의해 주세요.</p>
-          <p class="related"><span>함께 보기</span> <a href="family.html">가정용</a> <span aria-hidden="true">·</span> <a href="technology.html">기술</a></p>
+          
           </div>
           <a class="btn btn-primary" href="contact.html">문의하기</a>
         </div>
@@ -322,10 +228,8 @@
           <a class="f-logo" href="index.html" aria-label="다문 DAMUN 홈"><img src="img/damun-white.svg" alt="damun" width="124" height="38"></a>
           <p class="f-mail">문의 <a href="mailto:info@damun.asia">info@damun.asia</a></p>
         </div>
-        <nav class="f-links" aria-label="사이트 안내">
-          <div class="f-group"><p class="f-head">다문</p><a href="index.html">홈</a><a href="about.html">회사</a><a href="contact.html">문의</a><a href="privacy.html">개인정보 처리방침</a></div>
-          <div class="f-group"><p class="f-head">제품</p><a href="rehaptic.html">제품 소개</a><a href="centers.html">센터용</a><a href="family.html">가정용</a><a href="technology.html">기술</a></div>
-        </nav>
+        <nav class="footer-utilities" aria-label="사이트 안내">
+          <a href="contact.html">문의</a><a href="privacy.html">개인정보 처리방침</a></nav>
       </div>
       <div class="f-bottom">
         <p class="f-biz">다문(DAMUN) · 대표 서성륜 · 사업자등록번호 894-20-02492 · 경기도 성남시 분당구 대왕판교로645번길 12, 7층 15호 (삼평동, 경기창조경제혁신센터)</p>
@@ -335,6 +239,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js" defer></script>
-</body>
+  <script src="js/design-main.js?v=16" defer></script>
+<script defer src="js/studio.js?v=20"></script><script defer src="js/center-session.js?v=10"></script></body>
 </html>

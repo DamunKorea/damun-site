@@ -1,0 +1,50 @@
+.motion-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(16px, 2.5vw, 32px);
+}
+.motion-pair .tilt-feature {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: 0;
+}
+.motion-pair .tilt-feature figure {margin: 0; aspect-ratio: 16/9;}
+.motion-pair .tilt-feature figure img {display: block; width: 100%; height: 100%; object-fit: cover;}
+.motion-pair .tilt-copy {display: flex; flex-direction: column; align-self: stretch; flex: 1; padding: clamp(18px, 2vw, 30px);}
+.motion-pair .tilt-copy .ps-textlink {align-self: flex-start; margin-top: auto; padding-top: 16px;}
+#family-play .family-chapters {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 12px;
+  border: 1px solid #cad8e5;
+  border-radius: 12px;
+  overflow: hidden;
+}
+#family-play .family-chapters[hidden] {display: none;}
+.family-chapters button {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 8px;
+  background: #f6f9fc;
+  color: #1b3d59;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+}
+.family-chapters button + button {border-inline-start: 1px solid #cad8e5;}
+.family-chapters small {font-variant-numeric: tabular-nums; color: #486680; font-size: .80em;}
+.family-chapters button:hover, .family-chapters button[aria-current] {background: #143753; color: #fff;}
+.family-chapters button:hover small, .family-chapters button[aria-current] small {color: #b8d9f2;}
+.family-chapters button:focus-visible {outline: 3px solid #458dd5; outline-offset: -4px;}
+.motion-status:empty {display: none;}
+.motion-hint {display: none;}
+@media (max-width: 680px) {
+  .motion-pair {grid-template-columns: 1fr;}
+  .family-chapters button {flex-direction: column; gap: 1px; font-size: .9rem;}
+  #family-play .motion-hint:not(:empty) {display: block; margin: 10px 2px 0; font-size: .94rem; line-height: 1.6; color: #334d62; word-break: keep-all;}
+}

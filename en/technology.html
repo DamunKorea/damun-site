@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Rehaptic technology | DAMUN</title>
-  <meta name="description" content="The seven record areas of Rehaptic, how the values are calculated, level suggestion rules and related patents.">
+  <meta name="description" content="See what Rehaptic records in seven areas, how it calculates each value and how it suggests changes in difficulty.">
   <meta name="theme-color" content="#FFFFFF">
   <link rel="canonical" href="https://damun.asia/en/technology.html">
   <link rel="alternate" hreflang="ko" href="https://damun.asia/technology.html">
@@ -15,7 +15,7 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="DAMUN">
   <meta property="og:title" content="Rehaptic technology | DAMUN">
-  <meta property="og:description" content="The seven record areas of Rehaptic, how the values are calculated, level suggestion rules and related patents.">
+  <meta property="og:description" content="See what Rehaptic records in seven areas, how it calculates each value and how it suggests changes in difficulty.">
   <meta property="og:url" content="https://damun.asia/en/technology.html">
   <meta property="og:image" content="https://damun.asia/img/og-image-en.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -26,183 +26,113 @@
 
   <link rel="stylesheet" href="../fonts/pretendard.css">
   <link rel="stylesheet" href="../css/style.css">
-</head>
+<link rel="stylesheet" href="../css/studio.css?v=11"><link rel="stylesheet" href="../css/showcase.css?v=19"></head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="index.html" aria-label="DAMUN home">
-        <img src="../img/damun-white.svg" alt="damun" width="155" height="48">
+        <img src="../img/damun-primary.svg" alt="damun" width="155" height="48">
       </a>
       <a class="lang-short" lang="ko" hreflang="ko" href="../technology.html" data-lang-switch aria-label="View this page in Korean">한국어</a>
-      <a class="btn btn-nav header-cta" href="contact.html">Contact us</a>
+      
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
         <span class="sr-only">Open menu</span>
         <span class="bars" aria-hidden="true"></span>
       </button>
       <nav id="site-nav" class="site-nav" aria-label="Main menu">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">Company</a></li>
-          <li class="has-sub is-current"><button class="sub-toggle" type="button" aria-expanded="false" aria-controls="nav-product">Product<i aria-hidden="true"></i></button><span class="sub-label" aria-hidden="true">Product</span><div class="sub" id="nav-product"><ul aria-label="Product"><li><a href="rehaptic.html"><b>Product overview</b><span>The grip and contents at a glance</span></a></li><li><a href="centers.html"><b>For centers</b><span>Tablet + admin web, run by staff</span></a></li><li><a href="family.html"><b>For home</b><span>Smartphone app, easy to start at home</span></a></li><li><a href="technology.html" aria-current="page"><b>Technology</b><span>Per-finger records and future plans</span></a></li></ul></div></li>
-          <li class="nav-cta"><a class="btn btn-nav" href="contact.html">Contact us</a></li>
-          <li class="lang"><span class="lang-group" role="group" aria-label="Language"><span lang="en" aria-current="true">English</span><span class="sep" aria-hidden="true">|</span><a lang="ko" hreflang="ko" href="../technology.html" data-lang-switch>한국어</a></span></li>
+          <li><a href="rehaptic.html">Product</a></li><li><a href="centers.html">For centers</a></li><li><a href="family.html">For home</a></li><li><a href="technology.html" aria-current="page">Technology</a></li><li><a href="about.html">About</a></li><li><a href="contact.html" class="nav-contact">Contact</a></li><li class="lang"><span class="lang-group" role="group" aria-label="Language"><span lang="en" aria-current="true">English</span><span class="sep" aria-hidden="true">|</span><a lang="ko" hreflang="ko" href="../technology.html" data-lang-switch>한국어</a></span></li>
         </ul>
       </nav>
     </div>
   </header>
-  <nav class="subnav" aria-label="Product menu">
-    <div class="wrap subnav-inner"><a href="rehaptic.html">Product overview</a><a href="centers.html">For centers</a><a href="family.html">For home</a><a href="technology.html" aria-current="page">Technology</a></div>
-  </nav>
+  
 
   <main id="main" data-page="technology">
 
     <section class="ph tech-hero">
       <div class="wrap">
-        <p class="kicker">Technology</p>
-        <h1>Reading each finger,<br>keeping a record</h1>
-        <p class="ph-lead">Rehaptic reads finger-by-finger input and automatically records how training was done, sorted into seven areas. As records build up, it suggests levels, and people decide. For the next generation, we plan to read hand movement with a motion sensor too.</p>
+        <div class="tech-copy"><p class="kicker">Technology</p>
+        <h1>Seven ways to read a finger press</h1>
+        <p class="ph-lead">Each activity reads a different aspect of a press. Explore how the app reads lever travel in hand exercise and timing in rhythm play.</p>
         <p class="state">Planned for launch</p>
-        <ul class="facts">
-          <li><strong>8</strong><span>Independent levers<br>4 per hand × 2</span></li>
-          <li><strong>0.1 s</strong><span>Interval of lever-position<br>signals for each finger</span></li>
-          <li><strong>7</strong><span>Recorded<br>areas</span></li>
-          <li><strong>3</strong><span>Domestic patent<br>applications (not yet granted)</span></li>
-        </ul>
+        </div><figure id="algorithm" class="instrument grip-viewer domain-viewer" data-viewer data-duration="0:56">
+          <figcaption id="lever-depth"><strong>Grip inputs and seven training domains</strong></figcaption><div id="grip-reading" class="film-pane"><div class="film-screen"><video controls playsinline preload="metadata" width="1280" height="720" poster="../video/domain-analysis-en.webp?v=20" aria-label="Grip inputs and seven training domains"><source src="../video/domain-analysis-en.webm?v=20" type="video/webm"><source src="../video/domain-analysis-en.mp4?v=20" type="video/mp4"></source></source></video>
+          <button type="button" class="film-start" hidden><i aria-hidden="true">▶</i> <span>Play analysis film</span> <small>0:56</small></button></div>
+          <details class="player-chapters"><summary>Choose a scene<span class="scene-name"></span></summary><div class="chapter-strip" role="group" aria-label="Select a technology chapter"><button type="button" data-time="0" data-summary="Rhythm Play matches the target beat to the press from the corresponding finger." data-scene-name="Input"><small>0:00</small><b>Input</b></button><button type="button" data-time="5" data-summary="Cue-to-press times are summarized by the median for each eligible activity." data-scene-name="Reaction"><small>0:05</small><b>Reaction</b></button><button type="button" data-time="10" data-summary="Count observed trials with an additional, non-target finger press." data-scene-name="Separation"><small>0:10</small><b>Separation</b></button><button type="button" data-time="15" data-summary="Normalize travel to each finger’s calibrated range and average valid peak depths." data-scene-name="Control"><small>0:15</small><b>Control</b></button><button type="button" data-time="20" data-summary="Divide held time by target time in Hand Exercise, cap each trial at 100%, then average." data-scene-name="Hold"><small>0:20</small><b>Hold</b></button><button type="button" data-time="25" data-summary="Average the judgement weights of 1, 0.5 and 0 across non-timeout trials. Press offsets are recorded separately." data-scene-name="Timing"><small>0:25</small><b>Timing</b></button><button type="button" data-time="30" data-summary="Average the number of positions reproduced correctly and in order across rounds." data-scene-name="Sequence"><small>0:30</small><b>Sequence</b></button><button type="button" data-time="35" data-summary="Group finger records by hand to show successes and attempts for the left and right hands." data-scene-name="Coordination"><small>0:35</small><b>Coordination</b></button><button type="button" data-time="40" data-summary="Each lever has a built-in resistance. Detach the entire lever from the grip and seat another at that finger position." data-link="lever-depth" data-play-label="Play lever swap" data-end="0:48" data-poster="../video/domain-analysis-en-lever.webp?v=7" data-scene-name="Lever swap"><small>0:40</small><b>Lever swap</b></button><button type="button" data-time="48" data-summary="Grip connection check shows each finger’s sensor distance in mm and press depth in percent. The calibrated open position is 0%, and fully pressed is 100%. Filmed with a virtual grip." data-link="grip-reading" data-play-label="Play press depth" data-end="0:56" data-poster="../video/domain-analysis-en-depth.webp?v=7" data-scene-name="Press depth"><small>0:48</small><b>Press depth</b></button></div>
+          </details><p class="chapter-summary">Follow a press through the app and see how it calculates the sample records.</p>
+          <a class="film-file" hidden href="../video/domain-analysis-en.mp4?v=20">Open MP4 video</a></div></figure>
       </div>
     </section>
 
-    <div class="wrap toc-inline-wrap">
-      <details class="toc-inline">
-        <summary>On this page</summary>
-        <div class="toc-group"><p class="toc-h">Platform & setup</p><ul><li><a href="#platform">Platform</a></li><li><a href="#difference">What makes it different</a></li><li><a href="#system">System setup</a></li></ul></div><div class="toc-group"><p class="toc-h">Next generation (v3)</p><ul><li><a href="#v3">Next generation (v3)</a></li></ul></div><div class="toc-group"><p class="toc-h">Records & activities</p><ul><li><a href="#domains">Seven record areas</a></li><li><a href="#coverage">Areas by activity</a></li><li><a href="#contents">Activities & levels</a></li><li><a href="#pipeline">From input to records</a></li></ul></div><div class="toc-group"><p class="toc-h">Suggestions & supporting details</p><ul><li><a href="#definitions">Record definitions</a></li><li><a href="#suggest">Level suggestions</a></li><li><a href="#ai">Future plans</a></li><li><a href="#records">Per-finger records</a></li><li><a href="#ip">Patent applications</a></li></ul></div>
-      </details>
+    
+    
+    
+
+    <section id="platform" class="section platform-section"><div class="wrap">
+    <div class="head"><h2>From a finger press to a training record</h2><p>Choose an activity to compare its inputs and records.</p></div>
+    <div class="ps-board"><div class="ps-controls"><fieldset><legend class="sr-only">Choose a training example</legend><label><input type="radio" name="platform-activity" value="handExercise" aria-controls="ps-view-handExercise ps-record-handExercise" checked><span>Hand exercise</span></label><label><input type="radio" name="platform-activity" value="rhythm" aria-controls="ps-view-rhythm ps-record-rhythm"><span>Rhythm play</span></label><label><input type="radio" name="platform-activity" value="sequence" aria-controls="ps-view-sequence ps-record-sequence"><span>Follow the Numbers</span></label></fieldset></div>
+    <div class="ps-flow">
+    <div class="ps-stage ps-input"><h3>Grip input</h3><div class="ps-grips"><img loading="lazy" width="900" height="520" src="../img/grip-crop.webp" alt="Rehaptic grips held in both hands"></div><p>Eight independent levers capture how far each finger presses.</p></div>
+    <div class="ps-stage ps-screen"><h3>Training screen</h3><div id="ps-view-handExercise" class="ps-case" data-case="handExercise"><div class="ps-tablet"><img loading="lazy" src="../img/app-hold-en.webp" width="1280" height="800" alt="Hand exercise"></div><p>Hold the highlighted levers for the time shown.</p></div><div id="ps-view-rhythm" class="ps-case" data-case="rhythm"><div class="ps-tablet"><img loading="lazy" src="../img/app-rhythm-en.webp" width="1280" height="800" alt="Rhythm play"></div><p>Press the matching lever as the note reaches its ring.</p></div><div id="ps-view-sequence" class="ps-case" data-case="sequence"><div class="ps-tablet"><img loading="lazy" src="../img/app-number-en.webp" width="1280" height="800" alt="Follow the Numbers"></div><p>Remember the numbers and press them in order.</p></div></div>
+    <div class="ps-stage ps-output"><h3>Training record</h3><div id="ps-record-handExercise" class="ps-case ps-reading" data-case="handExercise"><span>Hold time vs. target</span><strong>96.7<small>%</small></strong><div class="ps-bars" aria-hidden="true"><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:80.0%"></i><i style="--bar:80.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:80.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:80.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:80.0%"></i><i style="--bar:100.0%"></i><i style="--bar:80.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:80.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:80.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i></div><p>48-trial average · example data</p></div><div id="ps-record-rhythm" class="ps-case ps-reading" data-case="rhythm"><span>Weighted timing result</span><strong>92.7<small>%</small></strong><div class="ps-bars" aria-hidden="true"><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:50.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:50.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:50.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:50.0%"></i><i style="--bar:50.0%"></i><i style="--bar:50.0%"></i><i style="--bar:50.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i></div><p>48-trial average · example data</p></div><div id="ps-record-sequence" class="ps-case ps-reading" data-case="sequence"><span>Positions recalled in order</span><strong>3.3<small> / 4</small></strong><div class="ps-bars" aria-hidden="true"><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:50.0%"></i><i style="--bar:25.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:75.0%"></i><i style="--bar:100.0%"></i><i style="--bar:100.0%"></i><i style="--bar:50.0%"></i><i style="--bar:100.0%"></i></div><p>12-round average · example data</p></div></div></div>
     </div>
-    <aside id="page-toc" class="toc" aria-label="On this page">
-      <div class="toc-head"><b>On this page</b><button class="toc-close" type="button">Close contents</button></div>
-      <div class="toc-group"><p class="toc-h">Platform & setup</p><ul><li><a href="#platform">Platform</a></li><li><a href="#difference">What makes it different</a></li><li><a href="#system">System setup</a></li></ul></div><div class="toc-group"><p class="toc-h">Next generation (v3)</p><ul><li><a href="#v3">Next generation (v3)</a></li></ul></div><div class="toc-group"><p class="toc-h">Records & activities</p><ul><li><a href="#domains">Seven record areas</a></li><li><a href="#coverage">Areas by activity</a></li><li><a href="#contents">Activities & levels</a></li><li><a href="#pipeline">From input to records</a></li></ul></div><div class="toc-group"><p class="toc-h">Suggestions & supporting details</p><ul><li><a href="#definitions">Record definitions</a></li><li><a href="#suggest">Level suggestions</a></li><li><a href="#ai">Future plans</a></li><li><a href="#records">Per-finger records</a></li><li><a href="#ip">Patent applications</a></li></ul></div>
-      <a class="toc-top" href="#main" data-top>Back to top</a>
-    </aside>
-    <button class="toc-fab" type="button" aria-expanded="false" aria-controls="page-toc">On this page</button>
+    
+    </div></section>
 
-    <section id="platform" class="section">
-      <div class="wrap">
+    <section id="difference" class="section difference-section"><div class="wrap">
+      <div class="head"><h2>How one lever registers a press</h2></div>
+      <figure id="lever-signal" class="tech-film signal-film" data-lever-film data-duration="0:14">
+        <div class="film-pane"><div class="film-screen"><video controls playsinline preload="metadata" width="1280" height="720" poster="../video/input-cycle-en.webp?v=20" aria-label="Inside a single lever"><source src="../video/input-cycle-en.webm?v=20" type="video/webm"><source src="../video/input-cycle-en.mp4?v=20" type="video/mp4"></source></source></video>
+          <button class="film-start" type="button" hidden><i aria-hidden="true">▶</i> <span>Play sensor film</span> <small>0:14</small></button></div>
+          <div class="signal-notes"><h3>Sensor distance and app response</h3><p>See how the app evaluates an example distance reading every 0.1 seconds.</p>
+          <div class="signal-cues" role="group" aria-label="Select a lever scene"><button type="button" data-time="0" data-summary="The example calibration spans 19.0 mm at rest to 6.0 mm when fully pressed."><span>At rest</span><b>19.0 mm <i>·</i> 0%</b></button><button type="button" data-time="5.4" data-summary="At 10.5 mm the calibrated depth reaches about 65%, so the app recognizes a full press."><span>Full press detected</span><b>10.5 mm <i>·</i> 65%</b></button><button type="button" data-time="11" data-summary="On release, full press ends below 50%. This sample reads 48% and is classified as partial."><span>Full press released</span><b>12.8 mm <i>·</i> 48%</b></button></div>
+          <p class="chapter-summary">With the default setting, full press begins at 65% of calibrated travel.</p>
+          <a class="film-file" hidden href="../video/input-cycle-en.mp4?v=20">Open MP4 film</a></div></div>
+      </figure>
+      
+      
+    </div></section>
+
+    
+
+
+    <section id="v3" class="section next-grip"><div class="wrap next-layout"><div class="next-copy"><p class="next-kicker">NEXT GRIP · In planning</p><h2>From fingers to the movement of the hand</h2><p>We plan to develop a next-generation grip (v3) with a motion sensor (such as a gyro) that reads the orientation (tilt and rotation), position and movement path of the hand together with finger input.</p></div></div></section>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <section class="section tech-library"><div class="wrap reference-wrap"><h2>Technical reference</h2><details id="domains" class="tech-reference"><summary>Seven areas the app records</summary><div class="reference-body">
         <div class="head">
-          <h2>From input to records, one platform</h2>
-          <p>It reads finger input, guides you through contents and records values. Dashed items are future plans.</p>
-        </div>
-        <div class="stack" role="list" aria-label="Rehaptic platform structure">
-          <div class="layer l4" role="listitem"><div class="ln">AI suggestions<span class="ls">Planned</span></div><div class="lc"><span class="pill next plan">Training plan suggestions from records</span></div></div>
-          <div class="layer l3" role="listitem"><div class="ln">Records<span class="ls">The layer that keeps values</span></div><div class="lc"><span class="pill">Records by area and finger</span><span class="pill">Level suggestions</span><span class="pill">Reports</span><span class="pill next">Hand movement records</span></div></div>
-          <div class="layer l2" role="listitem"><div class="ln">Contents<span class="ls">What you do</span></div><div class="lc"><span class="pill">Hand exercise</span><span class="pill">Rhythm play</span><span class="pill">Follow the Numbers</span><span class="pill">Mole catching</span><span class="pill">Fist Dodge</span><span class="pill">One Finger at a Time</span><span class="pill">Water Pour</span><span class="pill">Beat Echo</span><span class="pill next">Hand movement contents</span></div></div>
-          <div class="layer l1" role="listitem"><div class="ln">Input<span class="ls">The layer that reads the hand</span></div><div class="lc"><span class="pill">8 independent levers</span><span class="pill">Light, sound and screen guidance</span><span class="pill next">Motion sensor (gyro etc.)</span></div></div>
-        </div>
-        <p class="legend"><span class="pill sample"></span> Current setup <span class="pill next sample"></span> Future plans</p>
-      </div>
-    </section>
-
-    <section id="difference" class="section">
-      <div class="wrap">
-        <div class="head"><h2>What makes it different</h2></div>
-        <ul class="points">
-          <li><h3>Finger-by-finger input and press confirmation</h3><p>Four independent levers per hand are pressed on their own. Light, the screen and sound together show which finger to press, and a vibration confirms a full press. The independent finger input and haptic structure is the subject of three domestic patent applications (pending, not yet granted).</p></li>
-          <li><h3>Records by area and by finger</h3><p>Training records are kept automatically under seven areas: reaction, separation, control, sustain, beat, sequence and coordination. For each trial, the reaction time, result, press depth and fingers pressed along are saved.</p></li>
-          <li><h3>Records built for how organizations work</h3><p>Participants are registered by ID number instead of name, and records gather in the admin web without staff writing them down. Levels are only suggested; staff confirm and apply them.</p></li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="system" class="section">
-      <div class="wrap">
-        <div class="head">
-          <h2>From the grip to the admin web, in one line</h2>
-          <p>Four stages that finger movement passes through until it becomes a record.</p>
-        </div>
-        <ol class="arch">
-          <li>
-            <h3>Haptic grips</h3>
-            <p>A left and right pair. Each finger has its own lever for input. Light gives the signal, and a vibration confirms each press.</p>
-            <span class="chip">8 levers · signal about every 0.1 s</span>
-          </li>
-          <li>
-            <span class="via">Bluetooth</span>
-            <h3>Tablet app</h3>
-            <p>Guides training on an Android tablet and records each trial. If the internet drops, it keeps the records and sends them once reconnected.</p>
-            <span class="chip">Sound · large text · practice first</span>
-          </li>
-          <li>
-            <span class="via">Internet</span>
-            <h3>Record server</h3>
-            <p>Stores trials by ID number, totals them by session and week, and calculates level suggestions.</p>
-            <span class="chip">ID numbers, not names</span>
-          </li>
-          <li>
-            <span class="via">Web browser</span>
-            <h3>Admin web</h3>
-            <p>Shows center status and each participant's records, provides PDF reports and CSV, applies level suggestions and manages accounts.</p>
-            <span class="chip">Staff apply suggestions</span>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-
-    <section id="v3" class="section band-dark">
-      <div class="wrap">
-        <div class="band-in">
-        <div class="head">
-          <p class="head-kick">Next generation · v3</p><h2>From fingers to the movement of the hand</h2>
-          <p>We plan to develop a next-generation grip (v3) with a motion sensor (such as a gyro) that reads the orientation (tilt and rotation), position and movement path of the hand together with finger input.</p>
-        </div>
-        <figure class="film" data-video="../video/v3-concept-en.mp4" data-poster="../video/v3-concept-en-poster.webp" data-mode="player" hidden>
-          <figcaption>Next-generation grip concept video (30 s, with music)</figcaption>
-        </figure>
-        <ul class="points">
-          <li><h3>A sensor that reads orientation and position</h3><p>A motion sensor inside the grip reads the tilt and rotation of the hand, and where it moved from and to (position and path).</p></li>
-          <li><h3>Hand-movement contents</h3><p>We are building new contents in which you move your hand while holding the grip. Finger input and hand movement are used together.</p></li>
-          <li><h3>Plan suggestions from records</h3><p>We are planning a feature that gathers finger and movement records and suggests a training plan. Staff decide whether to apply it.</p></li>
-        </ul>
-        <ul class="gallery v3-gallery">
-          <li class="cc"><figure><img src="../img/v3-grip-en.webp" width="1280" height="800" alt="Grip and motion sensor, concept illustration: 8 finger channels, orientation (tilt and rotation), position and movement path" loading="lazy"></figure><h3>Grip + motion sensor</h3></li>
-          <li class="cc"><figure><img src="../img/v3-content-en.webp" width="1280" height="800" alt="Hand-movement content, concept illustration: move the grip to carry the dot along the path, with the orientation and position of the hand read too" loading="lazy"></figure><h3>Hand-movement contents</h3></li>
-        </ul>
-        <p class="fine">The next generation (v3) is a development plan, and its items and schedule may change. Any values it keeps would also be records of how training was done, not a diagnosis or a judgment of effect. The pictures and video above are concept illustrations, not actual product or app screens.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="domains" class="section">
-      <div class="wrap">
-        <div class="head">
-          <h2>Seven areas of records</h2>
-          <p>Training records are sorted into seven areas. The names label groups of records; they are not measures of a person's ability. Screens for older adults show only content names.</p>
+          
+          <p>Training records are sorted into seven areas. The names label groups of records; they describe the recorded activity. Screens for older adults show only content names. The staff dashboard groups records by activity. The six metrics from reaction through sequence each require at least eight samples under their own counting rules. The activities below are the examples used in the film.</p>
         </div>
         <div class="table-wrap">
-          <table class="spec">
-            <thead><tr><th scope="col">Area</th><th scope="col">What is recorded</th><th scope="col">Recorded value</th><th scope="col">Contents</th></tr></thead>
-            <tbody>
-          <tr><th scope="row">Reaction</th><td data-label="What is recorded">Time from the signal to the press</td><td data-label="Recorded value">Time taken (ms, median)</td><td data-label="Contents">Mole catching · reaction time in Hand exercise and Follow the Numbers</td></tr>
-          <tr><th scope="row">Separation</th><td data-label="What is recorded">How often other fingers were pressed along with the target finger</td><td data-label="Recorded value">Number and kind of fingers pressed along</td><td data-label="Contents">Hand exercise · One Finger at a Time</td></tr>
-          <tr><th scope="row">Control</th><td data-label="What is recorded">How deep the lever was pressed</td><td data-label="Recorded value">Press depth (%, lever travel, not force)</td><td data-label="Contents">Water Pour</td></tr>
-          <tr><th scope="row">Sustain</th><td data-label="What is recorded">How long the press was held, out of the target time</td><td data-label="Recorded value">Hold time (% of target)</td><td data-label="Contents">Hand exercise · Water Pour</td></tr>
-          <tr><th scope="row">Beat</th><td data-label="What is recorded">Share of presses made on the beat</td><td data-label="Recorded value">Presses on the beat (%)</td><td data-label="Contents">Rhythm play · Beat Echo</td></tr>
-          <tr><th scope="row">Sequence</th><td data-label="What is recorded">Number of positions remembered and pressed in order</td><td data-label="Recorded value">Positions correct</td><td data-label="Contents">Follow the Numbers</td></tr>
-          <tr><th scope="row">Coordination</th><td data-label="What is recorded">Share of tasks each hand completed</td><td data-label="Recorded value">Completed share per hand (left and right shown separately, %)</td><td data-label="Contents">Fist Dodge · two-handed Hand exercise and Rhythm play</td></tr>
-            </tbody>
-          </table>
+          <table class="spec"><thead><tr><th scope="col">Domain</th><th scope="col">What the app records</th><th scope="col">Calculation</th><th scope="col">Activity in the film</th></tr></thead><tbody><tr><th scope="row">Reaction</th><td data-label="What the app records">Time from cue to target press</td><td data-label="Calculation">Median reaction time within the activity</td><td data-label="Activity in the film">Hand Exercise</td></tr><tr><th scope="row">Separation</th><td data-label="What the app records">Trials with an additional finger press</td><td data-label="Calculation">Trials with an extra lever press ÷ trials observed</td><td data-label="Activity in the film">Hand Exercise</td></tr><tr><th scope="row">Control</th><td data-label="What the app records">Press depth within each finger’s calibrated range</td><td data-label="Calculation">Mean of valid trial peak depths (%)</td><td data-label="Activity in the film">Hand Exercise</td></tr><tr><th scope="row">Hold</th><td data-label="What the app records">Target and actual hold durations</td><td data-label="Calculation">Mean of actual / target duration, capped at 100% per trial</td><td data-label="Activity in the film">Hand Exercise</td></tr><tr><th scope="row">Timing</th><td data-label="What the app records">Beat judgement and signed press offset</td><td data-label="Calculation">Mean judgement weight (1, 0.5 or 0) as a percentage, excluding timeouts</td><td data-label="Activity in the film">Rhythm Play</td></tr><tr><th scope="row">Sequence</th><td data-label="What the app records">Positions reproduced in order</td><td data-label="Calculation">Average number of correct positions per round</td><td data-label="Activity in the film">Follow the Numbers</td></tr><tr><th scope="row">Coordination</th><td data-label="What the app records">Attempts and successes for each hand</td><td data-label="Calculation">Successes / attempts for each hand</td><td data-label="Activity in the film">Hand Exercise</td></tr></tbody></table>
         </div>
       </div>
-    </section>
-
-    <section id="coverage" class="section">
-      <div class="wrap">
+    </details><details id="coverage" class="tech-reference"><summary>What each activity records</summary><div class="reference-body">
         <div class="head">
-          <h2>Each content looks at different areas</h2>
-          <p>One content covers several areas together, and each area is carried by several contents.</p>
+          
+          <p>See which areas each activity focuses on and which it also covers.</p>
         </div>
         <p class="scroll-hint">Swipe sideways to see more activities.</p>
-        <div class="table-wrap" tabindex="0" role="region" aria-label="Table of areas covered by each content">
+        <div class="table-wrap" tabindex="0" role="region" aria-label="Areas recorded for each activity">
           <table class="matrix">
             <thead>
               <tr><th scope="col">Area</th><th scope="col">Hand exercise</th><th scope="col">Rhythm play</th><th scope="col">Follow the Numbers</th><th scope="col">Mole catching</th><th scope="col">Fist Dodge</th><th scope="col">One Finger at a Time</th><th scope="col">Water Pour</th><th scope="col">Beat Echo</th></tr>
@@ -219,45 +149,65 @@
           </table>
         </div>
         <p class="legend"><span class="dot m"></span> Main area <span class="dot s"></span> Also covered</p>
-        <p class="fine">The reaction time in Mole catching is not added to the reaction values of other contents.</p>
+        <p class="fine">The app records reaction time in Mole catching separately from reaction times in other activities.</p>
       </div>
-    </section>
-
-    <section id="contents" class="section">
-      <div class="wrap">
-        <div class="head">
-          <h2>Training contents and the level structure</h2>
-          <p>Each content has a level ladder, and a level is set by its shape (stage and step) and its speed.</p>
+    </details><details id="system" class="tech-reference"><summary>Device and app setup</summary><div class="reference-body"><div class="head">
+          
+          <p>Follow a finger press from the grip to the staff dashboard.</p>
+        </div>
+        <ol class="arch">
+          <li>
+            <h3>Haptic grips</h3>
+            <p>Each grip has four independent levers. A light shows which lever to press, and the grip vibrates on a full press.</p>
+            <span class="chip">8 levers · signal about every 0.1 s</span>
+          </li>
+          <li>
+            <span class="via">Bluetooth</span>
+            <h3>Tablet app</h3>
+            <p>Guides training on an Android tablet and records each trial. If the internet drops, it keeps the records and sends them once reconnected.</p>
+            <span class="chip">Sound · large text · practice first</span>
+          </li>
+          <li>
+            <span class="via">Internet</span>
+            <h3>Records server</h3>
+            <p>Stores trials by ID number, totals them by session and week, and calculates level suggestions.</p>
+            <span class="chip">ID numbers, not names</span>
+          </li>
+          <li>
+            <span class="via">Web browser</span>
+            <h3>Admin web</h3>
+            <p>Shows center status and each participant's records, provides PDF reports and CSV, applies level suggestions and manages accounts.</p>
+            <span class="chip">Staff apply suggestions</span>
+          </li>
+        </ol>
+      </div></details><details id="contents" class="tech-reference"><summary>Activities and difficulty levels</summary><div class="reference-body"><div class="head">
+          
+          <p>Each activity has its own difficulty settings. The pattern and speed depend on the stage and step.</p>
         </div>
         <div class="table-wrap">
           <table class="spec">
-            <thead><tr><th scope="col">Content</th><th scope="col">How it works</th><th scope="col">Main areas</th><th scope="col">Level steps</th></tr></thead>
+            <thead><tr><th scope="col">Activity</th><th scope="col">How it works</th><th scope="col">Main areas</th><th scope="col">Level steps</th></tr></thead>
             <tbody>
-          <tr><th scope="row">Hand exercise</th><td data-label="How it works">Press the finger of the lit number and keep holding for a set time. Five formats (one hand at a time, both hands, two on one hand, different on each hand, two on each hand) run in a loop.</td><td data-label="Main areas">Separation · Sustain (Reaction · Coordination)</td><td data-label="Level steps">13 steps</td></tr>
-          <tr><th scope="row">Rhythm play</th><td data-label="How it works">Press falling circles with the right finger in time with the background music. One song is one round.</td><td data-label="Main areas">Beat (Sustain · Coordination)</td><td data-label="Level steps">19 steps</td></tr>
+          <tr><th scope="row">Hand exercise</th><td data-label="How it works">Press the lever that matches the lit number and hold it for the time shown. Five formats (one hand at a time, both hands, two on one hand, different on each hand, two on each hand) run in a loop.</td><td data-label="Main areas">Separation · Sustain (Reaction · Coordination)</td><td data-label="Level steps">13 steps</td></tr>
+          <tr><th scope="row">Rhythm play</th><td data-label="How it works">Press the matching lever as each note reaches its ring. One song is one round.</td><td data-label="Main areas">Beat (Sustain · Coordination)</td><td data-label="Level steps">19 steps</td></tr>
           <tr><th scope="row">Follow the Numbers</th><td data-label="How it works">Watch numbers one at a time, remember them and press them in the same order. Five rounds make one block.</td><td data-label="Main areas">Sequence (Reaction · Separation)</td><td data-label="Level steps">8 steps</td></tr>
-          <tr><th scope="row">Mole catching</th><td data-label="How it works">A reaction game in which you press the lit finger to catch the mole that pops up. Each round goes explanation, practice, then the main round.</td><td data-label="Main areas">Reaction (Separation)</td><td data-label="Level steps">7 steps</td></tr>
+          <tr><th scope="row">Mole catching</th><td data-label="How it works">When a mole pops up, press the matching lever to catch it. Each round goes explanation, practice, then the main round.</td><td data-label="Main areas">Reaction (Separation)</td><td data-label="Level steps">7 steps</td></tr>
           <tr><th scope="row">Fist Dodge</th><td data-label="How it works">Squeeze the whole left hand to go left and the whole right hand to go right, one lane at a time, dodging the dark clouds that come down. You open and squeeze again to move again, and both hands are needed.</td><td data-label="Main areas">Coordination (Sustain)</td><td data-label="Level steps">10 steps</td></tr>
           <tr><th scope="row">One Finger at a Time</th><td data-label="How it works">Gently press only the lit finger and hold until the flower blooms. The other fingers rest.</td><td data-label="Main areas">Separation (Control)</td><td data-label="Level steps">12 steps</td></tr>
-          <tr><th scope="row">Water Pour</th><td data-label="How it works">Water pours as deep as you press the lever. Match the water level to the yellow band and hold until the flower blooms. Let go and it goes down.</td><td data-label="Main areas">Control (Sustain)</td><td data-label="Level steps">12 steps</td></tr>
-          <tr><th scope="row">Beat Echo</th><td data-label="How it works">Listen to the beat to the end, then press the same beat on your turn.</td><td data-label="Main areas">Beat</td><td data-label="Level steps">10 steps</td></tr>
+          <tr><th scope="row">Water Pour</th><td data-label="How it works">The farther you press the lever, the higher the water rises. Match the water level to the yellow band and hold until the flower blooms. Let go and it goes down.</td><td data-label="Main areas">Control (Sustain)</td><td data-label="Level steps">12 steps</td></tr>
+          <tr><th scope="row">Beat Echo</th><td data-label="How it works">Listen to the whole rhythm, then tap it back on your turn.</td><td data-label="Main areas">Beat</td><td data-label="Level steps">10 steps</td></tr>
             </tbody>
           </table>
         </div>
-        <p class="fine">Level steps are the number of steps on the level ladder. Planned contents such as seasonal and regional theme packs are not in this table.</p>
-      </div>
-    </section>
-
-    <section id="pipeline" class="section">
-      <div class="wrap">
-        <div class="head">
-          <h2>From grip signal to record</h2>
-          <p>The order in which a grip signal becomes a per-finger record and a level suggestion.</p>
+        <p class="fine">The table lists the number of difficulty steps for each activity. Planned activities, including seasonal and regional theme packs, are listed separately.</p>
+      </div></details><details id="pipeline" class="tech-reference"><summary>How records are stored</summary><div class="reference-body"><div class="head">
+          
+          <p>Follow a lever signal from calibration to a participant’s record and a suggested level.</p>
         </div>
         <ol class="steps steps-5">
           <li><h3>Grip signal</h3><p>The lever position is sent for each finger about every 0.1 seconds.</p></li>
           <li><h3>Calibration</h3><p>Using the "released to fully pressed" length that staff calibrated, it is read as press depth (%).</p></li>
-          <li><h3>Trial record</h3><p>For each trial, the per-finger reaction time, result, press depth and fingers pressed along are saved automatically.</p></li>
+          <li><h3>Trial record</h3><p>For each trial, the app saves the reaction time, result and press depth for each finger, along with any other levers pressed.</p></li>
           <li><h3>Totals</h3><p>Records are gathered by session and week and shown in the admin web, PDF reports and CSV.</p></li>
           <li><h3>Suggestion</h3><p>Levels are suggested from the records, and staff confirm before applying.</p></li>
         </ol>
@@ -270,7 +220,7 @@
               <div><dt>Result</dt><dd>Success</dd></div>
               <div><dt>Reaction time</dt><dd>620 ms</dd></div>
               <div><dt>Press depth</dt><dd>78 %<span class="depth" aria-hidden="true"><i style="width:78%"></i><b style="left:65%"></b></span></dd></div>
-              <div><dt>Pressed along</dt><dd>None</dd></div>
+              <div><dt>Other fingers pressed</dt><dd>None</dd></div>
             </dl>
             <p class="r-foot">The vertical mark is the press depth that counts (65% by default; staff choose 50, 65 or 80%). The values above are fictional examples for explanation.</p>
           </div>
@@ -283,53 +233,50 @@
               <div><dt>Failure</dt><dd>Counts as 0</dd></div>
               <div><dt>Timeout</dt><dd>Left out of the denominator and counted separately</dd></div>
             </dl>
-            <p class="r-foot">If no trial was attempted, accuracy is "no value", not 0.</p>
+            <p class="r-foot">The app calculates an accuracy value only if at least one trial was attempted.</p>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section id="definitions" class="section">
-      <div class="wrap">
-        <div class="head">
-          <h2>How the values are calculated</h2>
-          <p>The formulas the code calculates, written out as they are.</p>
+      </div></details><details id="definitions" class="tech-reference"><summary>How values are calculated</summary><div class="reference-body"><div class="head">
+          
+          <p>These are the formulas the app uses for its records.</p>
         </div>
         <dl class="defs">
           <div><dt>Accuracy</dt><dd>Sum of (success 1 · partial success 0.5 · failure 0) ÷ trials attempted × 100. Timeouts are left out of the denominator and counted separately.</dd></div>
-          <div><dt>Time taken</dt><dd>The median reaction time (ms) of trials, excluding timeouts and Rhythm play. Rhythm play is measured separately with the beat measures.</dd></div>
+          <div><dt>Time taken</dt><dd>The median reaction time (ms) of trials, excluding timeouts and Rhythm play. Rhythm play records beat timing separately.</dd></div>
           <div><dt>Completed share per hand</dt><dd>For each hand, times completed ÷ times attempted × 100. Left and right are shown separately and are not combined into one number.</dd></div>
           <div><dt>Hold time</dt><dd>In Hand exercise, the sum of time actually held (counted only up to the target time) ÷ the sum of target times × 100.</dd></div>
           <div><dt>Presses on the beat</dt><dd>(exact + good × 0.5) ÷ rhythm trials × 100. A missed note is recorded as a failure.</dd></div>
-          <div><dt>Press depth</dt><dd>How many % of the calibrated length the target finger's lever went at its deepest during a trial (0 to 100). It is the distance the lever moved, not force, and is compared only with the same user's other times.</dd></div>
-          <div><dt>Pressed along</dt><dd>How many times another finger was pressed instead of (or together with) the finger that should be pressed, and which fingers. A press counts only when it is complete, and a finger that is newly pressed is counted once.</dd></div>
+          <div><dt>Press depth</dt><dd>The deepest point the target lever reached during a trial, as a percentage of its calibrated travel (0–100%). This describes lever movement. Compare readings only across trials for the same participant.</dd></div>
+          <div><dt>Other fingers pressed</dt><dd>Which other levers were fully pressed instead of, or along with, the target lever, and how often. Each new full press counts once.</dd></div>
         </dl>
-        <p class="fine">Press depth and fingers pressed along are recorded values and do not enter the formulas for accuracy or level suggestions. The definitions are drafts under development and may change.</p>
-      </div>
-    </section>
-
-    <section id="suggest" class="section">
-      <div class="wrap">
-        <div class="head">
-          <h2>Levels are suggested, and people decide</h2>
+        <p class="fine">The app records press depth and other fingers pressed separately. Neither is used to calculate accuracy or suggest a level. The definitions are drafts under development and may change.</p>
+      </div></details><details id="suggest" class="tech-reference"><summary>How levels are suggested</summary><div class="reference-body"><div class="head">
+          
           <p>It does not look at accuracy alone; it also looks at timeouts caused by not pressing.</p>
         </div>
         <ul class="rows">
-          <li><h3>Starting level</h3><p>At first, each content starts at its easiest step, and staff set the level and speed of each content.</p></li>
+          <li><h3>Starting level</h3><p>Each activity starts at its easiest step. Staff set its difficulty and speed.</p></li>
           <li><h3>Trials that are counted</h3><p>Only trials at the current level in the last 28 days, and only after the level was last changed.</p></li>
-          <li><h3>Timeouts are weighed too</h3><p>If the timeout share is 20% or more, the level is not raised even when accuracy is high, and "Continue" is shown with the reason. At 50% or more, "Please check the position and the device once" is added. This keeps timeouts caused by not pressing from being read as "too hard" and lowering the level.</p></li>
-          <li><h3>No immediate reversal</h3><p>After a level change, it is not suggested again until two sessions have passed.</p></li>
-          <li><h3>The app never changes it secretly</h3><p>Staff decide in the admin web with [Apply], [Later] or [Ignore]. Applying, ignoring and changing, with the reasons, are kept in the history.</p></li>
+          <li><h3>How timeouts affect suggestions</h3><p>If the timeout share is 20% or more, the level is not raised even when accuracy is high, and "Continue" is shown with the reason. At 50% or more, "Please check the position and the device once" is added. This keeps timeouts caused by not pressing from being read as "too hard" and lowering the level.</p></li>
+          <li><h3>No immediate reversal</h3><p>After a level change, the system waits two sessions before suggesting another change.</p></li>
+          <li><h3>Staff confirm level changes</h3><p>Staff decide in the admin web with [Apply], [Later] or [Ignore]. Applying, ignoring and changing, with the reasons, are kept in the history.</p></li>
         </ul>
         <p class="fine">The threshold values are provisional and will be set after reviewing actual use records.</p>
-      </div>
-    </section>
-
-    <section id="ai" class="section ai-section band-dark">
-      <div class="wrap">
-        <div class="band-in">
-        <div class="head">
-          <h2>Looking ahead: plan suggestions from records</h2>
+      </div></details><details id="records" class="tech-reference"><summary>Records by finger</summary><div class="reference-body"><div>
+          
+          <p>The record summary in the admin web gives no scores or rankings. It shows weekly attendance, where each activity's level stands, and records by finger.</p>
+          <ul class="timeline" aria-label="Where records lead">
+            <li><span>Records</span>Performance records and reports by finger</li>
+            <li><span>Suggest</span>Level and speed suggestions based on performance records</li>
+            <li><span>Plan</span><a class="text-link" href="#ai">Training plan suggestions from records (planned; staff apply them)</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="frame"><img src="../img/admin-record-en.webp" width="1440" height="900" alt="Admin web record summary: level position for each activity" loading="lazy"></div>
+          <p class="note">The staff dashboard is currently available only in Korean. This English rendering shows a development screen with fictional data and participant IDs. Product specifications, screens and available languages may change.</p>
+        </div>
+      </div></details><details id="ai" class="tech-reference"><summary>Planned activity suggestions</summary><div class="reference-body"><div class="head">
+          
           <p>We are exploring a feature that uses AI to suggest training plans from accumulated training records. It is not part of the product yet, and its timing has not been set.</p>
         </div>
         <div class="ai-panel ai-plan">
@@ -340,32 +287,8 @@
           </ol>
         </div>
         <p class="fine">Checking the applicable regulations comes first. It would only suggest a training plan; it would not judge a person's condition and is not a diagnosis or a decision about treatment.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="records" class="section">
-      <div class="wrap split">
-        <div>
-          <h2>Shown at the level of each finger</h2>
-          <p>The record summary in the admin web gives no scores or rankings. It shows weekly attendance, where each activity's level stands, and records by finger.</p>
-          <ul class="timeline" aria-label="Where records lead">
-            <li><span>Records</span>Performance records and reports by finger</li>
-            <li><span>Suggest</span>Level and speed suggestions based on performance records</li>
-            <li><span>Plan</span><a class="text-link" href="#ai">Training plan suggestions from records (planned; staff apply them)</a></li>
-          </ul>
-        </div>
-        <div>
-          <div class="frame"><img src="../img/admin-record-en.webp" width="1440" height="900" alt="Admin web record summary: level position for each activity" loading="lazy"></div>
-          <p class="note">The admin web currently has a Korean interface only, so this screen is an English rendering of the actual screen of a development environment, using only ID numbers and fictional data. Product specifications, screens and available languages may change.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="ip" class="section">
-      <div class="wrap">
-        <div class="head">
-          <h2>Related patents</h2>
+        </div></details><details id="ip" class="tech-reference"><summary>Patent applications</summary><div class="reference-body"><div class="head">
+          
           <p>We have filed three domestic patent applications covering independent finger input, the haptic structure and training composition (pending, not yet granted).</p>
         </div>
         <div class="table-wrap">
@@ -379,27 +302,13 @@
           </table>
         </div>
         <p class="fine">Official certificates of application (Korean and English). Personal details are redacted. Drawings and claims are not shown because they have not been published.</p>
-      </div>
-    </section>
-
-    <section class="section">
+      </div></details></div></section><section class="section">
       <div class="wrap narrow">
         <p class="notice"><strong>Performance record notice</strong>These values are records of how training was done. They are not a diagnosis, and medical decisions belong to a medical professional.</p>
       </div>
     </section>
 
-    <section class="cta">
-      <div class="wrap">
-        <div class="cta-in">
-          <div>
-            <h2>Questions about the technology or adoption?</h2>
-            <p>Feel free to ask about how records are kept, the package, center adoption and partnerships.</p>
-          <p class="related"><span>See also</span> <a href="centers.html">For centers</a> <span aria-hidden="true">·</span> <a href="family.html">For home</a></p>
-          </div>
-          <a class="btn btn-primary" href="contact.html">Contact us</a>
-        </div>
-      </div>
-    </section>
+    
   </main>
 
   <footer class="site-footer">
@@ -409,19 +318,17 @@
           <a class="f-logo" href="index.html" aria-label="DAMUN home"><img src="../img/damun-white.svg" alt="damun" width="124" height="38"></a>
           <p class="f-mail">Contact <a href="mailto:info@damun.asia">info@damun.asia</a></p>
         </div>
-        <nav class="f-links" aria-label="Site guide">
-          <div class="f-group"><p class="f-head">DAMUN</p><a href="index.html">Home</a><a href="about.html">Company</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy policy</a></div>
-          <div class="f-group"><p class="f-head">Product</p><a href="rehaptic.html">Product overview</a><a href="centers.html">For centers</a><a href="family.html">For home</a><a href="technology.html">Technology</a></div>
-        </nav>
+        <nav class="footer-utilities" aria-label="Site guide">
+          <a href="contact.html">Contact</a><a href="privacy.html">Privacy policy</a></nav>
       </div>
       <div class="f-bottom">
-        <p class="f-biz">DAMUN · Representative: Martin Seo · Business registration no. 894-20-02492 · 12, Daewangpangyo-ro 645beon-gil, Bundang-gu, Seongnam-si, Gyeonggi-do, Republic of Korea (7F #15, Gyeonggi Center for Creative Economy & Innovation)</p>
+        <p class="f-biz">DAMUN · Representative: Martin Seo · Business registration no. 894-20-02492 · 12, Daewangpangyo-ro 645beon-gil, Bundang-gu, Seongnam-si, Gyeonggi-do, Republic of Korea (7F #15, Gyeonggi Center for Creative Economy &amp; Innovation)</p>
         <p class="f-legal">Rehaptic has not been approved or certified as a medical device and is not intended to diagnose, treat or prevent disease. Screens shown are from an app in development or are concept examples; product specifications, screens, available languages and launch schedule may change.</p>
         <p class="f-copy">© 2026 DAMUN. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
-  <script src="../js/main.js" defer></script>
-</body>
+  <script src="../js/design-main.js?v=16" defer></script>
+<script defer src="../js/studio.js?v=20"></script></body>
 </html>

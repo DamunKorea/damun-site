@@ -26,28 +26,24 @@
 
   <link rel="stylesheet" href="fonts/pretendard.css">
   <link rel="stylesheet" href="css/style.css">
-</head>
+<link rel="stylesheet" href="css/studio.css?v=11"><link rel="stylesheet" href="css/showcase.css?v=19"></head>
 <body>
   <a class="skip" href="#main">본문 바로가기</a>
 
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="index.html" aria-label="다문 DAMUN 홈">
-        <img src="img/damun-white.svg" alt="damun" width="155" height="48">
+        <img src="img/damun-primary.svg" alt="damun" width="155" height="48">
       </a>
       <a class="lang-short" lang="en" hreflang="en" href="en/privacy.html" data-lang-switch aria-label="View this page in English">EN</a>
-      <a class="btn btn-nav header-cta" href="contact.html">문의하기</a>
+      
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
         <span class="sr-only">메뉴 열기</span>
         <span class="bars" aria-hidden="true"></span>
       </button>
       <nav id="site-nav" class="site-nav" aria-label="주요 메뉴">
         <ul>
-          <li><a href="index.html">홈</a></li>
-          <li><a href="about.html">회사</a></li>
-          <li class="has-sub"><button class="sub-toggle" type="button" aria-expanded="false" aria-controls="nav-product">제품<i aria-hidden="true"></i></button><span class="sub-label" aria-hidden="true">제품</span><div class="sub" id="nav-product"><ul aria-label="제품"><li><a href="rehaptic.html"><b>제품 소개</b><span>그립과 콘텐츠를 한눈에</span></a></li><li><a href="centers.html"><b>센터용</b><span>태블릿 + 관리자 웹 · 담당자가 진행</span></a></li><li><a href="family.html"><b>가정용</b><span>스마트폰 앱 · 집에서 부담 없이</span></a></li><li><a href="technology.html"><b>기술</b><span>손가락별 기록과 앞으로의 계획</span></a></li></ul></div></li>
-          <li class="nav-cta"><a class="btn btn-nav" href="contact.html">문의하기</a></li>
-          <li class="lang"><span class="lang-group" role="group" aria-label="언어 선택"><span lang="ko" aria-current="true">한국어</span><span class="sep" aria-hidden="true">|</span><a lang="en" hreflang="en" href="en/privacy.html" data-lang-switch>English</a></span></li>
+          <li><a href="rehaptic.html">제품</a></li><li><a href="centers.html">센터용</a></li><li><a href="family.html">가정용</a></li><li><a href="technology.html">기술</a></li><li><a href="about.html">회사</a></li><li><a href="contact.html" class="nav-contact">문의</a></li><li class="lang"><span class="lang-group" role="group" aria-label="언어 선택"><span lang="ko" aria-current="true">한국어</span><span class="sep" aria-hidden="true">|</span><a lang="en" hreflang="en" href="en/privacy.html" data-lang-switch>English</a></span></li>
         </ul>
       </nav>
     </div>
@@ -65,20 +61,20 @@
     </section>
 
     <section class="section clauses-sec">
-      <div class="wrap clauses">
-        <div class="clause">
+      <div class="wrap policy-grid"><details class="policy-disclosure"><summary>방침 목차</summary><ul><li><a href="#policy-1">적용 범위</a></li><li><a href="#policy-2">웹사이트가 직접 수집하는 정보</a></li><li><a href="#policy-3">문의 메일</a></li><li><a href="#policy-4">외부 서비스</a></li><li><a href="#policy-5">정보주체의 권리</a></li><li><a href="#policy-6">개인정보 보호책임자</a></li><li><a href="#policy-7">방침의 변경</a></li></ul></details><div class="clauses">
+        <div class="clause" id="policy-1">
           <h2><span>1.</span> 적용 범위</h2>
           <div class="clause-body">
         <p>이 방침은 다문(DAMUN)이 운영하는 웹사이트 damun.asia에 적용됩니다. Rehaptic 태블릿 앱과 관리자 웹의 개인정보 처리는 각 서비스 안에서 별도로 안내합니다.</p>
           </div>
         </div>
-        <div class="clause">
+        <div class="clause" id="policy-2">
           <h2><span>2.</span> 웹사이트가 직접 수집하는 정보</h2>
           <div class="clause-body">
         <p>이 웹사이트에는 회원가입, 로그인, 문의 양식이 없으며 방문자의 개인정보를 직접 수집하지 않습니다. 쿠키, 방문 분석 도구, 광고 추적 도구도 사용하지 않습니다.</p>
           </div>
         </div>
-        <div class="clause">
+        <div class="clause" id="policy-3">
           <h2><span>3.</span> 문의 메일</h2>
           <div class="clause-body">
         <p>메일로 문의하시면 보내 주신 이메일 주소와 메일에 적으신 내용(이름, 소속, 연락처, 문의 내용 등)이 수신 사서함에 보관됩니다.</p>
@@ -90,19 +86,19 @@
         </ul>
           </div>
         </div>
-        <div class="clause">
+        <div class="clause" id="policy-4">
           <h2><span>4.</span> 외부 서비스</h2>
           <div class="clause-body">
         <p>이 웹사이트는 글꼴을 사이트 안에서 직접 제공하며, 외부 글꼴·방문 분석·광고 서비스를 사용하지 않습니다. 다만 웹사이트는 GitHub Pages(GitHub, Inc.)로 제공되므로, 페이지를 열 때 방문자의 IP 주소 등 접속 정보가 호스팅 서비스의 접속 기록에 남을 수 있습니다.</p>
           </div>
         </div>
-        <div class="clause">
+        <div class="clause" id="policy-5">
           <h2><span>5.</span> 정보주체의 권리</h2>
           <div class="clause-body">
         <p>문의 메일에 담긴 본인의 개인정보에 대해 열람, 정정, 삭제, 처리 정지를 요청하실 수 있습니다. 아래 개인정보 보호책임자에게 메일로 요청해 주세요.</p>
           </div>
         </div>
-        <div class="clause">
+        <div class="clause" id="policy-6">
           <h2><span>6.</span> 개인정보 보호책임자</h2>
           <div class="clause-body">
         <ul>
@@ -111,14 +107,14 @@
         </ul>
           </div>
         </div>
-        <div class="clause">
+        <div class="clause" id="policy-7">
           <h2><span>7.</span> 방침의 변경</h2>
           <div class="clause-body">
         <p>이 방침을 바꾸면 이 페이지에 시행일과 함께 알립니다.</p>
           </div>
         </div>
       </div>
-    </section>
+    </div></section>
   </main>
 
   <footer class="site-footer">
@@ -128,10 +124,8 @@
           <a class="f-logo" href="index.html" aria-label="다문 DAMUN 홈"><img src="img/damun-white.svg" alt="damun" width="124" height="38"></a>
           <p class="f-mail">문의 <a href="mailto:info@damun.asia">info@damun.asia</a></p>
         </div>
-        <nav class="f-links" aria-label="사이트 안내">
-          <div class="f-group"><p class="f-head">다문</p><a href="index.html">홈</a><a href="about.html">회사</a><a href="contact.html">문의</a><a href="privacy.html">개인정보 처리방침</a></div>
-          <div class="f-group"><p class="f-head">제품</p><a href="rehaptic.html">제품 소개</a><a href="centers.html">센터용</a><a href="family.html">가정용</a><a href="technology.html">기술</a></div>
-        </nav>
+        <nav class="footer-utilities" aria-label="사이트 안내">
+          <a href="contact.html">문의</a><a href="privacy.html">개인정보 처리방침</a></nav>
       </div>
       <div class="f-bottom">
         <p class="f-biz">다문(DAMUN) · 대표 서성륜 · 사업자등록번호 894-20-02492 · 경기도 성남시 분당구 대왕판교로645번길 12, 7층 15호 (삼평동, 경기창조경제혁신센터)</p>
@@ -141,6 +135,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js" defer></script>
-</body>
+  <script src="js/design-main.js?v=16" defer></script>
+<script defer src="js/studio.js?v=20"></script></body>
 </html>

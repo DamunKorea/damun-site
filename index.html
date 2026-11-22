@@ -48,28 +48,24 @@
     ]
   }
   </script>
-</head>
+<link rel="stylesheet" href="css/studio.css?v=11"><link rel="stylesheet" href="css/showcase.css?v=19"></head>
 <body>
   <a class="skip" href="#main">본문 바로가기</a>
 
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="index.html" aria-label="다문 DAMUN 홈">
-        <img src="img/damun-white.svg" alt="damun" width="155" height="48">
+        <img src="img/damun-primary.svg" alt="damun" width="155" height="48">
       </a>
-      <a class="lang-short" lang="en" hreflang="en" href="en/" data-lang-switch aria-label="View this page in English">EN</a>
-      <a class="btn btn-nav header-cta" href="contact.html">문의하기</a>
+      <a class="lang-short" lang="en" hreflang="en" href="en/index.html" data-lang-switch aria-label="View this page in English">EN</a>
+      
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
         <span class="sr-only">메뉴 열기</span>
         <span class="bars" aria-hidden="true"></span>
       </button>
       <nav id="site-nav" class="site-nav" aria-label="주요 메뉴">
         <ul>
-          <li><a href="index.html" aria-current="page">홈</a></li>
-          <li><a href="about.html">회사</a></li>
-          <li class="has-sub"><button class="sub-toggle" type="button" aria-expanded="false" aria-controls="nav-product">제품<i aria-hidden="true"></i></button><span class="sub-label" aria-hidden="true">제품</span><div class="sub" id="nav-product"><ul aria-label="제품"><li><a href="rehaptic.html"><b>제품 소개</b><span>그립과 콘텐츠를 한눈에</span></a></li><li><a href="centers.html"><b>센터용</b><span>태블릿 + 관리자 웹 · 담당자가 진행</span></a></li><li><a href="family.html"><b>가정용</b><span>스마트폰 앱 · 집에서 부담 없이</span></a></li><li><a href="technology.html"><b>기술</b><span>손가락별 기록과 앞으로의 계획</span></a></li></ul></div></li>
-          <li class="nav-cta"><a class="btn btn-nav" href="contact.html">문의하기</a></li>
-          <li class="lang"><span class="lang-group" role="group" aria-label="언어 선택"><span lang="ko" aria-current="true">한국어</span><span class="sep" aria-hidden="true">|</span><a lang="en" hreflang="en" href="en/" data-lang-switch>English</a></span></li>
+          <li><a href="rehaptic.html">제품</a></li><li><a href="centers.html">센터용</a></li><li><a href="family.html">가정용</a></li><li><a href="technology.html">기술</a></li><li><a href="about.html">회사</a></li><li><a href="contact.html" class="nav-contact">문의</a></li><li class="lang"><span class="lang-group" role="group" aria-label="언어 선택"><span lang="ko" aria-current="true">한국어</span><span class="sep" aria-hidden="true">|</span><a lang="en" hreflang="en" href="en/index.html" data-lang-switch>English</a></span></li>
         </ul>
       </nav>
     </div>
@@ -77,166 +73,15 @@
 
   <main id="main" data-page="index">
 
-    <section id="top" class="hero dark">
-      <div class="wrap">
-        <p class="kicker">디지털 건강 경험 플랫폼</p>
-        <h1>당신의 <span class="accent">목소리</span>에서<br>시작합니다</h1>
-        <div class="hero-grid">
-          <div class="hero-copy">
-          <p class="lead">다문은 고객과 현장의 목소리에 귀 기울이며, 사람의 필요를 디지털 건강 경험으로 연결하는 기업입니다.</p>
-          <p class="sub">대표 제품 <strong>Rehaptic</strong>(출시 예정) — 손가락마다 따로 눌리는 그립과 앱으로 손 운동을 쉽게 시작하고 기록으로 남기도록 돕는 디지털 훈련 기기</p>
-          <div class="actions">
-            <a class="btn btn-primary" href="rehaptic.html">제품 살펴보기</a>
-            <a class="go" href="about.html">회사 살펴보기</a>
-          </div>
-          </div>
-          <div class="hero-visual">
-          <div class="stage" data-video="video/act-hold.mp4" data-mode="loop">
-            <div class="tablet"><img src="img/app-hold.webp" width="1280" height="800" alt="Rehaptic 태블릿 앱의 손 운동 화면: 햅틱 그립을 쥔 두 손과 손가락 번호"></div>
-          </div>
-          <p class="note">화면은 개발 중인 앱의 실제 화면을 바탕으로 만든 예시이며, 제품 사양과 화면은 바뀔 수 있습니다.</p>
-        </div>
-        </div>
-        <ul class="facts">
-          <li><strong>8</strong><span>독립 레버<br>한 손 4개 × 2</span></li>
-          <li><strong>0.1초</strong><span>손가락별 레버 위치<br>신호 간격</span></li>
-          <li><strong>7</strong><span>기록하는<br>영역</span></li>
-          <li><strong>3건</strong><span>국내 특허 출원<br>(등록 전)</span></li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="product" class="section">
-      <div class="wrap">
-        <div class="ed">
-          <p class="ed-label"><span>01</span>제품</p>
-          <div class="ed-body">
-        <div class="head">
-          <h2>손끝의 움직임을 새로운 훈련 경험으로</h2>
-          <p>Rehaptic은 손으로 조작하는 그립과 앱 콘텐츠를 연결해, 손가락마다 따로 누른 훈련을 반응·분리·조절·지속·박자·순서·협응 일곱 가지 영역으로 기록하는 디지털 훈련 기기입니다.</p>
-        </div>
-        <ul class="points">
-          <li><h3>손가락마다 따로 눌리는 입력</h3><p>한 손 네 개의 레버가 손가락마다 따로 눌립니다. 누를 손가락은 화면과 그립의 불빛으로 알려 주고, 완전히 눌리면 진동으로 확인해 줍니다.</p></li>
-          <li><h3>앱이 안내하는 여덟 가지 활동</h3><p>손 운동 · 리듬 놀이 · 숫자 따라 누르기부터 물 따르기 · 박자 따라 하기까지, 앱이 소리와 큰 글씨로 안내합니다.</p></li>
-          <li><h3>자동으로 쌓이는 수행 기록</h3><p>참여 기록이 관리자 웹에 모여 출석 기록과 콘텐츠별 난이도, PDF 리포트로 나옵니다. 이 기록을 바탕으로 훈련 구성을 제안하는 기능은 계획 중입니다.</p></li>
-        </ul>
-        <figure class="film" data-video="video/product-explainer.mp4" data-poster="video/product-explainer-poster.webp" data-mode="player" hidden>
-          <figcaption>Rehaptic 설명 영상 (94초 · 음악)</figcaption>
-        </figure>
-        <p class="more"><a class="go" href="rehaptic.html">제품 자세히 보기</a></p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="modes" class="section modes-sec">
-      <div class="wrap">
-        <div class="ed">
-          <p class="ed-label"><span>02</span>구성</p>
-          <div class="ed-body">
-            <div class="head">
-              <h2>센터에서도, 집에서도</h2>
-              <p>센터에서는 담당자가 태블릿과 관리자 웹으로 여러 분을 꼼꼼히 챙기고, 집에서는 내 스마트폰 앱으로 부담 없이 즐깁니다.</p>
-            </div>
-            <div class="modes bleed">
-          <article class="mode">
-            <figure class="kit"><img src="img/kit-center.webp" width="1280" height="800" alt="센터용 구성: 햅틱 그립 한 쌍, 태블릿 앱이 열린 태블릿, 관리자 웹이 열린 노트북" loading="lazy"></figure>
-            <div class="mode-body">
-              <div class="mode-top"><p class="mode-tag">센터용</p><p class="state">2027년 상반기 출시 예정</p></div>
-              <h3>태블릿 + 관리자 웹</h3>
-              <dl class="mode-rows"><div><dt>이런 곳</dt><dd>복지관 · 경로당 · 주·야간보호센터 · 요양시설</dd></div><div><dt>구성</dt><dd>햅틱 그립 + 태블릿 앱 + 관리자 웹</dd></div><div><dt>이렇게 한 까닭</dt><dd>담당자가 여러 분의 기록을 한곳에서 관리해, 더 꼼꼼한 서비스를 하도록</dd></div></dl>
-              <a class="go" href="centers.html">센터용 자세히 보기</a>
-            </div>
-          </article>
-          <article class="mode">
-            <figure class="kit"><img src="img/kit-home.webp" width="1280" height="800" alt="가정용 구성: 햅틱 그립 한 쌍과 앱 화면이 열린 스마트폰" loading="lazy"><figcaption class="concept-cap">가정용 앱 화면 구성 예시(개념) — 실제 가정용 앱 화면이 아닙니다.</figcaption></figure>
-            <div class="mode-body">
-              <div class="mode-top"><p class="mode-tag">가정용</p><p class="state">개발 진행 중 · 2028년 이후 출시 예정</p></div>
-              <h3>스마트폰 앱</h3>
-              <dl class="mode-rows"><div><dt>이런 분</dt><dd>집에 계신 어르신과 가족</dd></div><div><dt>구성</dt><dd>햅틱 그립 + 스마트폰 앱</dd></div><div><dt>이렇게 한 까닭</dt><dd>태블릿과 관리자 웹 없이 꼭 필요한 것만 담아, 부담 없이 시작하도록</dd></div></dl>
-              <a class="go" href="family.html">가정용 자세히 보기</a>
-            </div>
-          </article>
-            </div>
-            <div class="same bleed"><p class="same-title"><b>두 구성 모두</b> 같은 콘텐츠</p><ul class="same-list"><li>손 운동</li><li>리듬 놀이</li><li>숫자 따라 누르기</li><li>두더지 잡기</li><li>주먹으로 피하기</li><li>손가락 따로</li><li>물 따르기</li><li>박자 따라 하기</li></ul></div>
-            <p class="fine bleed">구성 그림은 이해를 돕기 위한 개념 예시입니다. 태블릿 화면은 개발 중인 앱의 화면을 바탕으로 한 예시이고, 스마트폰 화면은 폰에 맞게 다시 짠 화면 구성 예시(개념)입니다. 화면 크기에 맞춰 화면 구성(UI)만 다릅니다.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <section id="platform" class="section">
-      <div class="wrap">
-        <div class="ed">
-          <p class="ed-label"><span>03</span>플랫폼</p>
-          <div class="ed-body">
-        <div class="head">
-          <h2>입력에서 기록까지, 하나의 플랫폼</h2>
-          <p>손가락 입력을 읽고, 콘텐츠로 안내하고, 값으로 기록합니다. 점선 항목은 앞으로의 계획입니다.</p>
-        </div>
-        <div class="stack" role="list" aria-label="Rehaptic 플랫폼 구조">
-          <div class="layer l4" role="listitem"><div class="ln">AI 제안<span class="ls">앞으로의 계획</span></div><div class="lc"><span class="pill next plan">기록 바탕 훈련 구성 제안</span></div></div>
-          <div class="layer l3" role="listitem"><div class="ln">기록<span class="ls">값으로 남기는 층</span></div><div class="lc"><span class="pill">영역별 · 손가락별 기록</span><span class="pill">난이도 제안</span><span class="pill">리포트</span><span class="pill next">손 움직임 기록</span></div></div>
-          <div class="layer l2" role="listitem"><div class="ln">콘텐츠<span class="ls">하는 활동</span></div><div class="lc"><span class="pill">손 운동</span><span class="pill">리듬 놀이</span><span class="pill">숫자 따라 누르기</span><span class="pill">두더지 잡기</span><span class="pill">주먹으로 피하기</span><span class="pill">손가락 따로</span><span class="pill">물 따르기</span><span class="pill">박자 따라 하기</span><span class="pill next">손 움직임 콘텐츠</span></div></div>
-          <div class="layer l1" role="listitem"><div class="ln">입력<span class="ls">손에서 읽는 층</span></div><div class="lc"><span class="pill">독립 레버 8채널</span><span class="pill">불빛 · 소리 · 화면 안내</span><span class="pill next">모션 센서(자이로 등)</span></div></div>
-        </div>
-        <p class="legend"><span class="pill sample"></span> 지금 구성 <span class="pill next sample"></span> 앞으로의 계획</p>
-        <p class="more"><a class="go" href="technology.html">기술 자세히 보기</a></p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <section id="v3" class="section band-dark">
-      <div class="wrap">
-        <div class="ed">
-          <p class="ed-label"><span>04</span>다음 세대 · v3</p>
-          <div class="ed-body">
-        <div class="head">
-          <h2>손가락에서 손의 움직임까지</h2>
-          <p>다음 세대 그립(v3)은 모션 센서(자이로 등)를 담아, 손가락 입력과 함께 손의 방향(기울기·회전)과 위치, 이동 경로를 읽도록 개발할 계획입니다.</p>
-        </div>
-        <figure class="film" data-video="video/v3-concept.mp4" data-poster="video/v3-concept-poster.webp" data-mode="player" hidden>
-          <figcaption>다음 세대 그립 개념 영상 (30초 · 음악)</figcaption>
-        </figure>
-        <ul class="points">
-          <li><h3>손의 방향과 위치를 읽는 센서</h3><p>그립 안의 모션 센서가 손의 기울기와 회전, 그리고 어디서 어디로 움직였는지(위치와 이동 경로)를 읽습니다.</p></li>
-          <li><h3>손 움직임 콘텐츠</h3><p>그립을 쥔 채 손을 움직이는 새 콘텐츠를 만듭니다. 손가락 입력과 손의 움직임이 함께 쓰입니다.</p></li>
-          <li><h3>기록을 바탕으로 한 구성 제안</h3><p>손가락 기록과 움직임 기록을 함께 모아 훈련 구성을 제안하는 기능을 계획하고 있습니다. 적용은 담당자가 정합니다.</p></li>
-        </ul>
-        <p class="fine">다음 세대(v3)는 개발 계획이며 항목과 일정은 바뀔 수 있습니다. 이때 남는 값도 훈련을 어떻게 했는지에 대한 기록이며 진단이나 효과 판단이 아닙니다. 위 영상은 개념 예시이고 실제 제품·앱 화면이 아닙니다.</p>
-        <p class="more"><a class="go" href="technology.html#v3">기술 자세히 보기</a></p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="company" class="section company">
-      <div class="wrap">
-        <div class="ed">
-          <p class="ed-label"><span>05</span>회사</p>
-          <div class="ed-body">
-        <h2>많은 목소리를 듣는 데서 출발합니다</h2>
-        <p>다문은 많을 다 多와 들을 문 聞에서 출발합니다. 고객과 보호자, 현장의 담당자, 함께 만드는 파트너의 목소리를 듣고, 그 안에서 발견한 필요를 제품과 서비스에 반영합니다.</p>
-        <p class="more"><a class="go" href="about.html">회사 자세히 보기</a></p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta">
-      <div class="wrap">
-        <div class="cta-in">
-          <div>
-            <h2>도입을 검토하고 계신가요?</h2>
-            <p>센터 도입과 제휴, 그 밖의 궁금한 점을 편하게 문의해 주세요.</p>
-          </div>
-          <a class="btn btn-primary" href="contact.html">문의하기</a>
-        </div>
-      </div>
-    </section>
+    <section class="home-intro" id="top"><div class="wrap home-intro-grid"><div class="home-intro-copy"><img class="home-wordmark" src="img/rehaptic-primary.svg" width="150" height="46" alt="Rehaptic"><h1>손끝에서 시작되는<br>디지털 훈련</h1><p>불빛에 맞춰 그립을 누르면 화면 속 음표가 반응합니다. 리헵틱은 양손의 움직임을 손 운동과 리듬 놀이로 연결합니다.</p><div class="home-actions"><a class="btn btn-primary" href="rehaptic.html">제품 살펴보기</a><a href="#how-it-works" class="mechanism-jump">작동 원리 보기</a></div></div><figure class="home-photograph"><img src="img/rehaptic-in-hand.webp" width="900" height="885" fetchpriority="high" alt="왼손과 오른손으로 리헵틱 그립을 쥔 모습"></figure></div></section><section id="system-specs" class="home-specs" aria-label="그립 사양"><div class="wrap"><dl><div><dt>양손 독립 레버</dt><dd>8개</dd></div><div><dt>신호 간격</dt><dd>0.1초</dd></div><div><dt>기록 영역</dt><dd>7가지</dd></div></dl></div></section><section id="how-it-works" class="home-mechanism"><div class="wrap"><div class="mechanism-copy"><h2>그립을 누르면 <br>무슨 일이 일어날까요?</h2></div><figure id="training" class="instrument grip-viewer" data-viewer data-duration="0:35" data-root="viewer/">
+          <figcaption id="rhythm"><strong>그립의 작동 원리</strong></figcaption>
+          <div class="film-pane"><div class="film-screen"><video controls playsinline preload="metadata" width="1280" height="720" poster="video/grip-cover.webp?v=20" aria-label="그립 입력과 앱의 손 운동·리듬 놀이를 보여주는 35초 영상"><source src="video/grip-engineering.webm?v=20" type="video/webm"><source src="video/grip-engineering.mp4?v=20" type="video/mp4"></source></source></video><button class="film-start" type="button" hidden><i aria-hidden="true">▶</i> <span>영상 재생</span> <small>0:35</small></button></div>
+          <details class="player-chapters"><summary>장면 선택<span class="scene-name"></span></summary><div class="chapter-strip" role="group" aria-label="영상 장면으로 이동"><button type="button" data-time="0" data-summary="네 손가락이 각각 하나의 레버를 움직입니다." data-scene-name="외형"><small>0:00</small><b>외형</b></button><button type="button" data-time="4" data-summary="그립이 열리고, 다음에 누를 손가락 자리에 불이 들어옵니다." data-scene-name="불빛 안내"><small>0:04</small><b>불빛 안내</b></button><button type="button" data-time="8" data-summary="레버가 움직이면 센서가 눌림을 읽고 신호를 보냅니다." data-scene-name="누름 감지"><small>0:08</small><b>누름 감지</b></button><button type="button" data-time="11.4" data-summary="입력은 앱으로 전달되고, 레버를 끝까지 누르면 그립이 진동합니다." data-scene-name="피드백"><small>0:11</small><b>피드백</b></button><button type="button" data-time="15" data-summary="가운데 태블릿 양옆으로 왼손 1–4번과 오른손 5–8번을 배치했습니다. 왼손 2번과 오른손 8번이 차례로 눌리며 태블릿의 고리가 찹니다." data-link="training" data-play-label="손 운동 재생" data-end="0:24" data-poster="video/grip-engineering-training.webp?v=20" data-scene-name="손 운동"><small>0:15</small><b>손 운동</b></button><button type="button" data-time="24" data-summary="음표가 닿는 순간, 본체의 해당 레버가 눌리고 센서 위치가 빛납니다. 태블릿의 같은 번호에서 판정과 점수가 바뀝니다." data-link="rhythm" data-play-label="리듬 놀이 재생" data-end="0:35" data-poster="video/grip-engineering-rhythm.webp?v=20" data-scene-name="리듬 놀이"><small>0:24</small><b>리듬 놀이</b></button></div>
+          </details><p class="chapter-summary">손끝의 입력이 회로를 거쳐 손 운동과 리듬 놀이로 이어지는 과정을 보세요.</p>
+          <a class="film-file" hidden href="video/grip-engineering.mp4?v=20">MP4 영상 열기</a></div>
+          
+          <noscript><a href="video/grip-engineering.mp4?v=20">그립과 앱 영상 열기</a></noscript>
+        </figure></div></section><section class="paths"><div class="wrap"><h2>리헵틱을 만나는 두 가지 환경</h2><div class="pair"><a href="centers.html"><img src="img/kit-center.webp" loading="lazy" alt=""><h3>센터용 리헵틱</h3><p>태블릿 앱과 관리자 웹으로 함께 진행하는 손 운동</p></a><a href="family.html"><img src="img/kit-home.webp?v=9" loading="lazy" alt=""><h3>가정용 리헵틱</h3><p>집에서도 즐기는 스마트폰 연동형 제품 · 개발 중</p></a></div></div></section><section class="studio-about wrap"><div><h2>많이 듣는 회사, 다문</h2></div><div><p>Rehaptic은 손으로 조작하는 그립과 앱 콘텐츠를 연결해, 손가락마다 따로 누른 훈련을 반응·분리·조절·지속·박자·순서·협응 일곱 가지 영역으로 기록하는 디지털 훈련 기기입니다.</p><a class="studio-link" href="about.html">다문의 개발 이야기</a></div></section>
   </main>
 
   <footer class="site-footer">
@@ -246,10 +91,8 @@
           <a class="f-logo" href="index.html" aria-label="다문 DAMUN 홈"><img src="img/damun-white.svg" alt="damun" width="124" height="38"></a>
           <p class="f-mail">문의 <a href="mailto:info@damun.asia">info@damun.asia</a></p>
         </div>
-        <nav class="f-links" aria-label="사이트 안내">
-          <div class="f-group"><p class="f-head">다문</p><a href="index.html">홈</a><a href="about.html">회사</a><a href="contact.html">문의</a><a href="privacy.html">개인정보 처리방침</a></div>
-          <div class="f-group"><p class="f-head">제품</p><a href="rehaptic.html">제품 소개</a><a href="centers.html">센터용</a><a href="family.html">가정용</a><a href="technology.html">기술</a></div>
-        </nav>
+        <nav class="footer-utilities" aria-label="사이트 안내">
+          <a href="contact.html">문의</a><a href="privacy.html">개인정보 처리방침</a></nav>
       </div>
       <div class="f-bottom">
         <p class="f-biz">다문(DAMUN) · 대표 서성륜 · 사업자등록번호 894-20-02492 · 경기도 성남시 분당구 대왕판교로645번길 12, 7층 15호 (삼평동, 경기창조경제혁신센터)</p>
@@ -259,6 +102,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js" defer></script>
-</body>
+  <script src="js/design-main.js?v=16" defer></script>
+<script defer src="js/studio.js?v=20"></script></body>
 </html>
