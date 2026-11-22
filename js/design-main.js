@@ -369,6 +369,8 @@
   /* 콘텐츠 영상: 누를 것 없이 화면에 들어온 영상이 소리 없이 돈다. 첫 화면 태블릿과 같이(대표 지시 11/07)
      움직임 줄이기 설정에서도 틀고, 구역 위의 단추 하나로 모두 멈출 수 있다. */
   const setupClips = (list) => {
+    const concepts = new Set(list.closest('section')?.querySelectorAll('figure[data-concept-film]'));
+    const previewed = new Set();
     const btn = document.querySelector('[data-clips-toggle]');
     const seen = new Set();
     let stopped = false;
@@ -388,19 +390,32 @@
       slot.appendChild(v);
       return v;
     };
+    const playVisibleConcept = (byUser = false) => {
+      if (!byUser && (reduceMotion || (activeFilm && !activeFilm.paused))) return;
+      for (const slot of seen) {
+        if (!concepts.has(slot)) continue;
+        const film = videoOf(slot);
+        if (!byUser && (previewed.has(slot) || film.played.length || !film.muted)) continue;
+        previewed.add(slot);
+        film.play().catch(() => {});
+        break;
+      }
+    };
     const io = new IntersectionObserver((entries) => {
       entries.forEach((e) => {
         if (e.isIntersecting) {
           seen.add(e.target);
-          if (!stopped) videoOf(e.target).play().catch(() => {});
+          if (!stopped && !concepts.has(e.target)) videoOf(e.target).play().catch(() => {});
         } else {
           seen.delete(e.target);
           const v = e.target.querySelector('video');
           if (v) v.pause();
         }
       });
+      if (!stopped) playVisibleConcept();
     }, { threshold: 0.2 });
     list.querySelectorAll('figure[data-video]').forEach((slot) => io.observe(slot));
+    concepts.forEach(slot => io.observe(slot));
     if (!btn) return;
     const sync = () => {
       btn.textContent = stopped ? S.playAll : S.pauseAll;
@@ -411,7 +426,12 @@
     btn.addEventListener('click', () => {
       stopped = !stopped;
       sync();
-      seen.forEach((slot) => { const v = videoOf(slot); if (stopped) v.pause(); else v.play().catch(() => {}); });
+      seen.forEach(slot => {
+        const v = videoOf(slot);
+        if (stopped) v.pause();
+        else if (!concepts.has(slot)) v.play().catch(() => {});
+      });
+      if (!stopped) playVisibleConcept(true);
     });
   };
   document.querySelectorAll('[data-clips]').forEach(setupClips);

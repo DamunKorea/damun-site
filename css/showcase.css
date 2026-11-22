@@ -538,3 +538,20 @@ main #v3.next-grip {background:#142941}
   .site-header .site-nav .sub a span { color:#506479; line-height:1.4; }
   .site-header .site-nav .nav-cta { display:block; padding:6px 0 0; }
 }
+
+/* Next-grip concept films use the same inline viewing flow as the app examples. */
+.concept-collection header { display:block; margin-bottom:clamp(18px,2.6vw,30px); }
+.concept-collection header p { margin-top:.45rem; }
+.concept-games { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:clamp(24px,3.4vw,42px) clamp(16px,2.5vw,32px); }
+.concept-game { min-width:0; }
+.concept-screen { margin:0; min-width:0; scroll-margin-top:calc(var(--header-h) + 12px); }
+.concept-screen video { display:block; width:100%; height:auto; aspect-ratio:16/10; background:#102139; border-radius:12px; }
+.concept-copy { padding:12px 2px 0; }
+.concept-name { display:flex; align-items:baseline; justify-content:space-between; gap:10px; }
+.concept-name h4 { margin:0; color:var(--ink); font-size:clamp(1.2rem,1.7vw,1.5rem); letter-spacing:-.025em; }
+.concept-name span { flex:none; color:#51677d; font-size:.875rem; font-variant-numeric:tabular-nums; }
+.concept-copy p { margin:.4rem 0 0; color:var(--ink-2); font-size:1rem; line-height:1.6; }
+@media(max-width:700px) {
+  .concept-games { grid-template-columns:minmax(0,1fr); gap:25px; }
+  .concept-copy { padding-top:8px; }
+}
