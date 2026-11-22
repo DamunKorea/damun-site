@@ -547,6 +547,13 @@ main #v3.next-grip {background:#142941}
 .concept-screen { margin:0; min-width:0; scroll-margin-top:calc(var(--header-h) + 12px); }
 .concept-screen video { display:block; width:100%; height:auto; aspect-ratio:16/10; background:#102139; border-radius:12px; }
 .concept-copy { padding:12px 2px 0; }
+.concept-listen {
+  display:inline-flex; align-items:center; min-height:44px; margin-top:6px; padding:0 12px;
+  border:1px solid var(--hair); border-radius:8px; background:var(--white); color:var(--blue-deep);
+  cursor:pointer; font:inherit; font-size:.875rem; font-weight:600;
+}
+.concept-listen[hidden] { display:none; }
+.concept-listen:focus-visible { outline:2px solid var(--blue); outline-offset:2px; }
 .concept-name { display:flex; align-items:baseline; justify-content:space-between; gap:10px; }
 .concept-name h4 { margin:0; color:var(--ink); font-size:clamp(1.2rem,1.7vw,1.5rem); letter-spacing:-.025em; }
 .concept-name span { flex:none; color:#51677d; font-size:.875rem; font-variant-numeric:tabular-nums; }

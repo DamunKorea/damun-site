@@ -27,6 +27,17 @@
   const nav = document.getElementById('site-nav');
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  document.querySelectorAll('[data-hear-calls]').forEach((button) => {
+    const film = button.closest('.concept-game')?.querySelector('video');
+    if (!film) return;
+    button.hidden = false;
+    button.addEventListener('click', () => {
+      film.currentTime = 0;
+      film.muted = false;
+      film.play().catch(() => film.controls = true);
+    });
+  });
+
   let activeFilm;
   document.addEventListener('play', (event) => {
     const film = event.target;
